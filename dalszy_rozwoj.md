@@ -45,7 +45,7 @@ Identyfikacja potencjalnych cech akustycznych, fonetycznych lub lingwistycznych,
 
 **Etykiety Danych:**
 
- Dokładne etykiety dla każdego pliku audio, wskazujące, które słowa pacjent nie usłyszał. Etykiety powinny być spójne i zgodne z ustalonym formatem.
+ Dokładne etykiety dla każdego pliku audio, wskazujące, które słowa pacjent nie usłyszał. Etykiety powinny być spójne i zgodne z ustalonym formatem. Tak jak jest teraz lub lepiej
 
 # 5. Infrastruktura i Współpraca:
 
