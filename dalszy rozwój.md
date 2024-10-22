@@ -1,4 +1,5 @@
 # Możliwości
+Ten projekt otwiera furtkę na zastosowanie własnego lub zmodyfikowanego gpt który bazując na otrzymanych przez nas danych mogłby analizować które słowa/dźwięki/tony/częstotliwości sprawiają trudność dla pacjenta. Osobisty asystent który prowadziłby użytkownika i pokazywał mu z czym ma problem, myśle że mogło by to być dobre narzędzie usprawniające dalszą naukę życia z aparatem słuchowym. 
 
 ## Specjalizacja Modelu: 
 
