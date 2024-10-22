@@ -1,6 +1,20 @@
 # 1. Możliwości
 Ten projekt otwiera furtkę na zastosowanie własnego lub zmodyfikowanego gpt który bazując na otrzymanych przez nas danych mogłby analizować które słowa/dźwięki/tony/częstotliwości sprawiają trudność dla pacjenta. Osobisty asystent który prowadziłby użytkownika i pokazywał mu z czym ma problem, myśle że mogło by to być dobre narzędzie usprawniające dalszą naukę życia z aparatem słuchowym.
-Jak np. [nvidia](https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct/modelcard) lub [Hugging Face](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct)
+Jak np. [nvidia](https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct/modelcard) lub [Hugging Face](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct) 
+
+### Licencja LLAMA 3.1 Community License Agreement
+
+1. Licencja LLAMA 3.1 Community License od Meta Platforms pozwala na:
+2. 
+- Używanie, reprodukcję, dystrybucję i modyfikację materiałów LLAMA 3.1.
+- Tworzenie dzieł pochodnych oraz ich dystrybucja, pod warunkiem dołączenia kopii licencji i wyraźnego oznaczenia "Built with Llama".
+- Użycie nazwy "Llama" w nazwach modeli AI bazujących na LLAMA 3.1.
+- Dostosowanie modelu do specyficznych potrzeb, np. analizy audio dla osób z problemami słuchu, zgodnie z założeniami dalszego rozwoju projektu.
+  
+2. Wpływ na dalszy rozwój projektu:
+- Zgodność z licencją: Możemy swobodnie trenować i modyfikować model, pod warunkiem przestrzegania warunków licencji, takich jak odpowiednia adnotacja i dystrybucja licencji.
+- Oznaczenia i atrybucje: Wszelkie zmodyfikowane wersje muszą być odpowiednio oznaczone i zawierać informacje o licencji.
+- Ograniczenia komercyjne: Jeśli liczba aktywnych użytkowników miesięcznie przekracza 700 milionów, konieczne jest uzyskanie dodatkowej licencji od Meta.
 
 ## Specjalizacja Modelu: 
 
