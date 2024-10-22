@@ -43,16 +43,17 @@ Identyfikacja potencjalnych cech akustycznych, fonetycznych lub lingwistycznych,
 
  Duży zbiór plików audio, które będą używane do treningu. Pliki powinny być różnorodne, obejmując różne gatunki mowy, akcenty, poziomy głośności, i jakości audio.
 
-Etykiety Danych:
+**Etykiety Danych:**
 
  Dokładne etykiety dla każdego pliku audio, wskazujące, które słowa pacjent nie usłyszał. Etykiety powinny być spójne i zgodne z ustalonym formatem.
 
 # 5. Infrastruktura i Współpraca:
 
-Dostęp do Danych:
+**Dostęp do Danych:**
 
- UWB powinien zapewnić bezpieczny, kontrolowany dostęp do danych treningowych.
-Zespół Współpracy: Zalecana jest współpraca interdyscyplinarnego zespołu, składającego się z przedstawicieli UWB (np., specjalistów ds. słuchu, językoznawców, inżynierów danych) oraz mojego zespołu KNFM "Neuron"
+UWB powinien zapewnić bezpieczny, kontrolowany dostęp do danych treningowych.
+
+Zespół Współpracy: Zalecana jest współpraca interdyscyplinarnego zespołu, składającego się z przedstawicieli UWB np. specjalistów ds. słuchu i uczenia maszynowego oraz mojego zespołu KNFM "Neuron"
 
 ## Proces Trenowania i Weryfikacji:
 
