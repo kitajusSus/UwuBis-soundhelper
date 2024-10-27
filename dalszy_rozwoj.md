@@ -1,5 +1,5 @@
 # 1. Możliwości
-Ten projekt otwiera furtkę na zastosowanie własnego lub zmodyfikowanego gpt który bazując na otrzymanych przez nas danych mogłby analizować które słowa/dźwięki/tony/częstotliwości sprawiają trudność dla pacjenta. Osobisty asystent który prowadziłby użytkownika i pokazywał mu z czym ma problem, myśle że mogło by to być dobre narzędzie usprawniające dalszą naukę życia z aparatem słuchowym.
+Ten projekt otwiera furtkę na zastosowanie własnego lub zmodyfikowanego gpt który bazując na otrzymanych przez od nas danych mogłby analizować które słowa/dźwięki/tony/częstotliwości sprawiają trudność dla pacjenta. Osobisty asystent który prowadziłby  użytkownika na drodze nauki slyszenia i pokazywał mu z czym ma problem, myśle że mogło by to być dobre narzędzie usprawniające dalszą naukę życia z aparatem słuchowym.
 Jak np. nvidia\Llama-3.1-Nemotron-70B-Instruct  [link do strony nvidia](https://build.nvidia.com/nvidia/llama-3_1-nemotron-70b-instruct/modelcard), [link do platformy hugging face](https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct) 
 
 ### Licencja LLAMA 3.1 Community License Agreement
