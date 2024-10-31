@@ -17,7 +17,7 @@ class Aplikacja:
         self.wynik = tk.StringVar()
         self.czas_start = datetime.datetime.now()
         self.folder_zapisu = "wyniki/"  # Folder do zapisu wyników
-        self.katalog_audio = ""  # Katalog z plikami audio (ustawiany przez użytkownika)
+        self.katalog_audio = "audio/demony/"  # Katalog z plikami audio (ustawiany przez użytkownika)
         self.ile_slow_do_rozpoznania = 5
         self.plik_audio = ""
         self.słowa_w_pliku = []
@@ -25,6 +25,7 @@ class Aplikacja:
         self.wyniki_użytkownika = {}
         self.ekrany = []
         self.aktualny_ekran = None
+        self.current_chapter = 0
 
         self.login_screen()
 
@@ -113,8 +114,20 @@ class Aplikacja:
         threading.Thread(target=self.przebieg_testu, args=(numer_rozdziału,)).start()
 
     def przebieg_testu(self, numer_rozdziału):
-        słowa_w_rozdziale = self.rozdziały[numer_rozdziału]
-        self.informacja_screen(numer_rozdziału)
+        self.current_chapter = numer_rozdziału  # Ustawienie current_chapter
+        self.aktualny_ekran.pack_forget()
+        odtwarzaj_audio(self.plik_audio)  # Odtwarzaj cały plik audio (do poprawy: odtwarzaj tylko wybrany rozdział)
+        time.sleep(1)  # Czas na zastanowienie
+
+        # Dodajemy etykietę z komunikatem
+        self.aktualny_ekran = tk.Frame(self.root)
+        self.aktualny_ekran.pack(fill="both", expand=True)
+        tk.Label(self.aktualny_ekran, text="Powtórz słowa które usłyszałeś").pack()
+
+        poprawne_slowa, powtórzone_słowa = powtorz_słowa(self.rozdziały[numer_rozdziału])
+        wynik = f"{len(poprawne_slowa)}/{len(self.rozdziały[numer_rozdziału])}"
+        self.wyniki_użytkownika[numer_rozdziału] = wynik
+        self.zapytaj_o_dalsze(numer_rozdziału, wynik, poprawne_slowa, powtórzone_słowa, self.rozdziały[numer_rozdziału])
 
     def informacja_screen(self, numer_rozdziału):
         if self.aktualny_ekran:
@@ -186,6 +199,29 @@ class Aplikacja:
         for i, (słowo, powtórzone) in enumerate(zip(słowa_w_rozdziale, powtórzone_słowa), start=1):
             self.statystyki_text.insert(tk.END, f"{i}. {słowo} -> {powtórzone}\n")
 
+        # przyciski
+        tk.Button(self.root, text="Odtwórz to samo audio", command=lambda: self.powtórz_audio(self.current_chapter)).pack(pady=10)
+        tk.Button(self.root, text="Dalej", command=self.odtwórz_kolejny_audio).pack(pady=10)
+        tk.Button(self.root, text="Zakończ", command=self.root.destroy).pack(pady=10)
+        tk.Button(self.root, text="Cofnij", command=self.go_back).pack(pady=10)
+
+    def powtórz_audio(self, numer_rozdziału):
+        self.root.destroy()
+        threading.Thread(target=self.przebieg_testu, args=(numer_rozdziału,)).start()
+
+    def odtwórz_kolejny_audio(self):
+        self.current_chapter += 1
+        if self.current_chapter < len(self.rozdziały):
+            self.root.destroy()
+            threading.Thread(target=self.przebieg_testu, args=(self.current_chapter,)).start()
+        else:
+             tk.messagebox.showinfo("Koniec", "To był ostatni rozdział.")
+
+    def go_back(self):
+        if self.ekrany:
+            self.aktualny_ekran.pack_forget()
+            self.aktualny_ekran = self.ekrany.pop()
+            self.aktualny_ekran.pack(fill="both", expand=True)
 
 if __name__ == "__main__":
     root = tk.Tk()
