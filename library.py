@@ -10,7 +10,7 @@ import random
 
 """Funkcje pomocnicze do programu UwuBiś."""
 
-def zapisz_wynik(login, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu):
+def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu):
     nazwa_pliku = f"{login}.xlsx"
     # Upewnij się, że folder zapisu istnieje
     if not os.path.exists(folder_zapisu):
@@ -19,7 +19,7 @@ def zapisz_wynik(login, poprawne_słowa, powtórzone_słowa, słowa, folder_zapi
     # Jeśli nie istnieje plik to zrób nowy 
     if not os.path.exists(nazwa_pliku):
         # tworznie nagłówków df=dataframe
-        df = pd.DataFrame(columns=["Numer podejścia", "Słowa w pliku", "Słowa poprawne", "Słowa niepoprawne", "Wynik", "Maksymalny Wynik"])
+        df = pd.DataFrame(columns=["Numer podejścia","Nazwa Pliku i rozdzial" "Słowa w pliku", "Słowa poprawne", "Słowa niepoprawne", "Wynik", "Maksymalny Wynik"])
         df.to_excel(nazwa_pliku, index=False, engine='openpyxl')
     
     # Otwórz istniejący plik
@@ -33,7 +33,7 @@ def zapisz_wynik(login, poprawne_słowa, powtórzone_słowa, słowa, folder_zapi
     wynik = f"{len(poprawne_słowa)}/{len(słowa)}"
     maks_wynik = len(słowa) # ilość słow w pliku może się zmieniać ale narazie program czyta tylko pierwsze 5 słów
     # Dodaj nowy wiersz
-    new_row = [numer_podejscia, ', '.join(słowa), ', '.join(poprawne_słowa), ', '.join(niepoprawne_słowa), wynik, maks_wynik]
+    new_row = [numer_podejscia, ', ' .join(nazwa_audio), ', '.join(słowa), ', '.join(poprawne_słowa), ', '.join(niepoprawne_słowa), wynik, maks_wynik]
     sheet.append(new_row)
     # Zapisz plik
     book.save(nazwa_pliku)
@@ -87,3 +87,4 @@ def odtwarzaj_audio(nazwa_pliku):
     data, fs = sf.read(nazwa_pliku, dtype='float32')
     sd.play(data, fs)
     sd.wait()
+
