@@ -37,7 +37,7 @@ def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa
     sheet.append(new_row)
     # Zapisz plik
     book.save(nazwa_pliku)
-
+    shutil.move(nazwa_pliku, f"{folder_zapisu}{nazwa_pliku}")
 
 
 
