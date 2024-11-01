@@ -205,9 +205,6 @@ class Aplikacja:
         tk.Button(self.root, text="Zakończ", command=self.root.destroy).pack(pady=10)
         tk.Button(self.root, text="Cofnij", command=self.go_back).pack(pady=10)
 
-    def powtórz_audio(self, numer_rozdziału):
-        self.root.destroy()
-        threading.Thread(target=self.przebieg_testu, args=(numer_rozdziału,)).start()
 
     def odtwórz_kolejny_audio(self):
         self.current_chapter += 1
