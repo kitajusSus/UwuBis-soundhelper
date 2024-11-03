@@ -2,19 +2,20 @@ import os
 import time
 import random
 from library import zapisz_wynik, rozpoznaj_slowa_z_pliku, powtorz_słowa, odtwarzaj_audio
-import tkinter as tk
-from tkinter import messagebox, filedialog
+from PyQt5 import QtWidgets, QtCore, QtGui
 import openpyxl
 import datetime
 import threading
+import sys
 
-class Aplikacja:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Aplikacja UwuBiś")
-        self.root.geometry("800x600") 
-        self.login = tk.StringVar()
-        self.wynik = tk.StringVar()
+
+class uwubis(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Aplikacja UwuBiś")
+        self.setGeometry(100, 100, 800, 600)
+        self.login = ""
+        self.wynik = ""
         self.czas_start = datetime.datetime.now()
         self.folder_zapisu = "wyniki/"  # Folder do zapisu wyników
         self.katalog_audio = "audio/demony/"  # Katalog z plikami audio (ustawiany przez użytkownika)
@@ -30,99 +31,150 @@ class Aplikacja:
         self.login_screen()
 
     def login_screen(self):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
+        """
+        Display the login screen.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
 
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-
-        tk.Label(self.aktualny_ekran, text="Login:").pack()
-        tk.Entry(self.aktualny_ekran, textvariable=self.login).pack()
-        tk.Button(self.aktualny_ekran, text="Zaloguj się", command=self.sprawdź_login).pack()
-        tk.Button(self.aktualny_ekran, text="Cofnij", command=self.root.destroy).pack()
+        layout.addWidget(QtWidgets.QLabel("Login:"))
+        self.login_input = QtWidgets.QLineEdit()
+        layout.addWidget(self.login_input)
+        login_button = QtWidgets.QPushButton("Zaloguj się")
+        login_button.clicked.connect(self.sprawdź_login)
+        layout.addWidget(login_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.cofnij)
+        layout.addWidget(back_button)
 
     def sprawdź_login(self):
-        # Sprawdź login (tu powinna być logika sprawdzania loginu)
-        if self.login.get() == "test":  # Przykładowy login
-             self.wybierz_folder_audio_screen()
+        """
+        Check the login credentials.
+        """
+        self.login = self.login_input.text()
+        if self.login == "test":  # Przykładowy login
+            self.wybierz_folder_audio_screen()
         else:
-                messagebox.showerror("Błąd", "Niepoprawny login")
+            QtWidgets.QMessageBox.critical(self, "Błąd", "Niepoprawny login")
 
     def wybierz_folder_audio_screen(self):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
+        """
+        Display the screen to choose the audio folder.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
 
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-
-        tk.Button(self.aktualny_ekran, text="Wybierz folder z plikami audio", command=self.wybierz_folder_audio).pack()
-        tk.Button(self.aktualny_ekran, text="Cofnij", command=self.cofnij).pack()
+        choose_folder_button = QtWidgets.QPushButton("Wybierz folder z plikami audio")
+        choose_folder_button.clicked.connect(self.wybierz_folder_audio)
+        layout.addWidget(choose_folder_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.cofnij)
+        layout.addWidget(back_button)
 
     def wybierz_folder_audio(self):
-        self.katalog_audio = filedialog.askdirectory()
-        self.pliki_audio_screen()
+        """
+        Open a dialog to choose the audio folder.
+        """
+        try:
+            self.katalog_audio = QtWidgets.QFileDialog.getExistingDirectory(self, "Wybierz folder")
+            if self.katalog_audio:
+                self.pliki_audio_screen()
+            else:
+                QtWidgets.QMessageBox.critical(self, "Błąd", "Nie wybrano folderu")
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(self, "Błąd", f"Wystąpił błąd: {e}")
 
     def pliki_audio_screen(self):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
+        """
+        Display the screen to choose an audio file.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
 
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
+        try:
+            self.pliki_audio = [f for f in os.listdir(self.katalog_audio) if f.endswith('.wav')]
+            if not self.pliki_audio:
+                QtWidgets.QMessageBox.critical(self, "Błąd", "Brak plików audio w wybranym folderze")
+                self.cofnij()
+                return
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(self, "Błąd", f"Wystąpił błąd: {e}")
+            self.cofnij()
+            return
 
-        self.pliki_audio = [f for f in os.listdir(self.katalog_audio) if f.endswith('.wav')]
-        self.listbox = tk.Listbox(self.aktualny_ekran, width=80, height=20)  
+        self.listbox = QtWidgets.QListWidget()
         for plik in self.pliki_audio:
-            self.listbox.insert(tk.END, plik)
-        self.listbox.pack(pady=50)  
-        tk.Button(self.aktualny_ekran, text="Wybierz plik audio", command=self.wybierz_plik_audio).pack(pady=10)
-        tk.Button(self.aktualny_ekran, text="Cofnij", command=self.cofnij).pack(pady=10)
+            self.listbox.addItem(plik)
+        layout.addWidget(self.listbox)
+        choose_file_button = QtWidgets.QPushButton("Wybierz plik audio")
+        choose_file_button.clicked.connect(self.wybierz_plik_audio)
+        layout.addWidget(choose_file_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.cofnij)
+        layout.addWidget(back_button)
 
     def wybierz_plik_audio(self):
-        self.plik_audio = os.path.join(self.katalog_audio, self.listbox.get(tk.ACTIVE))
-        self.słowa_w_pliku = rozpoznaj_slowa_z_pliku(self.plik_audio, len(rozpoznaj_slowa_z_pliku(self.plik_audio, 1000)))
-        self.rozdziały = [self.słowa_w_pliku[i:i + self.ile_slow_do_rozpoznania] for i in range(0, len(self.słowa_w_pliku), self.ile_slow_do_rozpoznania)]
-        self.rozdziały_screen()
+        """
+        Choose an audio file and process it.
+        """
+        try:
+            self.plik_audio = os.path.join(self.katalog_audio, self.listbox.currentItem().text())
+            self.słowa_w_pliku = rozpoznaj_slowa_z_pliku(self.plik_audio, len(rozpoznaj_slowa_z_pliku(self.plik_audio, 1000)))
+            self.rozdziały = [self.słowa_w_pliku[i:i + self.ile_slow_do_rozpoznania] for i in range(0, len(self.słowa_w_pliku), self.ile_slow_do_rozpoznania)]
+            self.rozdziały_screen()
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(self, "Błąd", f"Wystąpił błąd: {e}")
+            self.cofnij()
 
     def rozdziały_screen(self):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
+        """
+        Display the screen to choose a chapter.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
 
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-
-        self.listbox = tk.Listbox(self.aktualny_ekran)
+        self.listbox = QtWidgets.QListWidget()
         for i, rozdział in enumerate(self.rozdziały):
-            self.listbox.insert(tk.END, f"Rozdział {i+1}: {' '.join(rozdział)}")
-        self.listbox.pack()
-        tk.Button(self.aktualny_ekran, text="Wybierz rozdział", command=self.wybierz_rozdział).pack()
-        tk.Button(self.aktualny_ekran, text="Cofnij", command=self.cofnij).pack()
-        self.wynik_label = tk.Label(self.aktualny_ekran, text="Wynik:")
-        self.wynik_label.pack()
+            self.listbox.addItem(f"Rozdział {i+1}: {' '.join(rozdział)}")
+        layout.addWidget(self.listbox)
+        choose_chapter_button = QtWidgets.QPushButton("Wybierz rozdział")
+        choose_chapter_button.clicked.connect(self.wybierz_rozdział)
+        layout.addWidget(choose_chapter_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.cofnij)
+        layout.addWidget(back_button)
+        self.wynik_label = QtWidgets.QLabel("Wynik:")
+        layout.addWidget(self.wynik_label)
 
     def wybierz_rozdział(self):
-        wybrany_rozdział = self.listbox.get(tk.ACTIVE)
+        """
+        Choose a chapter and start the test.
+        """
+        wybrany_rozdział = self.listbox.currentItem().text()
         numer_rozdziału = int(wybrany_rozdział.split(":")[0].split()[-1]) - 1
         słowa_w_rozdziale = self.rozdziały[numer_rozdziału]
         if numer_rozdziału in self.wyniki_użytkownika:
-            self.wynik_label['text'] = f"Wynik:  {self.wyniki_użytkownika[numer_rozdziału]}"
+            self.wynik_label.setText(f"Wynik:  {self.wyniki_użytkownika[numer_rozdziału]}")
         else:
-            self.wynik_label['text']= "Brak wyniku"
+            self.wynik_label.setText("Brak wyniku")
         threading.Thread(target=self.przebieg_testu, args=(numer_rozdziału,)).start()
 
     def przebieg_testu(self, numer_rozdziału):
+        """
+        Conduct the test for the chosen chapter.
+        """
         self.current_chapter = numer_rozdziału  # Ustawienie current_chapter
-        self.aktualny_ekran.pack_forget()
+        self.clear_screen()
         odtwarzaj_audio(self.plik_audio)  # Odtwarzaj cały plik audio (do poprawy: odtwarzaj tylko wybrany rozdział)
         time.sleep(1)  # Czas na zastanowienie
 
-        # Dodajemy etykietę z komunikatem
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-        tk.Label(self.aktualny_ekran, text="Powtórz słowa które usłyszałeś").pack()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
+        layout.addWidget(QtWidgets.QLabel("Powtórz słowa które usłyszałeś"))
 
         poprawne_slowa, powtórzone_słowa = powtorz_słowa(self.rozdziały[numer_rozdziału])
         wynik = f"{len(poprawne_slowa)}/{len(self.rozdziały[numer_rozdziału])}"
@@ -130,97 +182,148 @@ class Aplikacja:
         self.zapytaj_o_dalsze(numer_rozdziału, wynik, poprawne_slowa, powtórzone_słowa, self.rozdziały[numer_rozdziału])
 
     def informacja_screen(self, numer_rozdziału):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
+        """
+        Display the information screen before starting the audio playback.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
 
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-
-        tk.Label(self.aktualny_ekran, text="Za sekundę rozpocznie się odtwarzanie audio...", wraplength=400, justify=tk.CENTER).pack(pady=20)
-        self.root.after(1000, lambda: self.odtwórz_audio_ikontynuuj(numer_rozdziału))  # Po sekundzie uruchom odtwarzanie audio
+        layout.addWidget(QtWidgets.QLabel("Za sekundę rozpocznie się odtwarzanie audio...", wordWrap=True, alignment=QtCore.Qt.AlignCenter))
+        QtCore.QTimer.singleShot(1000, lambda: self.odtwórz_audio_ikontynuuj(numer_rozdziału))  # Po sekundzie uruchom odtwarzanie audio
 
     def odtwórz_audio_ikontynuuj(self, numer_rozdziału):
-        self.aktualny_ekran.pack_forget()
+        """
+        Play the audio and continue the test.
+        """
+        self.clear_screen()
         odtwarzaj_audio(self.plik_audio)  # Odtwarzaj cały plik audio (do poprawy: odtwarzaj tylko wybrany rozdział)
         time.sleep(1)  # Czas na zastanowienie
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
+        layout.addWidget(QtWidgets.QLabel("Powtórz usłyszane słowa...", wordWrap=True, alignment=QtCore.Qt.AlignCenter))
         poprawne_slowa, powtórzone_słowa = powtorz_słowa(self.rozdziały[numer_rozdziału])
         wynik = f"{len(poprawne_slowa)}/{len(self.rozdziały[numer_rozdziału])}"
         self.wyniki_użytkownika[numer_rozdziału] = wynik
         self.zapytaj_o_dalsze(numer_rozdziału, wynik, poprawne_slowa, powtórzone_słowa, self.rozdziały[numer_rozdziału])
-        
 
     def zapytaj_o_dalsze(self, numer_rozdziału, wynik, poprawne_słowa, powtórzone_słowa, słowa_w_rozdziale):
-        if self.aktualny_ekran:
-            self.ekrany.append(self.aktualny_ekran)
-            self.aktualny_ekran.pack_forget()
-        self.aktualny_ekran = tk.Frame(self.root)
-        self.aktualny_ekran.pack(fill="both", expand=True)
-        tk.Label(self.aktualny_ekran, text=f"Wynik: {wynik}").pack()
+        """
+        Ask the user what to do next after the test.
+        """
+        self.clear_screen()
+        layout = QtWidgets.QVBoxLayout()
+        self.setLayout(layout)
+        layout.addWidget(QtWidgets.QLabel(f"Wynik: {wynik}"))
 
-        zapisz_wynik(self.login.get(), self.plik_audio, słowa_w_rozdziale, powtórzone_słowa, wynik, self.folder_zapisu)
+        zapisz_wynik(self.login, self.plik_audio, słowa_w_rozdziale, powtórzone_słowa, wynik, self.folder_zapisu)
 
         self.wyświetl_statystyki(słowa_w_rozdziale, poprawne_słowa, powtórzone_słowa)
-        tk.Button(self.aktualny_ekran, text="Wybierz kolejny rozdział", command=self.rozdziały_screen).pack()
-        tk.Button(self.aktualny_ekran, text="Cofnij", command=self.cofnij).pack()
-        frame = tk.Frame(self.aktualny_ekran)
-        frame.pack(pady=10)
-        tk.Button(frame, text="Powtórz to samo audio", command=lambda: self.powtórz_audio(numer_rozdziału)).pack(side=tk.LEFT, padx=10)
-        tk.Button(frame, text="Wybierz inny plik audio", command=self.wybierz_folder_audio_screen).pack(side=tk.LEFT, padx=10)
-        tk.Button(frame, text="Zobacz statystyki i zakończ", command=lambda: self.wyświetl_statystyki_i_zakończ(słowa_w_rozdziale, poprawne_słowa, powtórzone_słowa)).pack(side=tk.LEFT, padx=10)
+        choose_chapter_button = QtWidgets.QPushButton("Wybierz kolejny rozdział")
+        choose_chapter_button.clicked.connect(self.rozdziały_screen)
+        layout.addWidget(choose_chapter_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.cofnij)
+        layout.addWidget(back_button)
 
     def cofnij(self):
+        """
+        Go back to the previous screen.
+        """
         if self.ekrany:
-            self.aktualny_ekran.pack_forget()
+            self.clear_screen()
             self.aktualny_ekran = self.ekrany.pop()
+            self.setLayout(self.aktualny_ekran)
 
     def powtórz_audio(self, numer_rozdziału):
-        self.root.destroy()
+        """
+        Repeat the audio for the given chapter.
+        """
+        self.close()
         threading.Thread(target=self.przebieg_testu, args=(numer_rozdziału,)).start()
 
     def wyświetl_statystyki_i_zakończ(self, słowa_w_rozdziale, poprawne_słowa, powtórzone_słowa):
-        #self.save_current_screen()
-        self.root.destroy()
-        self.root = tk.Tk()
-        self.root.title("Aplikacja UwuBiś - Statystyki")
-        self.statystyki_text = tk.Text(self.root, height=15, width=60)
-        self.statystyki_text.pack(pady=20)
-        self.statystyki_text.insert(tk.END, f"Poprawnie powtórzone słowa: {len(poprawne_słowa)}/{len(słowa_w_rozdziale)}\n")
+        """
+        Display the statistics and end the application.
+        """
+        self.close()
+        self.statystyki_window = QtWidgets.QWidget()
+        self.statystyki_window.setWindowTitle("Aplikacja UwuBiś - Statystyki")
+        layout = QtWidgets.QVBoxLayout()
+        self.statystyki_window.setLayout(layout)
+        self.statystyki_text = QtWidgets.QTextEdit()
+        self.statystyki_text.setReadOnly(True)
+        layout.addWidget(self.statystyki_text)
+        self.statystyki_text.append(f"Poprawnie powtórzone słowa: {len(poprawne_słowa)}/{len(słowa_w_rozdziale)}\n")
         for i, (słowo, powtórzone) in enumerate(zip(słowa_w_rozdziale, powtórzone_słowa), start=1):
-             self.statystyki_text.insert(tk.END, f"{i}. {słowo} -> {powtórzone}\n")
-        tk.Button(self.root, text="Zakończ", command=self.root.destroy).pack(pady=10)
-        tk.Button(self.root, text="Cofnij", command=self.go_back).pack(pady=10)
-        self.root.mainloop()
+            self.statystyki_text.append(f"{i}. {słowo} -> {powtórzone}\n")
+        close_button = QtWidgets.QPushButton("Zakończ")
+        close_button.clicked.connect(self.statystyki_window.close)
+        layout.addWidget(close_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.go_back)
+        layout.addWidget(back_button)
+        self.statystyki_window.show()
 
     def wyświetl_statystyki(self, słowa_w_rozdziale, poprawne_słowa, powtórzone_słowa):
-        self.statystyki_text = tk.Text(self.root, height=10, width=40)
-        self.statystyki_text.pack()
-        self.statystyki_text.insert(tk.END, f"Poprawnie powtórzone słowa: {len(poprawne_słowa)}/{len(słowa_w_rozdziale)}\n")
+        """
+        Display the statistics.
+        """
+        self.statystyki_text = QtWidgets.QTextEdit()
+        self.statystyki_text.setReadOnly(True)
+        self.layout().addWidget(self.statystyki_text)
+        self.statystyki_text.append(f"Poprawnie powtórzone słowa: {len(poprawne_słowa)}/{len(słowa_w_rozdziale)}\n")
         for i, (słowo, powtórzone) in enumerate(zip(słowa_w_rozdziale, powtórzone_słowa), start=1):
-            self.statystyki_text.insert(tk.END, f"{i}. {słowo} -> {powtórzone}\n")
+            self.statystyki_text.append(f"{i}. {słowo} -> {powtórzone}\n")
 
         # przyciski
-        tk.Button(self.root, text="Odtwórz to samo audio", command=lambda: self.powtórz_audio(self.current_chapter)).pack(pady=10)
-        tk.Button(self.root, text="Dalej", command=self.odtwórz_kolejny_audio).pack(pady=10)
-        tk.Button(self.root, text="Zakończ", command=self.root.destroy).pack(pady=10)
-        tk.Button(self.root, text="Cofnij", command=self.go_back).pack(pady=10)
-
+        repeat_audio_button = QtWidgets.QPushButton("Odtwórz to samo audio")
+        repeat_audio_button.clicked.connect(lambda: self.powtórz_audio(self.current_chapter))
+        self.layout().addWidget(repeat_audio_button)
+        next_audio_button = QtWidgets.QPushButton("Dalej")
+        next_audio_button.clicked.connect(self.odtwórz_kolejny_audio)
+        self.layout().addWidget(next_audio_button)
+        close_button = QtWidgets.QPushButton("Zakończ")
+        close_button.clicked.connect(self.close)
+        self.layout().addWidget(close_button)
+        back_button = QtWidgets.QPushButton("Cofnij")
+        back_button.clicked.connect(self.wybierz_folder_audio_screen)
+        self.layout().addWidget(back_button)
 
     def odtwórz_kolejny_audio(self):
+        """
+        Play the next audio chapter.
+        """
         self.current_chapter += 1
         if self.current_chapter < len(self.rozdziały):
-            self.root.destroy()
+            self.close()
             threading.Thread(target=self.przebieg_testu, args=(self.current_chapter,)).start()
         else:
-             tk.messagebox.showinfo("Koniec", "To był ostatni rozdział.")
+            QtWidgets.QMessageBox.information(self, "Koniec", "To był ostatni rozdział.")
 
     def go_back(self):
+        """
+        Go back to the previous screen.
+        """
         if self.ekrany:
-            self.aktualny_ekran.pack_forget()
+            self.clear_screen()
             self.aktualny_ekran = self.ekrany.pop()
-            self.aktualny_ekran.pack(fill="both", expand=True)
+            self.setLayout(self.aktualny_ekran)
+
+    def clear_screen(self):
+        """
+        Clear the current screen.
+        """
+        for i in reversed(range(self.layout().count())):
+            widget = self.layout().itemAt(i).widget()
+            if widget is not None:
+                widget.deleteLater()
+
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = Aplikacja(root)
-    root.mainloop()
+    if getattr(sys, 'frozen', False):
+        os.chdir(sys._MEIPASS)
+    app = QtWidgets.QApplication(sys.argv)
+    window = uwubis()
+    window.show()
+    sys.exit(app.exec_())
