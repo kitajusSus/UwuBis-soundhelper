@@ -8,7 +8,7 @@ import unicodedata
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                             QPushButton, QLabel, QLineEdit, QListWidget, 
                             QMessageBox, QFileDialog, QTextEdit)
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt, QTimer, QTime
 from library import zapisz_wynik, rozpoznaj_slowa_z_pliku, powtorz_słowa, odtwarzaj_audio
 import pygame  
 from library import AUDIOLIB
@@ -18,6 +18,7 @@ class Config:
     WORDS_PER_CHAPTER = 5
     RESULTS_FOLDER = "wyniki/"
     AUDIO_FOLDER = "audio/demony/"
+    SPEAKING_TIME = 10  # Time in seconds for speaking
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -28,6 +29,7 @@ class MainWindow(QMainWindow):
         self.initVariables()
         self.current_segment = 0
         self.total_segments = 0
+        self.elapsed_time = 0
         
     def initVariables(self):
         self.login = ""
@@ -123,6 +125,18 @@ class MainWindow(QMainWindow):
         
         QTimer.singleShot(1000, self.playCurrentSegment)
 
+    def counting(self): 
+        self.time_label = QLabel("PLACEHOLDER")
+        self.speak_label.setStyleSheet("QLabel { color: blue; font-size: 24px; font-weight: bold; }")
+
+        for i in range(0, self.config.SPEAKING_TIME):
+                self.time_label = QLabel(f"Pozostało: {self.config.SPEAKING_TIME - i}")
+                self.layout.addWidget(self.time_label)
+                time.sleep(1)
+                self.time_label.deleteLater()
+                """QApplication.processEvents()"""
+
+
     def playCurrentSegment(self):
         try:
             self.clearLayout()
@@ -141,22 +155,33 @@ class MainWindow(QMainWindow):
             if not current_words:
                 raise Exception("Nie udało się odtworzyć segmentu")
             
-            # Show 'speak now' message
+            # Show 'speak now' message with timer
             self.clearLayout()
-            speak_label = QLabel("TERAZ MOŻESZ MÓWIĆ!")
-            speak_label.setStyleSheet("QLabel { color: red; font-size: 24px; font-weight: bold; }")
-            speak_label.setAlignment(Qt.AlignCenter)
-            self.layout.addWidget(speak_label)
+            self.speak_label = QLabel("TERAZ MOŻESZ MÓWIĆ!")
+            self.speak_label.setStyleSheet("QLabel { color: red; font-size: 24px; font-weight: bold; }")
+            self.speak_label.setAlignment(Qt.AlignCenter)
+            self.layout.addWidget(self.speak_label)
+            #zegar nasz
+            
+            self.countdown_thread = threading.Thread(target=self.counting)
+            self.countdown_thread.start()
+
+
+            """# Start countdown timer
+            self.time_remaining = self.config.SPEAKING_TIME
+            self.countdown_timer.start(1000)  # Fire every second
             
             QApplication.processEvents()
-            time.sleep(1)
+            time.sleep(1)"""
             
             poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words)
             self.showSegmentResults(poprawne_slowa, powtórzone_słowa)
             
         except Exception as e:
+            self.countdown_thread._stop()
             QMessageBox.critical(self, "Błąd", f"Wystąpił błąd podczas testu: {e}")
 
+    
     def showSegmentResults(self, poprawne_slowa, powtórzone_słowa, is_replay=False):
         """Wyświetla wyniki segmentu, uwzględniając powtórki."""
         self.clearLayout()

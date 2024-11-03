@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from main import Main
+from dodatkowy_kod.main import Main
 
 class App:
     def __init__(self, root):
