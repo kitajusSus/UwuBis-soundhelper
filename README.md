@@ -14,7 +14,7 @@
   - `numpy` 2.1.1
   - `pandas` 2.1.1
   - `openpyxl` 3.1.2
-
+KArol
 Instalacja bibliotek
 ```sh
 pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
