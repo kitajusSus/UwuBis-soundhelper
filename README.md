@@ -15,6 +15,9 @@
   - `pandas` 2.1.1
   - `openpyxl` 3.1.2
 
+
+
+
 Instalacja bibliotek
 ```sh
 pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
@@ -28,8 +31,8 @@ Uruchom skrypt:
 ```python
 python main.py
 ```
-
-
+### Dokumentacja bibliotek
+- [QTPY](https://doc.qt.io/qtforpython-6/overviews/timers.html)
 ## Ogólne wytłumaczenie poszczególnych funkcji. 
 
 1. Losowanie pliku audio: Skrypt losuje plik audio z katalogu.
