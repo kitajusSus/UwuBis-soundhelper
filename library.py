@@ -21,68 +21,104 @@ logging.basicConfig(
 Funkcje pomocnicze do programu UwuBiś.
 """
 
-class AudioHelper:
+class AUDIOLIB:
     def __init__(self, config):
         self.config = config
         self.audio_duration = 0
-        self.current_chapter = 0
+        self.current_segment = 0
         self.słowa_w_pliku = []
-        self.rozdziały = []
+        self.segments = []
+        self.current_segment_audio = None  # Store current segment audio data
+        self.current_segment_sr = None     # Store current segment sample rate
+        self.segment_positions = []  # Store start positions for each segment
 
     def load_audio_file(self, file_path):
-        """Ładuje plik audio i przygotowuje rozdziały."""
+        """Ładuje plik audio i dzieli na 5-słowne segmenty."""
         try:
-            audio_data, samplerate = sf.read(file_path)
-            self.audio_duration = len(audio_data) / samplerate
+            self.audio_data, self.samplerate = sf.read(file_path)
+            self.audio_duration = len(self.audio_data) / self.samplerate
             self.słowa_w_pliku = rozpoznaj_slowa_z_pliku(file_path)
-            self.current_chapter = 0
-            self.rozdziały = [
-                self.słowa_w_pliku[i:i + self.config.WORDS_PER_CHAPTER] 
-                for i in range(0, len(self.słowa_w_pliku), self.config.WORDS_PER_CHAPTER)
-            ]
+            self.current_segment = 0
+            
+            # Calculate segment positions and durations
+            total_duration = self.audio_duration
+            segment_duration = total_duration / len(self.słowa_w_pliku)
+            
+            # Divide words into segments and store their positions
+            self.segments = []
+            self.segment_positions = []
+            for i in range(0, len(self.słowa_w_pliku), 5):
+                segment = self.słowa_w_pliku[i:i + 5]
+                if segment:
+                    self.segments.append(segment)
+                    start_pos = i * segment_duration
+                    self.segment_positions.append(start_pos)
+            
             return True
         except Exception as e:
-            logging.error(f"Błąd podczas ładowania pliku audio: {str(e)}")
+            logging.error(f"Blad podczas ladowania pliku audio: {str(e)}")
             return False
 
-    def get_audio_files(self, folder_path):
-        """Zwraca listę plików audio w folderze."""
+    def play_segment(self, segment_idx, file_path):
+        """Odtwarza segment audio."""
         try:
-            return [f for f in os.listdir(folder_path) if f.endswith('.wav')]
-        except Exception as e:
-            logging.error(f"Błąd podczas listowania plików audio: {str(e)}")
-            return []
-
-    def play_chapter(self, chapter_idx, file_path):
-        """Odtwarza rozdział audio."""
-        try:
-            start_time = chapter_idx * self.config.DEFAULT_SEGMENT_DURATION
-            current_words = self.rozdziały[chapter_idx]
+            if segment_idx >= len(self.segment_positions):
+                return []
+                
+            start_time = self.segment_positions[segment_idx]
+            duration = self.config.DEFAULT_SEGMENT_DURATION
+            current_words = self.segments[segment_idx]
             
-            audio_thread = threading.Thread(
-                target=odtwarzaj_audio,
-                kwargs={
-                    'plik_audio': file_path,
-                    'words': current_words,
-                    'start_time': start_time,
-                    'duration': self.config.DEFAULT_SEGMENT_DURATION
-                }
-            )
-            audio_thread.start()
-            audio_thread.join()
+            # Calculate and store segment audio
+            start_frame = int(start_time * self.samplerate)
+            duration_frames = int(duration * self.samplerate)
+            self.current_segment_audio = self.audio_data[start_frame:start_frame + duration_frames]
+            self.current_segment_sr = self.samplerate
+            
+            self._play_segment_audio()
             return current_words
         except Exception as e:
-            logging.error(f"Błąd podczas odtwarzania rozdziału: {str(e)}")
+            logging.error(f"Blad podczas odtwarzania segmentu: {str(e)}")
             return []
 
-    def has_next_chapter(self):
-        """Sprawdza czy istnieje następny rozdział."""
-        return self.current_chapter < len(self.rozdziały)
+    def replay_current_segment(self):
+        """Powtarza odtwarzanie aktualnego segmentu."""
+        if self.current_segment_audio is not None:
+            try:
+                self._play_segment_audio()
+                return True
+            except Exception as e:
+                logging.error(f"Blad podczas powtarzania segmentu: {str(e)}")
+        return False
 
-    def get_current_words(self):
-        """Zwraca słowa z aktualnego rozdziału."""
-        if self.current_chapter < len(self.rozdziały):
-            return self.rozdziały[self.current_chapter]
+    def _play_segment_audio(self):
+        """Wewnętrzna metoda do odtwarzania segmentu."""
+        temp_file_path = None
+        try:
+            temp_file_path = os.path.abspath(f'temp_segment_{int(time.time())}.wav')
+            sf.write(temp_file_path, self.current_segment_audio, self.current_segment_sr)
+            
+            pygame.mixer.init()
+            pygame.mixer.music.load(temp_file_path)
+            pygame.mixer.music.play()
+            time.sleep(self.config.DEFAULT_SEGMENT_DURATION)
+            pygame.mixer.music.stop()
+        finally:
+            pygame.mixer.quit()
+            if temp_file_path and os.path.exists(temp_file_path):
+                try:
+                    os.remove(temp_file_path)
+                except Exception as e:
+                    logging.error(f"Nie udało się usunąć pliku tymczasowego: {str(e)}")
+
+    def get_total_segments(self):
+        """Zwraca całkowitą liczbę segmentów."""
+        return len(self.segments)
+
+    def get_current_segment_words(self):
+        """Zwraca słowa z aktualnego segmentu."""
+        if 0 <= self.current_segment < len(self.segments):
+            return self.segments[self.current_segment]
         return []
 
 def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu):
@@ -112,7 +148,7 @@ def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa
         df_final.to_excel(nazwa_pliku, index=False)
         logging.info(f"Zapisano wynik dla użytkownika {login}")
     except Exception as e:
-        logging.error(f"Błąd podczas zapisywania wyniku: {str(e)}")
+        logging.error(f"Blad podczas zapisywania wyniku: {str(e)}")
         raise
 
 def rozpoznaj_slowa_z_pliku(nazwa_pliku, ile_slow=5):
@@ -127,10 +163,10 @@ def rozpoznaj_slowa_z_pliku(nazwa_pliku, ile_slow=5):
             words = text.split()
             return words[:ile_slow]
     except sr.UnknownValueError:
-        logging.warning("Nie rozpoznano żadnych słów.")
+        logging.warning("Nie rozpoznano zadnych slow.")
         return []
     except Exception as e:
-        logging.error(f"Błąd podczas rozpoznawania słów: {str(e)}")
+        logging.error(f"Blad podczas rozpoznawania slow: {str(e)}")
         return []
 
 def losuj_plik_audio(katalog):
@@ -143,7 +179,7 @@ def losuj_plik_audio(katalog):
             raise ValueError("Brak plików audio w katalogu")
         return os.path.join(katalog, random.choice(pliki))
     except Exception as e:
-        logging.error(f"Błąd podczas losowania pliku: {str(e)}")
+        logging.error(f"Blad podczas losowania pliku: {str(e)}")
         raise
 
 def powtorz_słowa(słowa):
