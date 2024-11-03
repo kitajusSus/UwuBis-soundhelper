@@ -29,7 +29,11 @@ class MainWindow(QMainWindow):
         self.initVariables()
         self.current_segment = 0
         self.total_segments = 0
-        self.elapsed_time = 0
+        self.countdown_timer = QTimer(self)  # Make sure timer belongs to self
+        self.countdown_timer.timeout.connect(self.countdown)
+        self.countdown_timer.setInterval(1000)  # Set fixed interval
+        self.time_remaining = 0
+        self.time_label = None
         
     def initVariables(self):
         self.login = ""
@@ -125,17 +129,16 @@ class MainWindow(QMainWindow):
         
         QTimer.singleShot(1000, self.playCurrentSegment)
 
-    def counting(self): 
-        self.time_label = QLabel("PLACEHOLDER")
-        self.speak_label.setStyleSheet("QLabel { color: blue; font-size: 24px; font-weight: bold; }")
-
-        for i in range(0, self.config.SPEAKING_TIME):
-                self.time_label = QLabel(f"Pozostało: {self.config.SPEAKING_TIME - i}")
-                self.layout.addWidget(self.time_label)
-                time.sleep(1)
-                self.time_label.deleteLater()
-                """QApplication.processEvents()"""
-
+    def countdown(self):
+        """Aktualizuje wyświetlany czas pozostały."""
+        if self.time_remaining >= 0:
+            self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
+            self.time_remaining -= 1
+            QApplication.processEvents()  # Force GUI update
+        else:
+            self.countdown_timer.stop()
+            self.time_label.setText("CZAS MINĄŁ!")
+            self.time_label.setStyleSheet("QLabel { color: #ff0000; font-size: 24px; font-weight: bold; }")
 
     def playCurrentSegment(self):
         try:
@@ -157,28 +160,57 @@ class MainWindow(QMainWindow):
             
             # Show 'speak now' message with timer
             self.clearLayout()
+            
             self.speak_label = QLabel("TERAZ MOŻESZ MÓWIĆ!")
             self.speak_label.setStyleSheet("QLabel { color: red; font-size: 24px; font-weight: bold; }")
             self.speak_label.setAlignment(Qt.AlignCenter)
             self.layout.addWidget(self.speak_label)
-            #zegar nasz
-            
-            self.countdown_thread = threading.Thread(target=self.counting)
-            self.countdown_thread.start()
 
+            # Dodaj label do wyświetlania czasu
+            self.time_label = QLabel()
+            self.time_label.setStyleSheet("QLabel { font-size: 18px; }")
+            self.time_label.setAlignment(Qt.AlignCenter)
+            self.layout.addWidget(self.time_label)
 
-            """# Start countdown timer
+            # Initialize timer
             self.time_remaining = self.config.SPEAKING_TIME
-            self.countdown_timer.start(1000)  # Fire every second
+            self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
             
-            QApplication.processEvents()
-            time.sleep(1)"""
+            # Start timer
+            self.countdown_timer.start()
+            QApplication.processEvents()  # Force initial GUI update
             
-            poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words)
+            # Record and recognize speech while keeping timer running
+            results_ready = False
+            poprawne_slowa = []
+            powtórzone_słowa = []
+            
+            def handle_recording():
+                nonlocal results_ready, poprawne_slowa, powtórzone_słowa
+                # Przekaż czas z GUI do funkcji nagrywającej
+                poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words, 
+                                                                timeout=self.config.SPEAKING_TIME)
+                results_ready = True
+            
+            # Start recording in separate thread
+            recording_thread = threading.Thread(target=handle_recording)
+            recording_thread.daemon = True  # Wątek zostanie zakończony gdy główny program się zakończy
+            recording_thread.start()
+            
+            # Wait for recording while keeping timer running
+            while not results_ready and self.time_remaining >= 0:
+                QApplication.processEvents()
+                time.sleep(0.1)
+            
+            # Ensure we stop everything properly
+            self.countdown_timer.stop()
+            if recording_thread.is_alive():
+                recording_thread.join(timeout=1.0)  # Give thread 1 second to finish
+                
             self.showSegmentResults(poprawne_slowa, powtórzone_słowa)
             
         except Exception as e:
-            self.countdown_thread._stop()
+            self.countdown_timer.stop()
             QMessageBox.critical(self, "Błąd", f"Wystąpił błąd podczas testu: {e}")
 
     
@@ -238,17 +270,18 @@ class MainWindow(QMainWindow):
 
     def replayCurrentSegment(self):
         """Powtarza odtwarzanie aktualnego segmentu dla nowej próby."""
+        self.clearLayout()
         try:
             self.clearLayout()
             
             # Show replay message
+            
             replay_label = QLabel("Powtórka segmentu - spróbuj jeszcze raz!")
             replay_label.setStyleSheet("QLabel { color: blue; font-size: 18px; }")
-            replay_label.setAlignment(Qt.AlignCenter)
+            replay_label.setAlignment(Qt.AlignBottom | Qt.AlignRight)
             self.layout.addWidget(replay_label)
             
             QApplication.processEvents()
-            time.sleep(1)
             
             # Play audio again
             if not self.audio_helper.replay_current_segment():
@@ -260,9 +293,17 @@ class MainWindow(QMainWindow):
             speak_label.setStyleSheet("QLabel { color: red; font-size: 24px; font-weight: bold; }")
             speak_label.setAlignment(Qt.AlignCenter)
             self.layout.addWidget(speak_label)
-            QApplication.processEvents()
             
-            time.sleep(1)
+            # Add timer label
+            self.time_label = QLabel()
+            self.time_label.setStyleSheet("QLabel { font-size: 18px; }")
+            self.time_label.setAlignment(Qt.AlignCenter)
+            self.layout.addWidget(self.time_label)
+
+            # Initialize and start timer
+            self.time_remaining = self.config.SPEAKING_TIME
+            self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
+            self.countdown_timer.start()
             
             # Get new attempt
             current_words = self.audio_helper.get_current_segment_words()

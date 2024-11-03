@@ -47,11 +47,5 @@ TAK MA BYĆ POTEM
 
 
 ## Błędy / bugi 
-1. ***Odtwórz to samo audio.***
-jak klikam to 
-```bash
- File "d:\python projekty\UwuBis-soundhelper\main.py", line 201, in <lambda>
-    tk.Button(self.root, text="Odtwórz to samo audio", command=lambda: self.powtórz_audio(self.current_chapter)).pack(pady=10)
-                                                                                          ^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Aplikacja' object has no attribute 'current_chapter'
-```
+1. Niebieski napis 
+przestawić przy powtórce by sie nie nakładał na napis czerwony elo 

@@ -130,7 +130,7 @@ Już tłumaczę co to robi i po co, dla wygody rozbiję to na części:
 # n. Posłowie 
 Moja wizję rozwoju projektu opisałem w [dalszy rozwoj](dalszy_rozwoj.md). 
 
-
+##
 time() = 10
 
 elapsed_time = time()

@@ -182,7 +182,7 @@ def losuj_plik_audio(katalog):
         logging.error(f"Blad podczas losowania pliku: {str(e)}")
         raise
 
-def powtorz_słowa(słowa):
+def powtorz_słowa(słowa, timeout=None):
     """
     Nagrywa i rozpoznaje powtórzone słowa użytkownika.
     """
@@ -191,11 +191,15 @@ def powtorz_słowa(słowa):
         with sr.Microphone() as source:
             logging.info("Rozpoczęto nagrywanie")
             r.adjust_for_ambient_noise(source)
-            audio = r.listen(source, timeout=10)
+            # Używamy timeout z GUI jeśli jest podany
+            audio = r.listen(source, timeout=timeout if timeout else 10)
             
             powtórzone_słowa = r.recognize_google(audio, language="pl-PL").split()
             poprawne_słowa = list(set(słowa) & set(powtórzone_słowa))
             return poprawne_słowa, powtórzone_słowa
+    except sr.WaitTimeoutError:
+        logging.warning("Przekroczono czas oczekiwania na mowę")
+        return [], []
     except sr.UnknownValueError:
         logging.warning("Nie rozpoznano żadnych słów")
         return [], []
