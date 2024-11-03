@@ -122,3 +122,44 @@ Już tłumaczę co to robi i po co, dla wygody rozbiję to na części:
 
 # n. Posłowie 
 Moja wizję rozwoju projektu opisałem w [dalszy rozwoj](dalszy_rozwoj.md). 
+
+
+time() = 10
+
+elapsed_time = time()
+
+while (3420 - 343 >=  speaking_time){
+
+
+    doing()
+    elapsed_time += 1
+
+}
+
+
+speaking_second = 343
+
+
+
+
+0 - 0 >= 10
+
+1 - 0 >= speaking_time
+
+
+2 - 0 >= speaking_time
+
+
+
+
+start_time = 0
+
+while ()
+{
+
+
+    speaking()
+
+
+
+}
