@@ -23,12 +23,12 @@ pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
 [*DO ZROBIENIA*]
 
 ### ~Uruchamianie~
-~Umieść plik audio (np. audio1.wav) w katalogu audio~
+~~Umieść plik audio (np. audio1.wav) w katalogu audio~~
 
-~~Uruchom skrypt:
+~~Uruchom skrypt~~:
 ```python
 python main.py
-```~~
+```
 ### 0.1 Dokumentacja bibliotek
 - [QTPY](https://doc.qt.io/qtforpython-6/overviews/timers.html)
 ## 0.2 Ogólne wytłumaczenie poszczególnych funkcji. 
