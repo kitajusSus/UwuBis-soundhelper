@@ -14,30 +14,24 @@
   - `numpy` 2.1.1
   - `pandas` 2.1.1
   - `openpyxl` 3.1.2
-<<<<<<< HEAD
 
-
-
-
-=======
-KArol
->>>>>>> 7560fbc51cb0d2cc0c766efc2206b78647031980
 Instalacja bibliotek
 ```sh
 pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
 ```
 ## Tworzenie wirtualnego środowiska (opcjonalne)
+[*DO ZROBIENIA*]
 
-### Uruchamianie
-Umieść plik audio (np. audio1.wav) w katalogu audio\
+### ~Uruchamianie~
+~~Umieść plik audio (np. audio1.wav) w katalogu audio~~
 
-Uruchom skrypt:
+~~Uruchom skrypt~~:
 ```python
-python main.py
+python main_new.py
 ```
-### Dokumentacja bibliotek
+### 0.1 Dokumentacja bibliotek
 - [QTPY](https://doc.qt.io/qtforpython-6/overviews/timers.html)
-## Ogólne wytłumaczenie poszczególnych funkcji. 
+## 0.2 Ogólne wytłumaczenie poszczególnych funkcji. 
 
 1. Losowanie pliku audio: Skrypt losuje plik audio z katalogu.
 2. Odtwarzanie pliku audio: Skrypt odtwarza wybrany plik audio, aby użytkownik mógł go usłyszeć.
@@ -46,9 +40,10 @@ python main.py
 5. Porównywanie słów: Skrypt porównuje słowa wypowiedziane przez użytkownika z oryginalnymi słowami z pliku audio.
 6. Zapisywanie wyników: Skrypt zapisuje wyniki do pliku Excel, w którym znajdują się informacje o poprawnie i niepoprawnie powtórzonych słowach.
 
-## Wytłumacznie właściwości kodu, co do czego i po co.
+## 2. Wytłumacznie właściwości kodu, co do czego i po co.
+Tutaj tłumacze konkretne funcje bibliotek jak działają, a całe elementy kodu są wytłumaczone dokładniej w [WYTŁUMACZENIE](explaining.md)
 
-### 1. `threading`
+### 2.1. `threading`
 1. `threading` to standardowy moduł Pythona służący do obsługi wielowątkowości. Pozwala na:
 - Równoległe wykonywanie zadań
 - Zarządzanie wieloma operacjami jednocześnie
@@ -130,7 +125,7 @@ Już tłumaczę co to robi i po co, dla wygody rozbiję to na części:
 # n. Posłowie 
 Moja wizję rozwoju projektu opisałem w [dalszy rozwoj](dalszy_rozwoj.md). 
 
-##
+## Brudnopis Karol + krzys
 time() = 10
 
 elapsed_time = time()
