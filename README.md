@@ -27,7 +27,7 @@ pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
 
 ~~Uruchom skrypt~~:
 ```python
-python main.py
+python main_new.py
 ```
 ### 0.1 Dokumentacja bibliotek
 - [QTPY](https://doc.qt.io/qtforpython-6/overviews/timers.html)
