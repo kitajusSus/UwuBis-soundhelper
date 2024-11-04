@@ -22,8 +22,8 @@ pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
 ## Tworzenie wirtualnego środowiska (opcjonalne)
 [*DO ZROBIENIA*]
 
-### Uruchamianie
-Umieść plik audio (np. audio1.wav) w katalogu audio\
+~### Uruchamianie~
+~Umieść plik audio (np. audio1.wav) w katalogu audio\~
 
 Uruchom skrypt:
 ```python
