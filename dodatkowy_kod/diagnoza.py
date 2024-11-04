@@ -60,7 +60,8 @@ print(f'Diagnoza: {diagnoza}')
 
 
 
-"""from openai import OpenAI
+"""python
+from openai import OpenAI
 
 # Ustaw API key
 API_KEY = "YOUR_API_KEY_HERE"
