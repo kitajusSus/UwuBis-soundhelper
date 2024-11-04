@@ -3,6 +3,7 @@ import sys
 import time
 import datetime
 import threading
+import logging
 import soundfile as sf
 import unicodedata
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
@@ -13,33 +14,42 @@ from library import zapisz_wynik, rozpoznaj_slowa_z_pliku, powtorz_słowa, odtwa
 import pygame  
 from library import AUDIOLIB
 
+
+
 class Config:
     DEFAULT_SEGMENT_DURATION = 5
     WORDS_PER_CHAPTER = 5
     RESULTS_FOLDER = "wyniki/"
     AUDIO_FOLDER = "audio/demony/"
-    SPEAKING_TIME = 10  # Time in seconds for speaking
+    SPEAKING_TIME = 10  # Stały czas na odpowiedź - nie zmieniać
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.config = Config()
-        self.audio_helper = AUDIOLIB(self.config)
-        self.initUI()
-        self.initVariables()
-        self.current_segment = 0
-        self.total_segments = 0
-        self.countdown_timer = QTimer(self)  # Make sure timer belongs to self
+        logging.info("Window initialization started")
+        
+        # Initialize variables first
+        self.countdown_timer = QTimer(self)
         self.countdown_timer.timeout.connect(self.countdown)
-        self.countdown_timer.setInterval(1000)  # Set fixed interval
+        self.countdown_timer.setInterval(1000)
         self.time_remaining = 0
         self.time_label = None
+        self.is_timer_active = False
         
-    def initVariables(self):
+        # Initialize other attributes
+        self.config = Config()
+        self.audio_helper = AUDIOLIB(self.config)
+        self.current_segment = 0
+        self.total_segments = 0
+        
+        # Initialize variables from config
         self.login = ""
         self.folder_zapisu = self.config.RESULTS_FOLDER
         self.katalog_audio = self.config.AUDIO_FOLDER
         self.plik_audio = None
+        
+        # Setup UI last
+        self.initUI()
         
     def initUI(self):
         self.setWindowTitle('UwuBiś')
@@ -118,42 +128,70 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Błąd", "Nie udało się załadować pliku audio")
 
     def startSegmentTest(self):
+        """Rozpoczyna test dla aktualnego segmentu."""
         if self.current_segment >= self.total_segments:
             QMessageBox.information(self, "Koniec", "Ukończono wszystkie segmenty!")
             self.showAudioFiles()
             return
             
         self.clearLayout()
-        info_label = QLabel(f"Przygotuj się do odsłuchania segmentu {self.current_segment + 1} z {self.total_segments}...")
-        self.layout.addWidget(info_label)
         
-        QTimer.singleShot(1000, self.playCurrentSegment)
+        # Show segment progress
+        progress_label = QLabel(f"Segment {self.current_segment + 1} z {self.total_segments}")
+        progress_label.setStyleSheet("QLabel { font-size: 16px; font-weight: bold; }")
+        progress_label.setAlignment(Qt.AlignCenter)
+        self.layout.addWidget(progress_label)
+        
+        # Show word count
+        words = self.audio_helper.get_current_segment_words()
+        word_label = QLabel(f"Słowa w tym segmencie: {len(words)}")
+        word_label.setAlignment(Qt.AlignCenter)
+        self.layout.addWidget(word_label)
+        
+        # Add start button
+        start_btn = QPushButton("Rozpocznij segment")
+        start_btn.clicked.connect(self.playCurrentSegment)
+        self.layout.addWidget(start_btn)
 
     def countdown(self):
         """Aktualizuje wyświetlany czas pozostały."""
+        if not self.is_timer_active or not self.time_label:
+            self.countdown_timer.stop()
+            return
+            
         if self.time_remaining >= 0:
-            self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
-            self.time_remaining -= 1
-            QApplication.processEvents()  # Force GUI update
+            try:
+                self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
+                self.time_remaining -= 1
+                QApplication.processEvents()
+            except RuntimeError:
+                self.countdown_timer.stop()
+                self.is_timer_active = False
         else:
             self.countdown_timer.stop()
-            self.time_label.setText("CZAS MINĄŁ!")
-            self.time_label.setStyleSheet("QLabel { color: #ff0000; font-size: 24px; font-weight: bold; }")
+            self.is_timer_active = False
+            if self.time_label:
+                try:
+                    self.time_label.setText("CZAS MINĄŁ!")
+                    self.time_label.setStyleSheet("QLabel { color: #ff0000; font-size: 24px; font-weight: bold; }")
+                except RuntimeError:
+                    pass
 
     def playCurrentSegment(self):
         try:
             self.clearLayout()
             
-            # Show progress
+            # Show progress and instructions
             progress_label = QLabel(f"Segment {self.current_segment + 1} z {self.total_segments}")
+            progress_label.setStyleSheet("QLabel { font-size: 16px; font-weight: bold; }")
             self.layout.addWidget(progress_label)
             
-            listening_label = QLabel("Słuchaj uważnie...")
+            listening_label = QLabel("Słuchaj uważnie następnych 5 słów...")
             self.layout.addWidget(listening_label)
             
             QApplication.processEvents()
             
-            # Play current segment
+            # Play current 5-word segment
             current_words = self.audio_helper.play_segment(self.current_segment, self.plik_audio)
             if not current_words:
                 raise Exception("Nie udało się odtworzyć segmentu")
@@ -176,114 +214,64 @@ class MainWindow(QMainWindow):
             self.time_remaining = self.config.SPEAKING_TIME
             self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
             
-            # Start timer
-            self.countdown_timer.start()
-            QApplication.processEvents()  # Force initial GUI update
-            
-            # Record and recognize speech while keeping timer running
+            # Start timer and recording
             results_ready = False
             poprawne_slowa = []
             powtórzone_słowa = []
             
             def handle_recording():
                 nonlocal results_ready, poprawne_slowa, powtórzone_słowa
-                # Przekaż czas z GUI do funkcji nagrywającej
-                poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words, 
-                                                                timeout=self.config.SPEAKING_TIME)
+                poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words, timeout=10.0)
                 results_ready = True
             
-            # Start recording in separate thread
             recording_thread = threading.Thread(target=handle_recording)
-            recording_thread.daemon = True  # Wątek zostanie zakończony gdy główny program się zakończy
+            recording_thread.daemon = True
             recording_thread.start()
             
             # Wait for recording while keeping timer running
-            while not results_ready and self.time_remaining >= 0:
+            start_time = time.time()
+            end_time = start_time + 10.0  # Full 10 seconds duration
+            
+            while time.time() < end_time and not results_ready:
+                current_time = time.time()
+                remaining = end_time - current_time
+                
+                # Update timer display
+                self.time_remaining = max(0, int(remaining))
+                if self.time_label:
+                    self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
+                
+                # Process events and short sleep
                 QApplication.processEvents()
                 time.sleep(0.1)
-            
+
             # Ensure we stop everything properly
             self.countdown_timer.stop()
+            self.is_timer_active = False
             if recording_thread.is_alive():
-                recording_thread.join(timeout=1.0)  # Give thread 1 second to finish
+                recording_thread.join(timeout=1.0)
                 
             self.showSegmentResults(poprawne_slowa, powtórzone_słowa)
-            
+
         except Exception as e:
+            self.is_timer_active = False
             self.countdown_timer.stop()
             QMessageBox.critical(self, "Błąd", f"Wystąpił błąd podczas testu: {e}")
 
-    
-    def showSegmentResults(self, poprawne_slowa, powtórzone_słowa, is_replay=False):
-        """Wyświetla wyniki segmentu, uwzględniając powtórki."""
-        self.clearLayout()
-        
-        results_text = QTextEdit()
-        results_text.setReadOnly(True)
-        current_words = self.audio_helper.get_current_segment_words()
-        wynik = f"{len(poprawne_slowa)}/{len(current_words)}"
-        
-        # Add attempt info if it's a replay
-        attempt_info = " (Powtórka)" if is_replay else ""
-        results_text.append(f"Wynik segmentu {self.current_segment + 1}{attempt_info}: {wynik}\n")
-        results_text.append(f"Słowa do powtórzenia: {', '.join(current_words)}\n")
-        results_text.append(f"Twoje słowa: {', '.join(powtórzone_słowa)}\n")
-        results_text.append(f"Poprawne słowa: {', '.join(poprawne_slowa)}\n")
-        
-        # Add confirmation message for next segment
-        if self.current_segment + 1 < self.total_segments:
-            next_segment_label = QLabel("Czy chcesz przejść do następnych 5 słów?")
-            next_segment_label.setStyleSheet("QLabel { color: blue; font-size: 16px; }")
-            next_segment_label.setAlignment(Qt.AlignCenter)
-        
-        # Add buttons layout
-        button_layout = QHBoxLayout()
-        replay_btn = QPushButton("Powtórz obecne słowa")
-        
-        if self.current_segment + 1 < self.total_segments:
-            continue_btn = QPushButton("Tak, następne słowa")
-        else:
-            continue_btn = QPushButton("Zakończ")
-            
-        finish_btn = QPushButton("Wróć do wyboru pliku")
-        
-        replay_btn.clicked.connect(self.replayCurrentSegment)
-        continue_btn.clicked.connect(self.nextSegment)
-        finish_btn.clicked.connect(self.showAudioFiles)
-        
-        button_layout.addWidget(replay_btn)
-        button_layout.addWidget(continue_btn)
-        button_layout.addWidget(finish_btn)
-        
-        self.layout.addWidget(results_text)
-        if self.current_segment + 1 < self.total_segments:
-            self.layout.addWidget(next_segment_label)
-        self.layout.addLayout(button_layout)
-        
-        # Save results
-        nazwa_pliku = os.path.basename(self.plik_audio)
-        attempt_suffix = "_retry" if is_replay else ""
-        zapisz_wynik(self.login, 
-                    f"{nazwa_pliku}_segment_{self.current_segment + 1}{attempt_suffix}", 
-                    poprawne_slowa, powtórzone_słowa, 
-                    current_words, self.folder_zapisu)
-
     def replayCurrentSegment(self):
-        """Powtarza odtwarzanie aktualnego segmentu dla nowej próby."""
-        self.clearLayout()
         try:
             self.clearLayout()
             
             # Show replay message
-            
             replay_label = QLabel("Powtórka segmentu - spróbuj jeszcze raz!")
             replay_label.setStyleSheet("QLabel { color: blue; font-size: 18px; }")
-            replay_label.setAlignment(Qt.AlignBottom | Qt.AlignRight)
+            replay_label.setAlignment(Qt.AlignCenter)
             self.layout.addWidget(replay_label)
             
             QApplication.processEvents()
             
             # Play audio again
+            current_words = self.audio_helper.get_current_segment_words()
             if not self.audio_helper.replay_current_segment():
                 raise Exception("Nie można powtórzyć segmentu")
                 
@@ -300,25 +288,147 @@ class MainWindow(QMainWindow):
             self.time_label.setAlignment(Qt.AlignCenter)
             self.layout.addWidget(self.time_label)
 
-            # Initialize and start timer
+            # Reset and start timer
             self.time_remaining = self.config.SPEAKING_TIME
-            self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
-            self.countdown_timer.start()
             
             # Get new attempt
-            current_words = self.audio_helper.get_current_segment_words()
-            poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words)
+            results_ready = False
+            poprawne_slowa = []
+            powtórzone_słowa = []
             
-            # Show updated results with attempt number
+            def handle_recording():
+                nonlocal results_ready, poprawne_slowa, powtórzone_słowa
+                poprawne_slowa, powtórzone_słowa = powtorz_słowa(current_words, timeout=10.0)
+                results_ready = True
+            
+            recording_thread = threading.Thread(target=handle_recording)
+            recording_thread.daemon = True
+            recording_thread.start()
+            
+            # Wait for recording while keeping timer running
+            start_time = time.time()
+            end_time = start_time + 10.0  # Full 10 seconds duration
+            
+            while time.time() < end_time and not results_ready:
+                current_time = time.time()
+                remaining = end_time - current_time
+                
+                # Update timer display
+                self.time_remaining = max(0, int(remaining))
+                if self.time_label:
+                    self.time_label.setText(f"Pozostało: {self.time_remaining} sekund")
+                
+                # Process events and short sleep
+                QApplication.processEvents()
+                time.sleep(0.1)
+            
+            # Ensure we stop everything properly
+            self.countdown_timer.stop()
+            self.is_timer_active = False
+            if recording_thread.is_alive():
+                recording_thread.join(timeout=1.0)
+                
             self.showSegmentResults(poprawne_slowa, powtórzone_słowa, is_replay=True)
+            
         except Exception as e:
+            self.is_timer_active = False
+            self.countdown_timer.stop()
             QMessageBox.warning(self, "Błąd", f"Nie można powtórzyć segmentu: {e}")
+
+    def showSegmentResults(self, poprawne_slowa, powtórzone_słowa, is_replay=False):
+        """Wyświetla wyniki segmentu z lepszą nawigacją i porównaniem odpowiedzi."""
+        self.clearLayout()
+        
+        # Results display
+        self.results_text = QTextEdit()  # Make it instance variable
+        self.results_text.setReadOnly(True)
+        current_words = self.audio_helper.get_current_segment_words()
+        wynik = f"{len(poprawne_slowa)}/{len(current_words)}"
+        
+        # Show attempt info and progress
+        segment_info = f"Segment {self.current_segment + 1} z {self.total_segments}"
+        attempt_info = " (Powtórka)" if is_replay else ""
+        
+        self.results_text.append(f"{segment_info}{attempt_info}\n")
+        self.results_text.append(f"Wynik: {wynik}\n")
+        
+        # Ukryj słowa do powtórzenia początkowo
+        self.results_text.append("\nTwoje odpowiedzi:\n")
+        for word in powtórzone_słowa:
+            if word in current_words:
+                self.results_text.append(f"✓ {word} (prawidłowe)\n")
+            else:
+                self.results_text.append(f"✗ {word} (nieprawidłowe)\n")
+        
+        # Ustaw style dla tekstu
+        self.results_text.setStyleSheet("""
+            QTextEdit {
+                font-size: 12px;
+                line-height: 1;
+                padding: 10px;
+            }
+        """)
+        
+        self.layout.addWidget(self.results_text)
+        
+        # Add button to show reference words
+        show_words_btn = QPushButton("Pokaż słowa do powtórzenia")
+        show_words_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                padding: 8px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        """)
+        
+        def show_reference_words():
+            # Dodaj słowa referencyjne do wyników
+            self.results_text.append("\nSłowa do powtórzenia:\n")
+            for word in current_words:
+                if word in poprawne_slowa:
+                    self.results_text.append(f"✓ {word} (poprawnie powiedziane)\n")
+                else:
+                    self.results_text.append(f"✗ {word} (nie powiedziane)\n")
+            show_words_btn.setEnabled(False)  # Disable button after showing words
+        
+        show_words_btn.clicked.connect(show_reference_words)
+        self.layout.addWidget(show_words_btn)
+        
+        # Navigation buttons
+        btn_layout = QHBoxLayout()
+        
+        replay_btn = QPushButton("Powtórz ten segment")
+        replay_btn.clicked.connect(self.replayCurrentSegment)
+        btn_layout.addWidget(replay_btn)
+        
+        if self.current_segment + 1 < self.total_segments:
+            next_btn = QPushButton("Następne 5 słów")
+            next_btn.clicked.connect(self.nextSegment)
+            btn_layout.addWidget(next_btn)
+        
+        finish_btn = QPushButton("Zakończ ćwiczenie")
+        finish_btn.clicked.connect(self.showAudioFiles)
+        btn_layout.addWidget(finish_btn)
+        
+        self.layout.addLayout(btn_layout)
+        
+        # Save results
+        nazwa_pliku = os.path.basename(self.plik_audio)
+        attempt_suffix = "_retry" if is_replay else ""
+        zapisz_wynik(self.login, 
+                    f"{nazwa_pliku}_segment_{self.current_segment + 1}{attempt_suffix}", 
+                    poprawne_slowa, powtórzone_słowa, 
+                    current_words, self.folder_zapisu)
 
     def nextSegment(self):
         self.current_segment += 1
         self.startSegmentTest()
         
     def clearLayout(self):
+        self.is_timer_active = False  # Stop timer when clearing layout
+        self.countdown_timer.stop()
         while self.layout.count():
             child = self.layout.takeAt(0)
             if child.widget():
