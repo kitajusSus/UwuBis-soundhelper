@@ -14,14 +14,7 @@
   - `numpy` 2.1.1
   - `pandas` 2.1.1
   - `openpyxl` 3.1.2
-<<<<<<< HEAD
 
-
-
-
-=======
-KArol
->>>>>>> 7560fbc51cb0d2cc0c766efc2206b78647031980
 Instalacja bibliotek
 ```sh
 pip install speechrecognition sounddevice soundfile numpy pandas openpyxl
@@ -130,7 +123,7 @@ Już tłumaczę co to robi i po co, dla wygody rozbiję to na części:
 # n. Posłowie 
 Moja wizję rozwoju projektu opisałem w [dalszy rozwoj](dalszy_rozwoj.md). 
 
-##
+## Brudnopis Karol + krzys
 time() = 10
 
 elapsed_time = time()
