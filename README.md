@@ -40,6 +40,7 @@ python main.py
 6. Zapisywanie wyników: Skrypt zapisuje wyniki do pliku Excel, w którym znajdują się informacje o poprawnie i niepoprawnie powtórzonych słowach.
 
 ## Wytłumacznie właściwości kodu, co do czego i po co.
+Tutaj tłumacze konkretne funcje bibliotek jak działają, a całe elementy kodu są wytłumaczone dokładniej w [WYTŁUMACZENIE](explaining.md)
 
 ### 1. `threading`
 1. `threading` to standardowy moduł Pythona służący do obsługi wielowątkowości. Pozwala na:
