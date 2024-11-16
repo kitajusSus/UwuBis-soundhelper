@@ -89,7 +89,7 @@ class AUDIOLIB:
                 segment_idx = len(self.segments) - 1
                 self.segment_words_dict[segment_idx] = [word for word, _, _ in segment_words]
                 self.segment_positions.append(segment_start)
-                
+                ## giga combo jest, bedzie trudno
                 logging.info(f"Segment {segment_idx + 1}: {self.segment_words_dict[segment_idx]}")
             
             self.total_segments = len(self.segments)
@@ -138,7 +138,7 @@ class AUDIOLIB:
             pygame.mixer.init()
             pygame.mixer.music.load(temp_file_path)
             pygame.mixer.music.play()
-            
+           
             # Czekaj na zakończenie aktualnego segmentu
             while pygame.mixer.music.get_busy():
                 pygame.time.Clock().tick(10)
@@ -153,7 +153,7 @@ class AUDIOLIB:
                     os.remove(temp_file_path)
                 except Exception as e:
                     logging.error(f"Nie udało się usunąć pliku tymczasowego: {str(e)}")
-
+                    
     def _recognize_words_with_timestamps(self, file_path):
         """Rozpoznaje słowa wraz z ich czasami początku i końca."""
         r = sr.Recognizer()

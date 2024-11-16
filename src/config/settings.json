@@ -1,0 +1,7 @@
+{
+    "DEFAULT_SEGMENT_DURATION": 5,
+    "WORDS_PER_CHAPTER": 5,
+    "RESULTS_FOLDER": "wyniki/",
+    "AUDIO_FOLDER": "audio/demony/",
+    "SPEAKING_TIME": 10
+}

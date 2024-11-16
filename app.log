@@ -358,3 +358,52 @@
 2024-11-05 17:47:56,057 - INFO - Utworzono 2 segmentów po 5 s³ów
 2024-11-05 17:48:02,697 - INFO - Rozpoczêto nagrywanie
 2024-11-05 17:48:06,199 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-15 23:57:40,386 - INFO - Starting application...
+2024-11-15 23:59:16,725 - INFO - Starting application...
+2024-11-15 23:59:16,800 - INFO - Window initialization started
+2024-11-15 23:59:59,209 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-15 23:59:59,209 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
+2024-11-15 23:59:59,210 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
+2024-11-15 23:59:59,210 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
+2024-11-15 23:59:59,210 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
+2024-11-15 23:59:59,210 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
+2024-11-15 23:59:59,210 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
+2024-11-15 23:59:59,210 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
+2024-11-15 23:59:59,210 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
+2024-11-15 23:59:59,210 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
+2024-11-15 23:59:59,210 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
+2024-11-15 23:59:59,210 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-16 00:01:18,491 - INFO - Starting application...
+2024-11-16 00:01:18,512 - INFO - Window initialization started
+2024-11-16 00:01:42,181 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-16 00:01:42,181 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
+2024-11-16 00:01:42,182 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
+2024-11-16 00:01:42,182 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
+2024-11-16 00:01:42,182 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
+2024-11-16 00:01:42,182 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
+2024-11-16 00:01:42,182 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
+2024-11-16 00:01:42,182 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
+2024-11-16 00:01:42,182 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
+2024-11-16 00:01:42,182 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
+2024-11-16 00:01:42,182 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
+2024-11-16 00:01:42,182 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-16 00:04:17,102 - INFO - Starting application...
+2024-11-16 00:04:17,123 - INFO - Window initialization started
+2024-11-16 00:04:34,309 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-16 00:04:34,309 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
+2024-11-16 00:04:34,310 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
+2024-11-16 00:04:34,310 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
+2024-11-16 00:04:34,310 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
+2024-11-16 00:04:34,310 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
+2024-11-16 00:04:34,310 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
+2024-11-16 00:04:34,310 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
+2024-11-16 00:04:34,310 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
+2024-11-16 00:04:34,310 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
+2024-11-16 00:04:34,310 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
+2024-11-16 00:04:34,310 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-16 00:04:38,792 - INFO - Rozpoczêto nagrywanie
+2024-11-16 00:04:44,363 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-16 00:05:00,845 - INFO - Rozpoczêto nagrywanie
+2024-11-16 00:05:06,569 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-16 00:05:14,032 - INFO - Rozpoczêto nagrywanie
+2024-11-16 00:05:19,182 - INFO - Zapisano wynik dla u¿ytkownika test
