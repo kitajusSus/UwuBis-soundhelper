@@ -1,38 +1,71 @@
+//importtowanie standardowych bibliotek zig
 const std = @import("std");
 const c = @cImport({
-    @cInclude("soundfile.h");
+    @cInclude("soundfile.h"); // importtowanie bibliotek C
+    // odpowiedzialnych za obsluge dzwieku
 });
+// kluczowe w kontekscie tego programu
+// - w zig pamiec musi byc lawnie zwalniania
+// - bez zwolnienia pamieci powstaly by wycieki itd
+// `self.buffer` zostal zaalokowany dynamicznie w init()
+// Wykorzystujemy tu zasade RAII  'Resourse Acquisition is Initalization'
+//  * każdy zasób który jest alokowany w kontruktorze/init  jest zwolniony (I MUSI BYĆ) w destruktorze/deinit
+// Ten sam alokator który został użyty do alokacji, musi byś użyty do zwolnienia pamięci,
+// Dlatego 'allocator'  jest przekazywany jako parametr (patrz. 3 linijki niżej)
 
 pub const AudioProcessor = struct {
-    sample_rate: i32,
-    channels: i32,
-    buffer: []f32,
+    // deklaracja pół-struktury
+    sample_rate: i32, //szufladka na czestotliwosc próbkowania wielkosc 32bity
+    channels: i32, // szufladka na liczbę kanałów (standardowo 2) tez jako liczba 32bitowa
+    buffer: []f32, //dynamiczna "tablica" liczb zmiennoprzecinkowych tzw. floaty 32bitowe
 
+    // uruchamianie struktury
     pub fn init(allocator: *std.mem.Allocator) !AudioProcessor {
+        //ustawienie standardowych wartości 44100Hz, 2 kanały (stereo), Alokacja bufora na 1024 próbki
         return AudioProcessor{
             .sample_rate = 44100,
             .channels = 2,
-            .buffer = try allocator.alloc(f32, 1024),
+            .buffer = try allocator.alloc(f32, 1024), //przykład alokacji pamieci
         };
     }
+    // `allocator`  to jedynie wskaznik do alokatora pamieci
+    // alokuje 1024 * rozmiarzmiennej(f32) bajtów pamieci
+    // try napisane na wszelki wypadek bo moze wywalic blad nigdy nic nie wiadomo.
 
+    //PRZETWARZANIE AUDIO
     pub fn processAudio(self: *AudioProcessor, input: []const f32) !void {
-        // Implement audio processing logic here [TO DO ]
+        // Kolejne iteracje po kazdej próbce bufora
         for (input, 0..) |sample, i| {
             if (i < self.buffer.len) {
-                self.buffer[i] = sample;
+                self.buffer[i] = sample; //kopiowanie próbek do bufora
             }
         }
-    }
+    } //cel: przetwarzanie danych audio
+    //`self` wskaznik instancji AudioProcessor
+    //`input` slice danych wejsciowych (tablica f32)
+    // Działanie:
+    // 1. iteruje kazda próbkę wejsciową
+    // 2. sprawdza czy zestaw danych miesci się w szuflance na pamięc (.buffer)
+    // 3. kopiuje próbkę do  bufora wewnętrznego
+    // Zabezpieczenie: Sprawdzanie rozmiwaru bufora zapobiega przepelnieniu
+    // uzywa zaalokowanej pamieci z funkcji
+    // zapisuje dane  w .buffer z pub fn init AudioProcessor
+    // .buffer istnieje przez cały czas życia klasy (obiektu)
 
+    // Cel : zwalnianie zasobów procesora audio
     pub fn deinit(self: *AudioProcessor, allocator: *std.mem.Allocator) void {
-        allocator.free(self.buffer);
+        allocator.free(self.buffer); //uwalnianie zablokowanej pamieci bufora
     }
-};
+}; // 1. zwalnia zaalokowaną pamiec bufora
+// 2. uzywa tego samego alokatora co przy alokacji.
 
+// wywołuje `free` na alokatorze
+// przekazuje buffer do zwolnienia, zapobiega wyciekom pamięci.
+
+// Cel WordProcessor : INICJALIZACJA PROCESORA SŁÓW
 pub const WordProcessor = struct {
-    words: std.ArrayList([]u8),
-    allocator: *std.mem.Allocator,
+    words: std.ArrayList([]u8), //dynamiczna lista na slowa z pliku audio
+    allocator: *std.mem.Allocator, //wskaznik / pointer do alokatora pamieci
 
     pub fn init(allocator: *std.mem.Allocator) !WordProcessor {
         return WordProcessor{
@@ -40,9 +73,14 @@ pub const WordProcessor = struct {
             .allocator = allocator,
         };
     }
+    // Działanie:
+    // 1. tworzy pustą listę dynamiczna na slowa
+    // 2. zachowuje referencje do alokatora
+    // 3. Inicjuje kolejny obiekt
 
+    // Cel processWords: Przetworzenie tekstu na listę słów.
     pub fn processWords(self: *WordProcessor, input: []const u8) !usize {
-        var it = std.mem.split(u8, input, " ");
+        var it = std.mem.splitScalar(u8, input, " ");
         while (it.next()) |word| {
             const cleaned = try self.cleanWord(word);
             if (cleaned.len > 0) {
@@ -51,9 +89,20 @@ pub const WordProcessor = struct {
         }
         return self.words.items.len;
     }
-
+    //`self` wskaznik do instancji WordProcessor
+    // `input`: Tekst wejsciowych jako slice bajtów
+    // Działanie:
+    // 1. Dzieli tekst na slowa według spacji.
+    // 2. Dla kazdego słowa: * usuwa znaki specjalne, * sprawdza czy wynik nie jest pusty, tworzy kopie slowa w nowej pamieci, dodaje do listy słów,
+    // 3. zwraca liczbe przetworzonych slowa
+    //PILNEE!!!!!! - trzeba pilnowac by nie było bledow przy duplikowaniu/ podobno czeste
+    //bledy przy dodawaniu do listy
+    //
+    //Cel cleanWord : Czyszczenie slowa ze znakow specjalnych
     pub fn cleanWord(self: *WordProcessor, word: []const u8) ![]u8 {
         var result = std.ArrayList(u8).init(self.allocator);
+        errdefer result.deinit();
+
         for (word) |char| {
             if (std.ascii.isAlphanumeric(char)) {
                 try result.append(char);
@@ -61,19 +110,36 @@ pub const WordProcessor = struct {
         }
         return result.toOwnedSlice();
     }
+    // Działanie: 1. Tworzy nowa liste dynamiczna na znaki
+    // 2. iteruje przez kazdy znak w słowie
+    // 3. sprawdza  czy znak jest alfanumeryczny(abc, 0-9)\
+    // 4. zachowuje tylko znaki alfanumeryczne
+    // 5. zwraca wyczyszczone slowo
+    //
 
+    // Cel compareWords: porównywanie 2 slow, z pliku audio(spoken) i powiedzianych (reference)
     pub fn compareWords(spoken: []const u8, reference: []const u8) bool {
         return std.mem.eql(u8, spoken, reference);
     }
+    // uzywa funkcji `eql` do porównywania ciągów bajtów
+    // zwraca True jesli wszystko jest git
 
-    pub fn deinit(self: *WordProcessor) void {
+    // zwalnianie pamieci procesora słów
+    pub fn deinit(self: *WordProcessor) void { //iteruje przez wszystkie przechowane slowa
         for (self.words.items) |word| {
-            self.allocator.free(word);
+            self.allocator.free(word); //zwalnia pamiec kazdego slowa
         }
-        self.words.deinit();
+        self.words.deinit(); //zwalnia pamiec listy slow
     }
 };
-//
+
+///////---------PYTHON------//
+// Cel: Interfejs dla pythona do przetwarzanie audio \\ data= wskaznik do danych python, `len` = dlugosc danych
+// Działanie:
+// 1. tworzy lokalny bufor 1024 próbek
+// 2. Oblicza bezpieczny rozmiar slice'a
+// 3. kopiuje dane wejsciowe do bufora
+// 4. Zabezpiecza przez przpełnieniem bufora
 pub export fn process_audio_segment(data: [*]const f32, len: usize) void {
     var buffer: [1024]f32 = undefined;
     const slice = if (len > buffer.len) buffer[0..buffer.len] else buffer[0..len];
@@ -84,18 +150,18 @@ pub export fn process_audio_segment(data: [*]const f32, len: usize) void {
         }
     }
 }
-
-pub export fn process_words(
-    input_ptr: [*]const u8,
-    input_len: usize,
-    results_ptr: [*]u8,
-    max_results: usize,
+//CEL : przetwarzanie tekstu dla python
+pub fn process_words(
+    input_ptr: [*]const u8, //wskaznik do tekstu wejsciowego
+    input_len: usize, //dlugosc tekstu wejsciowego
+    results_ptr: [*]u8, //results_ptr
+    max_results: usize, //max_results
 ) usize {
     const input = input_ptr[0..input_len];
     var results = results_ptr[0..max_results];
     var written: usize = 0;
 
-    var it = std.mem.split(u8, input, " ");
+    var it = std.mem.splitScalar(u8, input, " ");
     while (it.next()) |word| {
         if (written + word.len + 1 > max_results) break;
 
@@ -106,6 +172,19 @@ pub export fn process_words(
             written += 1;
         }
     }
-
+    // Działanie: 1. Tworzy slicey z wskazników
+    // 2. Inicjuje licznik zapisanych bajtów
+    // 3. dzieli tekst na słowa// 4. dla kazdego slowa: * sprawdza czy miesci sie w buforze, * kopiuje slowo do bufora wynikowego, * dodaje spacje jako separator,
+    // * aktualizuje licznik zapisanych bajtów
+    // 5.    oddaje liczbe zapisanych bajtów
+    // Zabezpieczenia: Sprawdza limitu rozmiaru bufora
+    // przrywa działanie gdy brak miejsca,
+    // bezpiecznie kopiuje pamiec.
+    //
     return written;
 }
+
+//sporo sie rozpisalem a narazie nie umiem tego uruchomic
+//XDDd
+//made by: Krzysztof Bezubik Wydział Fizyki UwB
+//słuchałem teraz Alt-J - breezeblocks
