@@ -5,7 +5,7 @@ from library import AUDIOLIB
 
 class ZigAudioProcessor:
     def __init__(self):
-        lib_path = Path(__file__).parent / "zig-out/lib/audio.so"
+        lib_path = Path(__file__).parent / "zig-out/lib/audio.dll"
         self.lib = ctypes.CDLL(str(lib_path))
         self.lib.process_audio_segment.argtypes = [
             np.ctypeslib.ndpointer(dtype=np.float32),
