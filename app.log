@@ -334,128 +334,36 @@
 2024-11-04 21:05:33,933 - INFO - Zapisano wynik dla u¿ytkownika test
 2024-11-04 21:05:44,336 - INFO - Rozpoczêto nagrywanie
 2024-11-04 21:05:50,615 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-05 17:42:03,245 - INFO - Window initialization started
-2024-11-05 17:42:50,292 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-05 17:42:50,293 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-05 17:42:50,293 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-05 17:42:50,293 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-05 17:42:50,293 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-05 17:42:50,293 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-05 17:42:50,293 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-05 17:42:50,293 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-05 17:42:50,293 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-05 17:42:50,293 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-05 17:42:50,293 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-05 17:42:50,293 - INFO - Utworzono 11 segmentów po 5 s³ów
-2024-11-05 17:42:58,891 - INFO - Rozpoczêto nagrywanie
-2024-11-05 17:43:10,113 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-05 17:43:27,919 - INFO - Rozpoczêto nagrywanie
-2024-11-05 17:43:35,935 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-05 17:43:57,210 - INFO - Rozpoczêto nagrywanie
-2024-11-05 17:44:00,277 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-05 17:47:56,057 - INFO - Segment 1: ['Panno', 'œwiêta', 'co', 'jasnej', 'bronisz']
-2024-11-05 17:47:56,057 - INFO - Segment 2: ['Czêstochowy']
-2024-11-05 17:47:56,057 - INFO - Utworzono 2 segmentów po 5 s³ów
-2024-11-05 17:48:02,697 - INFO - Rozpoczêto nagrywanie
-2024-11-05 17:48:06,199 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-15 23:57:40,386 - INFO - Starting application...
-2024-11-15 23:59:16,725 - INFO - Starting application...
-2024-11-15 23:59:16,800 - INFO - Window initialization started
-2024-11-15 23:59:59,209 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-15 23:59:59,209 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-15 23:59:59,210 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-15 23:59:59,210 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-15 23:59:59,210 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-15 23:59:59,210 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-15 23:59:59,210 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-15 23:59:59,210 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-15 23:59:59,210 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-15 23:59:59,210 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-15 23:59:59,210 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-15 23:59:59,210 - INFO - Utworzono 11 segmentów po 5 s³ów
-2024-11-16 00:01:18,491 - INFO - Starting application...
-2024-11-16 00:01:18,512 - INFO - Window initialization started
-2024-11-16 00:01:42,181 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-16 00:01:42,181 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-16 00:01:42,182 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-16 00:01:42,182 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-16 00:01:42,182 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-16 00:01:42,182 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-16 00:01:42,182 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-16 00:01:42,182 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-16 00:01:42,182 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-16 00:01:42,182 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-16 00:01:42,182 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-16 00:01:42,182 - INFO - Utworzono 11 segmentów po 5 s³ów
-2024-11-16 00:04:17,102 - INFO - Starting application...
-2024-11-16 00:04:17,123 - INFO - Window initialization started
-2024-11-16 00:04:34,309 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-16 00:04:34,309 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-16 00:04:34,310 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-16 00:04:34,310 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-16 00:04:34,310 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-16 00:04:34,310 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-16 00:04:34,310 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-16 00:04:34,310 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-16 00:04:34,310 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-16 00:04:34,310 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-16 00:04:34,310 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-16 00:04:34,310 - INFO - Utworzono 11 segmentów po 5 s³ów
-2024-11-16 00:04:38,792 - INFO - Rozpoczêto nagrywanie
-2024-11-16 00:04:44,363 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-16 00:05:00,845 - INFO - Rozpoczêto nagrywanie
-2024-11-16 00:05:06,569 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-16 00:05:14,032 - INFO - Rozpoczêto nagrywanie
-2024-11-16 00:05:19,182 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-16 23:22:04,681 - INFO - Starting application...
-2024-11-16 23:22:05,212 - INFO - Window initialization started
-2024-11-16 23:22:08,160 - INFO - Starting application...
-2024-11-16 23:22:08,181 - INFO - Window initialization started
-2024-11-16 23:49:35,141 - INFO - Starting application...
-2024-11-16 23:49:35,161 - INFO - Window initialization started
-2024-11-16 23:51:36,368 - INFO - Starting application...
-2024-11-16 23:51:36,390 - INFO - Window initialization started
-2024-11-16 23:53:15,208 - INFO - Starting application...
-2024-11-16 23:53:15,229 - INFO - Window initialization started
-2024-11-16 23:53:15,229 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-16 23:53:15,251 - INFO - DLL loaded successfully
-2024-11-16 23:53:53,126 - INFO - Starting application...
-2024-11-16 23:53:53,148 - INFO - Window initialization started
-2024-11-16 23:53:53,148 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-16 23:53:53,148 - INFO - DLL loaded successfully
-2024-11-16 23:55:45,431 - INFO - Starting application...
-2024-11-16 23:55:45,452 - INFO - Window initialization started
-2024-11-16 23:55:45,452 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-16 23:55:45,453 - INFO - DLL loaded successfully
-2024-11-17 00:00:48,922 - INFO - Starting application...
-2024-11-17 00:00:48,945 - INFO - Window initialization started
-2024-11-17 00:00:48,945 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:00:48,945 - INFO - DLL loaded successfully
-2024-11-17 00:02:05,188 - INFO - Starting application...
-2024-11-17 00:02:05,208 - INFO - Window initialization started
-2024-11-17 00:02:05,209 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:02:05,209 - INFO - DLL loaded successfully
-2024-11-17 00:03:00,132 - INFO - Starting application...
-2024-11-17 00:03:00,152 - INFO - Window initialization started
-2024-11-17 00:03:00,152 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:03:00,153 - INFO - DLL loaded successfully
-2024-11-17 00:04:23,041 - INFO - Starting application...
-2024-11-17 00:04:23,062 - INFO - Window initialization started
-2024-11-17 00:04:23,062 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:04:23,063 - INFO - DLL loaded successfully
-2024-11-17 00:04:53,765 - INFO - Starting application...
-2024-11-17 00:04:53,788 - INFO - Window initialization started
-2024-11-17 00:04:53,788 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:04:53,789 - INFO - DLL loaded successfully
-2024-11-17 00:08:45,816 - INFO - Starting application...
-2024-11-17 00:08:45,839 - INFO - Window initialization started
-2024-11-17 00:08:45,840 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:08:45,840 - INFO - DLL loaded successfully
-2024-11-17 00:13:54,668 - INFO - Starting application...
-2024-11-17 00:13:54,690 - INFO - Window initialization started
-2024-11-17 00:13:54,690 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:13:54,691 - INFO - DLL loaded successfully
-2024-11-17 00:17:42,335 - INFO - Starting application...
-2024-11-17 00:17:42,355 - INFO - Window initialization started
-2024-11-17 00:17:42,355 - INFO - Looking for DLL at: d:\github\UwuBis-soundhelper\src\backend\zig-out\lib\audio.dll
-2024-11-17 00:17:42,356 - INFO - DLL loaded successfully
+2024-11-17 16:29:50,740 - INFO - Window initialization started
+2024-11-17 16:30:42,265 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-17 16:30:42,265 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
+2024-11-17 16:30:42,265 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
+2024-11-17 16:30:42,265 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
+2024-11-17 16:30:42,265 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
+2024-11-17 16:30:42,266 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
+2024-11-17 16:30:42,266 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
+2024-11-17 16:30:42,266 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
+2024-11-17 16:30:42,266 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
+2024-11-17 16:30:42,266 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
+2024-11-17 16:30:42,266 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
+2024-11-17 16:30:42,266 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-17 16:30:46,772 - INFO - Rozpoczêto nagrywanie
+2024-11-17 16:30:54,380 - WARNING - Nie rozpoznano ¿adnych s³ów
+2024-11-17 16:30:54,825 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 17:20:43,858 - INFO - Window initialization started
+2024-11-17 17:21:22,930 - INFO - Segment 1: ['wszystko', 'najwiêksze', 'zbrodnie', 'zabicie', 'matki']
+2024-11-17 17:21:22,930 - INFO - Segment 2: ['przejœcie', 'na', 'katolicyzm', 'to', 'przy']
+2024-11-17 17:21:22,930 - INFO - Segment 3: ['tym', 'pestki', 'Przypuszczam', '¿e', 'nigdy']
+2024-11-17 17:21:22,930 - INFO - Segment 4: ['mu', 'nie', 'powiemy', 'Nie', 'zabijê']
+2024-11-17 17:21:22,930 - INFO - Segment 5: ['siê', 'póki', 'nie', 'bêdê', 'na']
+2024-11-17 17:21:22,930 - INFO - Segment 6: ['100%', 'pewna', '¿e', 'mnie', 'spal¹']
+2024-11-17 17:21:22,931 - INFO - Segment 7: ['ohoho', 'k', 'prysznica', 'Daj', 'znaæ']
+2024-11-17 17:21:22,931 - INFO - Segment 8: ['o', 'sobie', 'nigdy', 'nienasycona', 'kolekcjonerka']
+2024-11-17 17:21:22,931 - INFO - Segment 9: ['¿¹dañ', 'ze', 'snu', 'wstajê', 'od']
+2024-11-17 17:21:22,931 - INFO - Segment 10: ['rzemyczka', 'do', 'koniczka', 'pozwól', 'jej']
+2024-11-17 17:21:22,931 - INFO - Segment 11: ['siê', 'powiesiæ', 'a', 'zacznie', 'siê']
+2024-11-17 17:21:22,931 - INFO - Segment 12: ['extra', 'szubienicy', 'domagaæ', 'olszynowy', 'a']
+2024-11-17 17:21:22,931 - INFO - Segment 13: ['mo¿e', 'nawet']
+2024-11-17 17:21:22,931 - INFO - Utworzono 13 segmentów po 5 s³ów
+2024-11-17 17:21:28,257 - INFO - Rozpoczêto nagrywanie
+2024-11-17 17:21:36,090 - INFO - Zapisano wynik dla u¿ytkownika test
