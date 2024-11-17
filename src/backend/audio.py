@@ -2,16 +2,37 @@ import ctypes
 import numpy as np
 from pathlib import Path
 from library import AUDIOLIB
+import logging
+
 
 class ZigAudioProcessor:
     def __init__(self):
-        lib_path = Path(__file__).parent / "zig-out/lib/audio.dll"
-        self.lib = ctypes.CDLL(str(lib_path))
-        self.lib.process_audio_segment.argtypes = [
-            np.ctypeslib.ndpointer(dtype=np.float32),
-            ctypes.c_size_t
-        ]
-        self.lib.process_audio_segment.restype = None
+        lib_path = Path(__file__).parent / "zig-out" / "lib" / "audio.dll"
+        logging.info(f"Looking for DLL at: {lib_path}")
+        
+        if not lib_path.exists():
+            logging.error(f"DLL not found at {lib_path}")
+            logging.info(f"Current directory: {Path.cwd()}")
+            raise FileNotFoundError(f"DLL not found at {lib_path}")
+            
+        try:
+            self.lib = ctypes.CDLL(str(lib_path))
+            logging.info("DLL loaded successfully")
+        except Exception as e:
+            logging.error(f"Failed to load DLL: {e}")
+            raise
+        # Definicje typów
+        self.lib.init_audio_processor.restype = ctypes.c_void_p
+        self.lib.process_audio.argtypes = [ctypes.c_void_p, ctypes.POINTER(ctypes.c_float), ctypes.c_size_t]
+        
+        # Inicjalizacja
+        self.processor = self.lib.init_audio_processor()
+        if not self.processor:
+            raise RuntimeError("Failed to initialize audio processor")
+
+    def __del__(self):
+        if hasattr(self, 'processor') and self.processor:
+            self.lib.cleanup_audio_processor(self.processor)
 
     def process_segment(self, audio_data: np.ndarray):
         """Process audio segment using Zig implementation"""
@@ -22,7 +43,7 @@ class ZigAudioProcessor:
 
 class WordProcessor:
     def __init__(self):
-        lib_path = Path(__file__).parent / "zig-out/lib/audio.so"
+        lib_path = Path(__file__).parent / "zig-out/lib/audio.dll"
         self.lib = ctypes.CDLL(str(lib_path))
         
         # Configure function signatures

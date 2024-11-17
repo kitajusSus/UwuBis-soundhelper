@@ -18,6 +18,7 @@ pub const AudioProcessor = struct {
     sample_rate: i32, //szufladka na czestotliwosc próbkowania wielkosc 32bity
     channels: i32, // szufladka na liczbę kanałów (standardowo 2) tez jako liczba 32bitowa
     buffer: []f32, //dynamiczna "tablica" liczb zmiennoprzecinkowych tzw. floaty 32bitowe
+    allocator: *std.mem.Allocator, // Store allocator in the struct
 
     // uruchamianie struktury
     pub fn init(allocator: *std.mem.Allocator) !AudioProcessor {
@@ -26,6 +27,7 @@ pub const AudioProcessor = struct {
             .sample_rate = 44100,
             .channels = 2,
             .buffer = try allocator.alloc(f32, 1024), //przykład alokacji pamieci
+            .allocator = allocator, // Store allocator
         };
     }
     // `allocator`  to jedynie wskaznik do alokatora pamieci
@@ -53,8 +55,8 @@ pub const AudioProcessor = struct {
     // .buffer istnieje przez cały czas życia klasy (obiektu)
 
     // Cel : zwalnianie zasobów procesora audio
-    pub fn deinit(self: *AudioProcessor, allocator: *std.mem.Allocator) void {
-        allocator.free(self.buffer); //uwalnianie zablokowanej pamieci bufora
+    pub fn deinit(self: *AudioProcessor) void {
+        self.allocator.free(self.buffer); // Use stored allocator
     }
 }; // 1. zwalnia zaalokowaną pamiec bufora
 // 2. uzywa tego samego alokatora co przy alokacji.
@@ -101,8 +103,7 @@ pub const WordProcessor = struct {
     //Cel cleanWord : Czyszczenie slowa ze znakow specjalnych
     pub fn cleanWord(self: *WordProcessor, word: []const u8) ![]u8 {
         var result = std.ArrayList(u8).init(self.allocator);
-        errdefer result.deinit();
-
+        // Removed errdefer result.deinit(); since ownership is transferred
         for (word) |char| {
             if (std.ascii.isAlphanumeric(char)) {
                 try result.append(char);
@@ -151,7 +152,7 @@ pub export fn process_audio_segment(data: [*]const f32, len: usize) void {
     }
 }
 //CEL : przetwarzanie tekstu dla python
-pub fn process_words(
+pub export fn process_words(
     input_ptr: [*]const u8, //wskaznik do tekstu wejsciowego
     input_len: usize, //dlugosc tekstu wejsciowego
     results_ptr: [*]u8, //results_ptr
@@ -183,8 +184,23 @@ pub fn process_words(
     //
     return written;
 }
+export fn init_audio_processor(allocator: *std.mem.Allocator) ?*AudioProcessor {
+    if (AudioProcessor.init(allocator)) |processor| {
+        return processor;
+    } else |_| {
+        return null;
+    }
+}
+
+export fn process_audio(processor: *AudioProcessor, input: [*]const f32, len: usize) void {
+    processor.processAudio(input[0..len]) catch {};
+}
+
+export fn cleanup_audio_processor(processor: *AudioProcessor) void {
+    processor.deinit();
+}
 
 //sporo sie rozpisalem a narazie nie umiem tego uruchomic
 //XDDd
-//made by: Krzysztof Bezubik Wydział Fizyki UwB
+//made by: bajo jajo Wydział Fizyki UwB
 //słuchałem teraz Alt-J - breezeblocks
