@@ -40,6 +40,55 @@ python main_new.py
 5. Porównywanie słów: Skrypt porównuje słowa wypowiedziane przez użytkownika z oryginalnymi słowami z pliku audio.
 6. Zapisywanie wyników: Skrypt zapisuje wyniki do pliku Excel, w którym znajdują się informacje o poprawnie i niepoprawnie powtórzonych słowach.
 
+
+### 0.2.1 Schemat Działania funkcji main.py
+```mermaid
+stateDiagram-v2
+    [*] --> initUI
+    initUI --> showLoginScreen
+    
+    showLoginScreen --> handleLogin
+    handleLogin --> showFolderSelection: login=="test"
+    handleLogin --> showLoginScreen: invalid_login
+    
+    showFolderSelection --> selectAudioFolder
+    selectAudioFolder --> showAudioFiles
+    showAudioFiles --> handleAudioFileSelection
+    
+    state "Audio Testing" as AudioTesting {
+        handleAudioFileSelection --> startSegmentTest
+        startSegmentTest --> playCurrentSegment: start
+        playCurrentSegment --> showSegmentResults: recording_complete
+        
+        showSegmentResults --> replayCurrentSegment: retry
+        showSegmentResults --> nextSegment: next
+        showSegmentResults --> showAudioFiles: finish
+        
+        replayCurrentSegment --> showSegmentResults
+        nextSegment --> startSegmentTest: has_more_segments
+    }
+    
+    startSegmentTest --> showAudioFiles: all_segments_complete
+    
+    note right of playCurrentSegment
+        audio_helper.play_segment()
+        powtorz_słowa()
+        countdown_timer
+        time_label updates
+    end note
+    
+    note right of showSegmentResults
+        display score
+        zapisz_wynik()
+        show navigation options
+    end note
+    
+    note right of handleAudioFileSelection
+        audio_helper.load_audio_file()
+        set current_segment = 0
+        calculate total_segments
+    end note
+```
 ## 2. Wytłumacznie właściwości kodu, co do czego i po co.
 Tutaj tłumacze konkretne funcje bibliotek jak działają, a całe elementy kodu są wytłumaczone dokładniej w [WYTŁUMACZENIE](explaining.md)
 
@@ -126,42 +175,76 @@ Już tłumaczę co to robi i po co, dla wygody rozbiję to na części:
 Moja wizję rozwoju projektu opisałem w [dalszy rozwoj](dalszy_rozwoj.md). 
 
 ## Brudnopis Karol + krzys
-time() = 10
+AUDIOLIB Class:
 
-elapsed_time = time()
-
-while (3420 - 343 >=  speaking_time){
-
-
-    doing()
-    elapsed_time += 1
-
-}
-
-
-speaking_second = 343
-
+`load_audio_file`: Ładuje plik audio i segmentuje go na segmenty po 5 słowach.
+`play_segment`: Odtwarza bieżący segment audio.
+_`play_segment_audio`: Wewnętrzna metoda do odtwarzania segmentu audio.
+`_recognize_words`: Rozpoznaje słowa z pliku audio.
+`replay_current_segment`: Powtarza odtwarzanie aktualnego segmentu.
+`get_total_segments`: Zwraca całkowitą liczbę segmentów.
+`get_current_segment_words`: Zwraca słowa z bieżącego segmentu.
+`get_segment_words`: Zwraca słowa dla konkretnego segmentu z macierzy.
+`mark_segment_complete`: Oznacza segment jako ukończony i przechowuje wyniki.
+`is_segment_complete`: Sprawdza, czy segment jest ukończony.
+`_update_current_segment_audio`: Aktualizuje dane audio bieżącego segmentu.
 
 
+Nazwa pliku: {{main.py}}
+Opis: Główny plik aplikacji UwuBiś, odpowiedzialny za interfejs użytkownika i logikę biznesową.
+Funkcjonalności:
 
-0 - 0 >= 10
+Logowanie: obsługa logowania użytkowników
+Wybór folderu z plikami audio: umożliwia wybór folderu z plikami audio do przetwarzania
+Przetwarzanie plików audio: wyświetla listę plików audio, pozwala na odtwarzanie i przetwarzanie wybranych plików
+Test słuchu: prowadzi użytkownika przez test słuchu, wyświetla wyniki i zapisuje je w pliku Excel
+Klasy i funkcje:
 
-1 - 0 >= speaking_time
+MainWindow: główna klasa aplikacji, dziedzicząca z QMainWindow
+__init__: inicjacja okna głównego
+initUI: inicjacja interfejsu użytkownika
+showLoginScreen, showFolderSelection, showAudioFiles, startSegmentTest, playCurrentSegment, confirmRepetition, showSegmentResults: metody obsługujące poszczególne ekrany aplikacji
+Dokumentacja dla library.py
 
+Nazwa pliku: library.py
+Opis: Plik biblioteki, zawierający funkcje wspomagające przetwarzanie plików audio i rozpoznawanie mowy.
+Funkcjonalności:
 
-2 - 0 >= speaking_time
+Rozpoznawanie mowy: funkcja powtorz_słowa rozpoznaje mowę użytkownika
+Przetwarzanie plików audio: klasa AUDIOLIB obsługuje odtwarzanie i przetwarzanie plików audio
+Zapis wyników: funkcja zapisz_wynik zapisuje wyniki testu w pliku Excel
+Klasy i funkcje:
 
+AUDIOLIB: klasa obsługująca przetwarzanie plików audio
+``__init__``: inicjacja obiektu AUDIOLIB
+``load_audio_file``, play_segment, replay_current_segment, get_segment_words: metody obsługujące przetwarzanie plików audio
+``powtorz_słowa``: funkcja rozpoznająca mowę użytkownika
+`zapisz_wynik`: funkcja zapisująca wyniki testu w pliku Excel
 
+**Plan optymalizacji:**
 
+Krótkoterminowe cele (w ciągu 2-4 tygodni):
 
-start_time = 0
+**Poprawa stabilności aplikacji:**
+Usuwanie błędów i obsługa wyjątków w kluczowych funkcjach.
+**Optymalizacja wydajności:**
+Przegląd i optymalizacja kodu w funkcjach powtorz_słowa i load_audio_file.
+**Ulepszona obsługa błędów:**
+Wprowadzenie bardziej szczegółowych komunikatów o błędach dla użytkownika.
 
-while ()
-{
+## **Średnioterminowe cele (w ciągu 4-8 tygodni):**
 
+Rozszerzenie funkcjonalności:
+Dodanie nowych rodzajów testów (np. testy słuchu z obrazkami).
+Ulepszona analityka:
+Wprowadzenie systemu śledzenia postępów użytkowników i generowania raportów.
+Poprawa interfejsu użytkownika:
+Przeprojektowanie interfejsu, aby był bardziej intuicyjny i przyjazny użytkownikowi.
+Długoterminowe cele (w ciągu 2-6 miesięcy):
 
-    speaking()
-
-
-
-}
+Integracja z nowymi technologiami:
+Wprowadzenie obsługi nowych formatów plików audio lub integracja z innymi aplikacjami.
+Rozwijanie funkcjonalności rozpoznawania mowy:
+Ulepszona dokładność rozpoznawania mowy, obsługa większej liczby języków.
+Tworzenie wersji mobilnej aplikacji:
+Przystosowanie aplikacji do urządzeń mobilnych, zachowując wszystkie funkcjonalności.

@@ -1,0 +1,51 @@
+const std = @import("std");
+
+pub const Error = error{ FileOpenFailed, AllocationFailed, WordRecognitionFailed };
+
+pub fn segment_audio(
+    words: [][]const u8,
+) !SegmentResult {
+    const allocator = std.heap.page_allocator;
+
+    // Calculate segments based on 5 words each
+    const words_per_segment = 5;
+    const total_segments = (words.len + words_per_segment - 1) / words_per_segment;
+
+    var segments = try allocator.alloc([]const u8, total_segments);
+    var start_idx = 0;
+
+    for (segments.len) |idx| {
+        const end_idx = std.math.min(start_idx + words_per_segment, words.len);
+        const segment = try allocator.alloc(u8, end_idx - start_idx);
+        defer allocator.free(segment);
+
+        for (start_idx..end_idx) |word_idx| {
+            segment[word_idx - start_idx] = words[word_idx];
+        }
+
+        segments[idx] = segment;
+        start_idx = end_idx;
+    }
+
+    return SegmentResult{
+        .segments = segments,
+        .total_segments = total_segments,
+    };
+}
+
+pub const SegmentResult = struct {
+    segments: []const []const u8,
+    total_segments: usize,
+};
+
+const WordTimestamp = struct {
+    word: []const u8,
+    start_time: f32,
+    end_time: f32,
+};
+
+// load_audio: Wczytuje plik audio i zwraca zawartość w postaci tablicy bajtów.
+// free_audio: Zwalnia alokowaną pamięć, po zakończeniu pracy z danymi audio.
+// Powyższy kod wczytuje plik audio i zwraca jego zawartość w formie dynamicznej tablicy bajtów.
+// Będziemy musieli przechować zawartość tego pliku w pamięci,
+//aby móc pracować z jego danymi w Pythonie.
