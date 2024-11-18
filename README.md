@@ -235,16 +235,197 @@ Wprowadzenie bardziej szczegółowych komunikatów o błędach dla użytkownika.
 ## **Średnioterminowe cele (w ciągu 4-8 tygodni):**
 
 Rozszerzenie funkcjonalności:
-Dodanie nowych rodzajów testów (np. testy słuchu z obrazkami).
+- Dodanie nowych rodzajów testów (np. testy słuchu z obrazkami).
+
 Ulepszona analityka:
-Wprowadzenie systemu śledzenia postępów użytkowników i generowania raportów.
+- Wprowadzenie systemu śledzenia postępów użytkowników i generowania raportów.
+
 Poprawa interfejsu użytkownika:
-Przeprojektowanie interfejsu, aby był bardziej intuicyjny i przyjazny użytkownikowi.
+- Przeprojektowanie interfejsu, aby był bardziej intuicyjny i przyjazny użytkownikowi.
 Długoterminowe cele (w ciągu 2-6 miesięcy):
 
 Integracja z nowymi technologiami:
+
+
+przykład uzycia 
+
 Wprowadzenie obsługi nowych formatów plików audio lub integracja z innymi aplikacjami.
 Rozwijanie funkcjonalności rozpoznawania mowy:
 Ulepszona dokładność rozpoznawania mowy, obsługa większej liczby języków.
 Tworzenie wersji mobilnej aplikacji:
 Przystosowanie aplikacji do urządzeń mobilnych, zachowując wszystkie funkcjonalności.
+
+
+
+
+przykłady uzycia nvidia//nemo do poprawy rozpoznawania słów:
+
+Użyjemy biblioteki nvidia-nemo do poprawy rozpoznawania słów w segmentach. Poniżej przedstawiam implementację:
+```python
+import torch
+from nemo_text_processing society nlp import NLP
+from nemo_text_processing society speech_recognition beam_search import BeamSearch
+from nemo_text_processing society speech_recognition decoding import Decoding
+from nemo_text_processing society speech_recognition praytorch import ASR
+from nemo_text_processing society speech_recognition atd import Tokenizer
+
+# Utwórz instancję modelu ASR z `nvidia-nemo`
+nemo_model_name = "stt_en_quartznet15x5"
+model = ASR(nemo_model_name=nemo_model_name)
+tokenizer = Tokenizer(
+    model=model,
+    tokenizer_name=" SpecTokenizersPreTrainedTokenizer",
+    tokenizer_model="nemo-quartznet15x5-sv",
+    add tokenize_bos=True,
+    add tokenize eos=True,
+)
+
+# Modyfikacja metody _recognize_words w twojej klasie AUDIOLIB
+def _recognize_words(self, file_path):
+    """Recognizes words from audio file using NVIDIA Nemo."""
+    try:
+        # Load audio file
+        audio_data, samplerate = sf.read(file_path)
+
+        # Utwórz instancję dekodera z `nvidia-nemo`
+        decoder = BeamSearch(model=model, tokenizer=tokenizer)
+
+        # Wykonaj dekodowanie
+        transcription = decoder.transcribe(audio_data, samplerate)
+
+        # Zwróć listę słów z transkrypcji
+        return transcription.split()
+    except Exception as e:
+        logging.error(f"Error recognizing words: {str(e)}")
+        return []
+
+# Modyfikacja metody powtorz_słowa
+def powtorz_słowa(słowa, timeout=None):
+    """Nagrywa i rozpoznaje powtórzone słowa użytkownika używając NVIDIA Nemo."""
+    try:
+        # Utwórz instancję dekodera z `nvidia-nemo`
+        decoder = BeamSearch(model=model, tokenizer=tokenizer)
+
+        # Nagrywa audio
+        with sr.Microphone() as source:
+            logging.info("Rozpoczęto nagrywanie")
+            r.adjust_for_ambient_noise(source)
+            # Explicitly set both timeout and phrase_time_limit to the same value
+            audio = r.listen(source, timeout=timeout, phrase_time_limit=timeout)
+
+            # Wykonaj dekodowanie
+            transcription = decoder.transcribe(audio.get_array(), audio.sample_rate)
+
+            # Zwróć listę słów z transkrypcji
+            powtórzone_słowa = transcription.split()
+            poprawne_słowa = list(set(słowa) & set(powtórzone_słowa))
+            return poprawne_słowa, powtórzone_słowa
+    except sr.WaitTimeoutError:
+        logging.warning("Przekroczono czas oczekiwania na mowę")
+        return [], []
+    except sr.UnknownValueError:
+        logging.warning("Nie rozpoznano żadnych słów")
+        return [], []
+    except sr.RequestError as e:
+        logging.error(f"Błąd połączenia z serwerem rozpoznawania mowy: {str(e)}")
+        return [], []
+    except Exception as e:
+        logging.error(f"Nieoczekiwany błąd: {str(e)}")
+        return [], []
+```
+Powyższe modyfikacje powinny poprawić rozpoznawanie słów w segmentach używając models nvidia-nemo. Pamiętaj o instalacji nvidia-nemo i przygotowaniu środowiska do pracy z tymi modelami.
+
+Dodatkowo, aby poprawnie rozpoznawać słowa w segmentach, zalecane jest ustawienie poprawnych parametrów dla modelu ASR, takich jak:
+
+    batch_size: Określa liczbę segmentów do przetworzenia jednocześnie.
+    sequence_length: Określa maksymalną długość sekwencji danych wejściowych.
+    sample_rate: Określa częstotliwość próbkowania danych wejściowych.
+
+
+
+wariant **2**
+generalnie to samo ale inne lekko podejscie cechujące sie prostrzą składnią  + wymaga wiekszej mocy obliczeniowej. mniej korzystne i ma wpływ na wydajnosc . 
+
+Integrating NVIDIA NeMo for enhanced speech recognition can significantly improve the accuracy of the transcription process. NeMo offers advanced models that can be fine-tuned for specific languages and tasks. Here is a step-by-step outline for enhancing your existing code with NeMo's speech recognition capabilities:
+
+    Install NVIDIA NeMo and its Dependencies:
+    Make sure you have NeMo and its dependencies installed. You may need to install additional libraries such as torch and soundfile.
+```python
+    pip install nemo_toolkit['all']
+```
+    Setup NeMo Model:
+    You will need to load a pre-trained ASR (Automatic Speech Recognition) model from NeMo. NeMo provides models trained on various datasets. For Polish, you may have to find a model fit for that language or consider fine-tuning an existing model.
+
+    Adjust your recognition method to use NeMo:
+    Update the _recognize_words method to utilize the NeMo model for speech-to-text conversion rather than Google’s recognizer.
+
+Here is how you might integrate NVIDIA NeMo into your AUDIOLIB class:
+```python
+import nemo
+import nemo.collections.asr as nemo_asr
+
+class AUDIOLIB:
+
+    def __init__(self, config):
+        self.config = config
+        self.audio_data = None
+        self.samplerate = None
+        self.words = []
+        self.segments = []
+        self.segment_words_dict = {}
+        self.current_segment = 0
+        self.total_segments = 0
+        self.current_segment_audio = None
+        self.word_matrix = None
+        self.segment_status = {}
+        self.temp_storage = {}
+        
+        # Initialize NeMo ASR model
+        self.asr_model = nemo_asr.models.EncDecCTCModel.from_pretrained(model_name="QuartzNet15x5Base-EN")
+
+    def _recognize_words(self, file_path):
+        """Recognizes words from audio file using NeMo ASR."""
+        try:
+            # Predict words using NeMo
+            transcription = self.asr_model.transcribe(paths2audio_files=[file_path])
+            if transcription:
+                text = transcription[0]
+                return text.split()  # Split into words
+            return []
+
+        except Exception as e:
+            logging.error(f"Error recognizing words with NeMo: {str(e)}")
+            return []
+
+# Implement similar NeMo integration for powtorz_słowa
+import soundfile as sf
+def powtorz_słowa(słowa, timeout=None):
+    """Nagrywa i rozpoznaje powtórzone słowa użytkownika."""
+    try:
+        # This part of the code should handle the audio recording functionality
+        with sr.Microphone() as source:
+            logging.info("Rozpoczęto nagrywanie")
+            r.adjust_for_ambient_noise(source)
+            audio = r.listen(source, timeout=timeout, phrase_time_limit=timeout)
+        
+            # Save to a temporary wave file for NeMo processing
+            with open("temp_repeated.wav", "wb") as f:
+                f.write(audio.get_wav_data())
+
+        # Transcribe using NeMo
+        repeated_transcription = self.asr_model.transcribe(paths2audio_files=["temp_repeated.wav"])
+        powtórzone_słowa = repeated_transcription[0].split() if repeated_transcription else []
+        poprawne_słowa = list(set(słowa) & set(powtórzone_słowa))
+        return poprawne_słowa, powtórzone_słowa
+    except Exception as e:
+        logging.error(f"Nieoczekiwany błąd: {str(e)}")
+        return [], []
+```
+Integration Notes:
+
+    Model Selection: Make sure you select an appropriate model for your language. If there isn't a model trained specifically for Polish, consider fine-tuning an English model with a Polish dataset.
+    Audio Data Handling: Ensure NeMo receives correctly formatted audio inputs. This involves saving your live audio captures into files before sending them to NeMo for processing.
+    Dependencies and Environment: Validate that your environment has all necessary NeMo dependencies. Consider running it on an environment with NVIDIA GPUs for efficient processing.
+    Expand the _recognize_words Method: Similar changes can be applied to the powtorz_słowa function for recognizing repeated words.
+
+By implementing these changes, your application should benefit from more precise ASR capabilities, helping users with accurate repetitions of words and handling segments efficiently.
