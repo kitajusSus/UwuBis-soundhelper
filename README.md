@@ -475,7 +475,7 @@ Dodatkowe porady
     Testuj model: Przed wdrożeniem modelu, testuj go na różnych danych, aby upewnić się, że działa on poprawnie.
     Monitoruj model: Po wdrożeniu modelu, monitoruj jego działanie, aby upewnić się, że nie ma żadnych problemów z wydajnością lub jakością.
 
-Zapisz ten plik jako `implementacja_modelu.md` i otwórz go w swoim ulubionym edytorze tekstu lub przeglądarce internetowej.
+
 
 # Implementing Speech Recognition Models: Tips and Considerations
 
@@ -534,5 +534,8 @@ Integrating advanced speech recognition models, such as those from NVIDIA NeMo o
 
 By weighing these factors, you can deploy a speech recognition system that is efficient, cost-effective, and user-friendly, making use of powerful tools offered by NVIDIA NeMo and Hugging Face.
 
+
+
+te porady dotyczace implementacji zostały wygenerowane przez gpt4o i llama3.1 70b instruct
 
 By implementing these changes, your application should benefit from more precise ASR capabilities, helping users with accurate repetitions of words and handling segments efficiently.
