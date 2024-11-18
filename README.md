@@ -258,9 +258,10 @@ Przystosowanie aplikacji do urządzeń mobilnych, zachowując wszystkie funkcjon
 
 
 
-przykłady uzycia nvidia//nemo do poprawy rozpoznawania słów:
+## przykłady uzycia nvidia//nemo do poprawy rozpoznawania słów:
 
-Użyjemy biblioteki nvidia-nemo do poprawy rozpoznawania słów w segmentach. Poniżej przedstawiam implementację:
+Użyjemy biblioteki nvidia-nemo do poprawy rozpoznawania słów w segmentach.//
+Przykładowa implementacja: 
 ```python
 import torch
 from nemo_text_processing society nlp import NLP
@@ -333,20 +334,22 @@ def powtorz_słowa(słowa, timeout=None):
         logging.error(f"Nieoczekiwany błąd: {str(e)}")
         return [], []
 ```
-Powyższe modyfikacje powinny poprawić rozpoznawanie słów w segmentach używając models nvidia-nemo. Pamiętaj o instalacji nvidia-nemo i przygotowaniu środowiska do pracy z tymi modelami.
+Powyższe modyfikacje powinny poprawić rozpoznawanie słów w segmentach używając models nvidia-nemo. Trzeba pamietac o zainstalowaiu nvidia nemo i uzywaniu tego zgodnie z licencją i przeznaczeniem. 
+- sprawdzic czy serwery to wytrzymają
+- sprawdzić czy licencja pozwala na uzytkowanie tego w ten sposób
 
 Dodatkowo, aby poprawnie rozpoznawać słowa w segmentach, zalecane jest ustawienie poprawnych parametrów dla modelu ASR, takich jak:
 
-    batch_size: Określa liczbę segmentów do przetworzenia jednocześnie.
-    sequence_length: Określa maksymalną długość sekwencji danych wejściowych.
-    sample_rate: Określa częstotliwość próbkowania danych wejściowych.
+    `batch_siz`e: Określa liczbę segmentów do przetworzenia jednocześnie.
+    `sequence_length`: Określa maksymalną długość sekwencji danych wejściowych.
+    `sample_rate`: Określa częstotliwość próbkowania danych wejściowych.
 
 
 
-wariant **2**
+## wariant **2**
 generalnie to samo ale inne lekko podejscie cechujące sie prostrzą składnią  + wymaga wiekszej mocy obliczeniowej. mniej korzystne i ma wpływ na wydajnosc . 
 
-Integrating NVIDIA NeMo for enhanced speech recognition can significantly improve the accuracy of the transcription process. NeMo offers advanced models that can be fine-tuned for specific languages and tasks. Here is a step-by-step outline for enhancing your existing code with NeMo's speech recognition capabilities:
+
 
     Install NVIDIA NeMo and its Dependencies:
     Make sure you have NeMo and its dependencies installed. You may need to install additional libraries such as torch and soundfile.
@@ -425,6 +428,11 @@ Integration Notes:
 
     Model Selection: Make sure you select an appropriate model for your language. If there isn't a model trained specifically for Polish, consider fine-tuning an English model with a Polish dataset.
     Audio Data Handling: Ensure NeMo receives correctly formatted audio inputs. This involves saving your live audio captures into files before sending them to NeMo for processing.
+
+## Problemy:
+- Znalezienie modelu dobrze rozumującego jezyk polski,
+- znalezienie finansowania na serwery (opcjonalne bo nie jest sprawdzona obecna wydajnosc)
+- sprawdzenie ceny API, koszty uzytkownaia, + wpływu na jakosć znajdowania słów i poprawę działania programu. 
     Dependencies and Environment: Validate that your environment has all necessary NeMo dependencies. Consider running it on an environment with NVIDIA GPUs for efficient processing.
     Expand the _recognize_words Method: Similar changes can be applied to the powtorz_słowa function for recognizing repeated words.
 
