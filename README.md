@@ -453,7 +453,7 @@ Większość modeli z Hugging Face jest dostępna za darmo, jednak niektóre z n
 Aby użyć modelu z Hugging Face, musisz zainstalować bibliotekę `transformers` i `torch`. Możesz to zrobić za pomocą pip:
 ```bash
 pip install transformers torch
-
+```
 Serwer
 
 Aby użyć modelu, nie musisz mieć własnego serwera. Możesz użyć istniejących usług w chmurze, takich jak AWS Lambda, Google Cloud Functions lub Azure Functions, aby hostować model.
