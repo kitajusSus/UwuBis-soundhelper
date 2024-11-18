@@ -435,5 +435,104 @@ Integration Notes:
 - sprawdzenie ceny API, koszty uzytkownaia, + wpływu na jakosć znajdowania słów i poprawę działania programu. 
     Dependencies and Environment: Validate that your environment has all necessary NeMo dependencies. Consider running it on an environment with NVIDIA GPUs for efficient processing.
     Expand the _recognize_words Method: Similar changes can be applied to the powtorz_słowa function for recognizing repeated words.
+## Porady; 
+### Implementacja modelu z Hugging Face
+
+Oto porady dotyczące implementacji modelu z Hugging Face w aplikacji:
+
+### Otrzymanie modelu
+
+Aby uzyskać dostęp do modelu, musisz utworzyć konto na stronie Hugging Face i uzyskać token API. Token ten możesz uzyskać po zalogowaniu się na stronie Hugging Face i przejściu do zakładki "Settings" > "Access Tokens".
+
+### Koszty
+
+Większość modeli z Hugging Face jest dostępna za darmo, jednak niektóre z nich mogą wymagać subskrypcji lub opłaty za użycie. Upewnij się, że sprawdziłeś koszty przed implementacją modelu.
+
+### Ustawienie środowiska
+
+Aby użyć modelu z Hugging Face, musisz zainstalować bibliotekę `transformers` i `torch`. Możesz to zrobić za pomocą pip:
+```bash
+pip install transformers torch
+
+Serwer
+
+Aby użyć modelu, nie musisz mieć własnego serwera. Możesz użyć istniejących usług w chmurze, takich jak AWS Lambda, Google Cloud Functions lub Azure Functions, aby hostować model.
+Możliwości sprzętowe
+
+Aby użyć modelu, musisz mieć dostęp do sprzętu z następującymi specyfikacjami:
+
+    Procesor: minimum Intel Core i5 lub jej odpowiednik
+    Pamięć RAM: minimum 8 GB
+    Karta graficzna: minimum NVIDIA GeForce GTX 1060 lub jej odpowiednik
+
+Obsługa modelu na własnym PC
+
+Tak, użytkownik może obsłużyć model na własnym PC, jeśli spełnia on powyższe wymagania sprzętowe. Można również użyć aplikacji lub strony internetowej do obsługi modelu, jeśli jest ona zaprojektowana do tego celu.
+Dodatkowe porady
+
+    Użyj GPU: Jeśli masz dostęp do karty graficznej, użyj jej do przyspieszenia obliczeń. Możesz to zrobić za pomocą biblioteki torch.cuda.
+    Optimizuj model: Aby zoptymalizować model, możesz użyć techniki takiej jak pruning lub model compression.
+    Testuj model: Przed wdrożeniem modelu, testuj go na różnych danych, aby upewnić się, że działa on poprawnie.
+    Monitoruj model: Po wdrożeniu modelu, monitoruj jego działanie, aby upewnić się, że nie ma żadnych problemów z wydajnością lub jakością.
+
+Zapisz ten plik jako `implementacja_modelu.md` i otwórz go w swoim ulubionym edytorze tekstu lub przeglądarce internetowej.
+
+# Implementing Speech Recognition Models: Tips and Considerations
+
+Integrating advanced speech recognition models, such as those from NVIDIA NeMo or Hugging Face, involves various decisions regarding API access, costs, infrastructure setup, and user accessibility. Below are essential considerations for a successful implementation.
+
+## API and Access
+
+### Obtaining API Access
+- **NVIDIA NeMo**: NeMo is a toolkit for building speech applications and does not offer a managed API. You'll need to run models locally, which is free to use but requires a compatible setup (e.g., CUDA for GPU).
+- **Hugging Face Transformers**: Models can be accessed via the Hugging Face Hub. Many can be used locally, and some offer direct inference APIs (either free or subscription-based).
+
+### API Costs
+- **Hugging Face API**: Free tier available for basic usage. Higher rate limits and features can incur subscription costs.
+- **Local Execution**: Avoids API costs but involves expenses for necessary infrastructure and setup.
+
+## Infrastructure Setup
+
+### Server Requirements
+- To run deep-learning speech recognition models, a powerful GPU-backed server is often necessary.
+- Cloud platforms like AWS, GCP, and Azure offer appropriate infrastructure with GPU instances that provide scalability but come with usage fees.
+
+### Local Hardware
+- **System Requirements**:
+  - A modern NVIDIA GPU with CUDA support for efficient model execution.
+  - Adequate RAM and disk space, depending on the model's size and complexity.
+
+### User Accessibility
+- **Advanced Users**: Can run applications locally on gaming desktops or powerful workstations with the aforementioned hardware.
+- **General Users**: Cloud-backed web applications facilitate usage without requiring complex local setups.
+
+## User Interface and Experience
+
+### Web Application
+- Allows easy distribution and access over the web using modern browsers. Hosting solutions include Heroku, AWS Amplify, etc.
+- Requires careful management of server logistics and costs.
+
+### Desktop Application
+- Direct integration for users, requiring packaging of dependencies (e.g., PyTorch, Transformers).
+- Deployment tools like PyInstaller can help create a user-friendly package.
+
+## Deployment and Usage
+
+### Data Privacy
+- Consider privacy by supporting on-device processing, reducing the need to send data to external servers.
+- Ensure compliance with laws like GDPR and CCPA, especially important for global deployment strategies.
+
+### User Training
+- Provide guides or tutorials to ease adoption, particularly for non-technical users.
+- Design an intuitive UI with clear instructions and feedback.
+
+### Ongoing Support and Maintenance
+- Develop a plan for updates, user support, and feedback mechanisms.
+- Monitor performance and resource usage, scaling accordingly to maintain cost-efficiency.
+
+---
+
+By weighing these factors, you can deploy a speech recognition system that is efficient, cost-effective, and user-friendly, making use of powerful tools offered by NVIDIA NeMo and Hugging Face.
+
 
 By implementing these changes, your application should benefit from more precise ASR capabilities, helping users with accurate repetitions of words and handling segments efficiently.
