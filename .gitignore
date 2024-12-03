@@ -3,3 +3,4 @@ wyniki/
 dist/
 build/
 app.log
+models/
