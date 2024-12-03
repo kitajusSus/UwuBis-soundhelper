@@ -153,3 +153,206 @@
 2024-11-17 23:12:23,414 - INFO - Rozpocz�to nagrywanie
 2024-11-17 23:12:50,524 - WARNING - Nie rozpoznano �adnych s��w
 2024-11-17 23:12:50,948 - INFO - Zapisano wynik dla u�ytkownika test
+2024-11-22 22:09:24,663 - INFO - Window initialization started
+2024-11-22 22:09:41,753 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-11-22 22:09:58,248 - INFO - Created 11 segments of 5 words each
+2024-11-22 22:10:14,069 - INFO - Rozpocz�to nagrywanie
+2024-11-22 22:10:18,886 - WARNING - Nie rozpoznano �adnych s��w
+2024-11-22 22:10:21,461 - INFO - Zapisano wynik dla u�ytkownika test
+2024-11-22 22:11:03,256 - INFO - Rozpocz�to nagrywanie
+2024-11-22 22:11:11,734 - INFO - Zapisano wynik dla u�ytkownika test
+2024-11-22 22:11:29,566 - INFO - Rozpocz�to nagrywanie
+2024-11-22 22:11:36,603 - WARNING - Nie rozpoznano �adnych s��w
+2024-11-22 22:11:36,690 - INFO - Zapisano wynik dla u�ytkownika test
+2024-11-22 22:11:37,495 - ERROR - Error updating timer label: Internal C++ object (PySide6.QtWidgets.QLabel) already deleted.
+2024-12-03 17:26:56,989 - INFO - Window initialization started
+2024-12-03 17:27:23,921 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 17:27:51,656 - INFO - Created 11 segments of 5 words each
+2024-12-03 17:35:48,274 - INFO - Window initialization started
+2024-12-03 17:35:58,635 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
+2024-12-03 17:36:36,362 - INFO - Created 12 segments of 5 words each
+2024-12-03 17:45:11,090 - INFO - Window initialization started
+2024-12-03 17:45:27,064 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\audio1.wav
+2024-12-03 17:45:29,657 - INFO - Created 1 segments of 5 words each
+2024-12-03 17:48:27,244 - INFO - Window initialization started
+2024-12-03 17:48:37,334 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
+2024-12-03 17:49:20,849 - INFO - Created 12 segments of 5 words each
+2024-12-03 17:57:43,143 - INFO - Window initialization started
+2024-12-03 17:58:29,782 - INFO - Starting audio processing for: D:/github/UwuBis/audio/demony\31wiele_demonow_czesc_4.wav
+2024-12-03 17:58:34,036 - INFO - Created 1 segments of 5 words each
+2024-12-03 17:58:55,061 - ERROR - Error in verify_user_audio: 
+2024-12-03 17:58:57,888 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 17:59:01,212 - ERROR - Error in verify_user_audio: 
+2024-12-03 17:59:01,319 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 17:59:18,939 - INFO - Rozpocz�to nagrywanie
+2024-12-03 18:39:56,957 - INFO - Window initialization started
+2024-12-03 18:40:12,422 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 18:40:59,731 - INFO - Created 11 segments of 5 words each
+2024-12-03 18:42:03,072 - ERROR - Error in verify_user_audio: 
+2024-12-03 18:42:03,525 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 18:42:03,992 - ERROR - Error updating timer label: Internal C++ object (PySide6.QtWidgets.QLabel) already deleted.
+2024-12-03 18:42:10,671 - INFO - Rozpocz�to nagrywanie
+2024-12-03 18:42:13,912 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 18:42:18,324 - INFO - Rozpocz�to nagrywanie
+2024-12-03 18:42:23,596 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 18:42:47,005 - ERROR - Error in verify_user_audio: 
+2024-12-03 18:42:47,069 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 18:42:52,594 - INFO - Rozpocz�to nagrywanie
+2024-12-03 18:42:57,629 - INFO - Zapisano wynik dla u�ytkownika test
+2024-12-03 19:01:55,737 - INFO - Window initialization started
+2024-12-03 19:02:16,071 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 19:02:45,253 - ERROR - B��d podczas rozpoznawania s��w: name 'nltk' is not defined
+2024-12-03 19:02:45,254 - ERROR - No words recognized in file
+2024-12-03 19:02:45,254 - ERROR - Audio processing error: Failed to load audio file
+2024-12-03 19:07:08,653 - INFO - Window initialization started
+2024-12-03 19:07:19,700 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 19:07:46,511 - ERROR - Error recognizing words: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/polish/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dzieci/nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\share\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\lib\\nltk_data'
+    - 'C:\\Users\\Dzieci\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2024-12-03 19:07:46,512 - ERROR - No words recognized in file
+2024-12-03 19:07:46,512 - ERROR - Audio processing error: Failed to load audio file
+2024-12-03 19:12:45,873 - INFO - Inicjalizacja okna g��wnego
+2024-12-03 19:12:57,111 - INFO - Rozpocz�cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
+2024-12-03 19:13:33,590 - ERROR - B��d podczas rozpoznawania s��w: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/polish/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dzieci/nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\share\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\lib\\nltk_data'
+    - 'C:\\Users\\Dzieci\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2024-12-03 19:13:33,591 - ERROR - Nie rozpoznano �adnych s��w w pliku
+2024-12-03 19:13:33,591 - ERROR - B��d podczas przetwarzania pliku audio: Nie uda�o si� za�adowa� pliku audio
+2024-12-03 19:20:58,752 - INFO - Inicjalizacja okna g��wnego
+2024-12-03 19:21:09,869 - INFO - Rozpocz�cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 19:25:16,227 - INFO - Inicjalizacja okna g��wnego
+2024-12-03 19:25:27,716 - INFO - Rozpocz�cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\audio2.wav
+2024-12-03 19:25:44,834 - ERROR - B��d podczas rozpoznawania s��w: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/polish/[0m
+
+  Searched in:
+    - 'C:\\Users\\Dzieci/nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\share\\nltk_data'
+    - 'D:\\conda-envs\\pyaudio_env\\lib\\nltk_data'
+    - 'C:\\Users\\Dzieci\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2024-12-03 19:25:44,834 - ERROR - Nie rozpoznano �adnych s��w w pliku
+2024-12-03 19:25:44,834 - ERROR - B��d podczas przetwarzania pliku audio: Nie uda�o si� za�adowa� pliku audio
+2024-12-03 19:45:45,951 - INFO - Inicjalizacja okna głównego
+2024-12-03 19:45:57,375 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 19:46:24,167 - INFO - Utworzono 11 segmentów po 5 słów każdy
+2024-12-03 19:46:51,879 - ERROR - Błąd w verify_user_audio: 
+2024-12-03 19:46:52,317 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 19:47:17,561 - INFO - Słowa użytkownika: ['co'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania']
+2024-12-03 19:47:17,562 - INFO - Wynik podobieństwa: 0.0
+2024-12-03 19:47:17,629 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 21:39:14,688 - INFO - Inicjalizacja okna głównego
+2024-12-03 21:39:40,276 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
+2024-12-03 21:39:42,938 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-03 21:39:42,939 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-03 21:39:42,961 - INFO - Utworzono 13 segmentów po 5 słów każdy
+2024-12-03 21:39:57,949 - INFO - Rozpoznany tekst użytkownika: 
+2024-12-03 21:39:57,949 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['tu', 'jestem', 'w', 'mrokach', 'ziemi']
+2024-12-03 21:39:57,949 - INFO - Wynik podobieństwa: 0.0
+2024-12-03 21:39:58,397 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 21:40:44,771 - INFO - Rozpoznany tekst użytkownika: 
+2024-12-03 21:40:44,771 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['tu', 'jestem', 'w', 'mrokach', 'ziemi']
+2024-12-03 21:40:44,772 - INFO - Wynik podobieństwa: 0.0
+2024-12-03 21:40:44,850 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 21:41:22,848 - INFO - Rozpoznany tekst użytkownika: jestem tam jeszcze
+2024-12-03 21:41:22,848 - INFO - Słowa użytkownika: ['jestem', 'tam', 'jeszcze'], Słowa referencyjne: ['jestem', 'tam', 'jeszcze', 'w', 'sumie']
+2024-12-03 21:41:22,848 - INFO - Wynik podobieństwa: 0.6
+2024-12-03 21:41:22,922 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 22:35:23,095 - INFO - Inicjalizacja okna głównego
+2024-12-03 22:35:34,367 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\audio2.wav
+2024-12-03 22:35:35,172 - INFO - Rozpoznany tekst: panno święta co jasnej bronisz częstochowy
+2024-12-03 22:35:35,172 - INFO - Tokenizowane słowa: ['panno', 'święta', 'co', 'jasnej', 'bronisz', 'częstochowy']
+2024-12-03 22:35:35,178 - INFO - Utworzono 1 segmentów po 5 słów każdy
+2024-12-03 22:35:47,961 - INFO - Rozpoczynam nagrywanie...
+2024-12-03 22:35:58,202 - INFO - Zakończono nagrywanie.
+2024-12-03 22:35:58,971 - INFO - Rozpoznany tekst użytkownika:  
+2024-12-03 22:35:58,972 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['panno', 'święta', 'co', 'jasnej', 'bronisz']
+2024-12-03 22:35:58,972 - INFO - Wynik podobieństwa: 0.0
+2024-12-03 22:35:59,580 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 22:37:04,429 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 22:37:06,999 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-03 22:37:06,999 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-03 22:37:07,029 - INFO - Utworzono 11 segmentów po 5 słów każdy
+2024-12-03 22:37:21,718 - INFO - Rozpoczynam nagrywanie...
+2024-12-03 22:37:31,871 - INFO - Zakończono nagrywanie.
+2024-12-03 22:37:32,591 - INFO - Rozpoznany tekst użytkownika:  
+2024-12-03 22:37:32,591 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-03 22:37:32,591 - INFO - Wynik podobieństwa: 0.0
+2024-12-03 22:37:32,662 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 22:37:42,088 - INFO - Rozpoczynam nagrywanie...
+2024-12-03 22:37:52,253 - INFO - Zakończono nagrywanie.
+2024-12-03 22:37:53,233 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania  
+2024-12-03 22:37:53,233 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-03 22:37:53,233 - INFO - Wynik podobieństwa: 0.8
+2024-12-03 22:37:53,307 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 22:38:20,287 - INFO - Rozpoczynam nagrywanie...
+2024-12-03 22:38:30,442 - INFO - Zakończono nagrywanie.
+2024-12-03 22:38:31,428 - INFO - Rozpoznany tekst użytkownika: zachowania pędu jest napęd rakietowy  
+2024-12-03 22:38:31,429 - INFO - Słowa użytkownika: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy']
+2024-12-03 22:38:31,429 - INFO - Wynik podobieństwa: 1.0
+2024-12-03 22:38:31,504 - INFO - Zapisano wynik dla użytkownika test
+2024-12-03 22:43:48,980 - INFO - Inicjalizacja okna głównego
+2024-12-03 22:44:00,665 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 22:44:03,197 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-03 22:44:03,197 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-03 22:44:03,223 - INFO - Utworzono 11 segmentów po 5 słów każdy
+2024-12-03 22:44:26,764 - INFO - Rozpoczynam nagrywanie...
+2024-12-03 22:44:36,927 - INFO - Zakończono nagrywanie.
+2024-12-03 22:44:37,916 - INFO - Rozpoznany tekst użytkownika: innym przykładem zastosowania zasady zachowania 
+2024-12-03 22:44:37,916 - INFO - Słowa użytkownika: ['innym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-03 22:44:37,916 - INFO - Wynik podobieństwa: 0.6
+2024-12-03 22:44:38,359 - INFO - Zapisano wynik dla użytkownika test

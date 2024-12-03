@@ -2,3 +2,5 @@ main.spec
 wyniki/
 dist/
 build/
+app.log
+models/
