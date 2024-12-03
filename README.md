@@ -235,16 +235,30 @@ Wprowadzenie bardziej szczegółowych komunikatów o błędach dla użytkownika.
 ## **Średnioterminowe cele (w ciągu 4-8 tygodni):**
 
 Rozszerzenie funkcjonalności:
-Dodanie nowych rodzajów testów (np. testy słuchu z obrazkami).
+- Dodanie nowych rodzajów testów (np. testy słuchu z obrazkami).
+
 Ulepszona analityka:
-Wprowadzenie systemu śledzenia postępów użytkowników i generowania raportów.
+- Wprowadzenie systemu śledzenia postępów użytkowników i generowania raportów.
+
 Poprawa interfejsu użytkownika:
-Przeprojektowanie interfejsu, aby był bardziej intuicyjny i przyjazny użytkownikowi.
+- Przeprojektowanie interfejsu, aby był bardziej intuicyjny i przyjazny użytkownikowi.
 Długoterminowe cele (w ciągu 2-6 miesięcy):
 
 Integracja z nowymi technologiami:
+
+
+przykład uzycia 
+
 Wprowadzenie obsługi nowych formatów plików audio lub integracja z innymi aplikacjami.
 Rozwijanie funkcjonalności rozpoznawania mowy:
 Ulepszona dokładność rozpoznawania mowy, obsługa większej liczby języków.
 Tworzenie wersji mobilnej aplikacji:
 Przystosowanie aplikacji do urządzeń mobilnych, zachowując wszystkie funkcjonalności.
+
+
+
+
+
+te porady dotyczace implementacji zostały wygenerowane przez gpt4o i llama3.1 70b instruct
+
+By implementing these changes, your application should benefit from more precise ASR capabilities, helping users with accurate repetitions of words and handling segments efficiently.
