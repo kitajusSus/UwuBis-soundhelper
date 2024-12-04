@@ -11,6 +11,7 @@ from PySide6.QtCore import Qt, QTimer
 from library import zapisz_wynik, AUDIOLIB
 from config import Config  # Upewnij się, że m asz plik config.py z klasą Config
 import spacy  # Importujemy spaCy
+#nie działa github
 
 # Ładujemy model języka polskiego
 nlp = spacy.load('pl_core_news_sm')
