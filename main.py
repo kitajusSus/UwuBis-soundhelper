@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                                QMessageBox, QFileDialog, QTextEdit, QCheckBox)
 from PySide6.QtCore import Qt, QTimer
 from library import zapisz_wynik, AUDIOLIB
-from config import Config  # Upewnij się, że masz plik config.py z klasą Config
+from config import Config  # Upewnij się, że m asz plik config.py z klasą Config
 import spacy  # Importujemy spaCy
 
 # Ładujemy model języka polskiego

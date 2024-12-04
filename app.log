@@ -3,19 +3,19 @@
 2024-11-17 20:49:18,927 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 20:49:18,931 - INFO - Audio file loaded: 1151488 samples, 44100Hz
 2024-11-17 20:49:18,931 - INFO - Processing audio file...
-2024-11-17 20:50:34,116 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-17 20:50:34,116 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-17 20:50:34,116 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-17 20:50:34,117 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-17 20:50:34,117 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-17 20:50:34,117 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-17 20:50:34,117 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-17 20:50:34,117 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-17 20:50:34,117 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-17 20:50:34,117 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-17 20:50:34,117 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-17 20:50:34,117 - INFO - Utworzono 11 segmentów po 5 s³ów
-2024-11-17 20:50:34,118 - ERROR - B³¹d podczas ³adowania pliku audio: Object of type ndarray is not JSON serializable
+2024-11-17 20:50:34,116 - INFO - Segment 1: ['piï¿½knym', 'Przykï¿½adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-17 20:50:34,116 - INFO - Segment 2: ['pï¿½du', 'jest', 'napï¿½d', 'rakietowy', 'napï¿½d']
+2024-11-17 20:50:34,116 - INFO - Segment 3: ['taki', 'jest', 'rozwiï¿½zaniem', 'podstawowego', 'problemu']
+2024-11-17 20:50:34,117 - INFO - Segment 4: ['jak', 'wprawiï¿½', 'Ciaï¿½o', 'w', 'ruch']
+2024-11-17 20:50:34,117 - INFO - Segment 5: ['Jeï¿½li', 'nie', 'ma', 'ï¿½adnego', 'zewnï¿½trznego']
+2024-11-17 20:50:34,117 - INFO - Segment 6: ['elementu', 'od', 'ktï¿½rego', 'mogï¿½oby', 'siï¿½']
+2024-11-17 20:50:34,117 - INFO - Segment 7: ['ono', 'odepchnï¿½ï¿½', 'lub', 'ktï¿½ry', 'mï¿½gï¿½by']
+2024-11-17 20:50:34,117 - INFO - Segment 8: ['ciaï¿½o', 'popchnï¿½ï¿½', 'aby', 'lepiej', 'zrozumieï¿½']
+2024-11-17 20:50:34,117 - INFO - Segment 9: ['tï¿½', 'sytuacjï¿½', 'czytelnik', 'powinien', 'sobie']
+2024-11-17 20:50:34,117 - INFO - Segment 10: ['wyobraziï¿½', 'ï¿½e', 'stoi', 'na', 'ï¿½rodku']
+2024-11-17 20:50:34,117 - INFO - Segment 11: ['idealnie', 'ï¿½liskiej', 'tafli', 'zamarzniï¿½tego', 'jeziora']
+2024-11-17 20:50:34,117 - INFO - Utworzono 11 segmentï¿½w po 5 sï¿½ï¿½w
+2024-11-17 20:50:34,118 - ERROR - Bï¿½ï¿½d podczas ï¿½adowania pliku audio: Object of type ndarray is not JSON serializable
 2024-11-17 20:50:34,118 - ERROR - Audio processing failed in AUDIOLIB
 2024-11-17 20:50:34,118 - ERROR - Unexpected error during audio processing: Failed to process audio file. Check file format and content.
 2024-11-17 20:50:34,118 - ERROR - Unexpected error during audio processing: Failed to process audio file. Check file format and content.
@@ -24,18 +24,18 @@
 2024-11-17 20:54:00,873 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 20:54:00,877 - INFO - Audio file loaded: 1151488 samples, 44100Hz
 2024-11-17 20:54:00,877 - INFO - Processing audio file...
-2024-11-17 20:54:53,573 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-17 20:54:53,574 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-17 20:54:53,574 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-17 20:54:53,574 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-17 20:54:53,574 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-17 20:54:53,574 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-17 20:54:53,574 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-17 20:54:53,574 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-17 20:54:53,574 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-17 20:54:53,574 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-17 20:54:53,574 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-17 20:54:53,574 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-17 20:54:53,573 - INFO - Segment 1: ['piï¿½knym', 'Przykï¿½adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-17 20:54:53,574 - INFO - Segment 2: ['pï¿½du', 'jest', 'napï¿½d', 'rakietowy', 'napï¿½d']
+2024-11-17 20:54:53,574 - INFO - Segment 3: ['taki', 'jest', 'rozwiï¿½zaniem', 'podstawowego', 'problemu']
+2024-11-17 20:54:53,574 - INFO - Segment 4: ['jak', 'wprawiï¿½', 'Ciaï¿½o', 'w', 'ruch']
+2024-11-17 20:54:53,574 - INFO - Segment 5: ['Jeï¿½li', 'nie', 'ma', 'ï¿½adnego', 'zewnï¿½trznego']
+2024-11-17 20:54:53,574 - INFO - Segment 6: ['elementu', 'od', 'ktï¿½rego', 'mogï¿½oby', 'siï¿½']
+2024-11-17 20:54:53,574 - INFO - Segment 7: ['ono', 'odepchnï¿½ï¿½', 'lub', 'ktï¿½ry', 'mï¿½gï¿½by']
+2024-11-17 20:54:53,574 - INFO - Segment 8: ['ciaï¿½o', 'popchnï¿½ï¿½', 'aby', 'lepiej', 'zrozumieï¿½']
+2024-11-17 20:54:53,574 - INFO - Segment 9: ['tï¿½', 'sytuacjï¿½', 'czytelnik', 'powinien', 'sobie']
+2024-11-17 20:54:53,574 - INFO - Segment 10: ['wyobraziï¿½', 'ï¿½e', 'stoi', 'na', 'ï¿½rodku']
+2024-11-17 20:54:53,574 - INFO - Segment 11: ['idealnie', 'ï¿½liskiej', 'tafli', 'zamarzniï¿½tego', 'jeziora']
+2024-11-17 20:54:53,574 - INFO - Utworzono 11 segmentï¿½w po 5 sï¿½ï¿½w
 2024-11-17 20:54:55,864 - INFO - Segment data saved successfully to segment_data.json
 2024-11-17 20:54:58,230 - INFO - Segment data saved successfully to segment_data.json
 2024-11-17 20:54:58,243 - INFO - Successfully processed audio file. Found 11 segments
@@ -46,18 +46,18 @@
 2024-11-17 20:57:04,166 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 20:57:04,170 - INFO - Audio file loaded: 1151488 samples, 44100Hz
 2024-11-17 20:57:04,170 - INFO - Processing audio file...
-2024-11-17 20:58:08,243 - INFO - Segment 1: ['piêknym', 'Przyk³adem', 'zastosowania', 'zasady', 'zachowania']
-2024-11-17 20:58:08,243 - INFO - Segment 2: ['pêdu', 'jest', 'napêd', 'rakietowy', 'napêd']
-2024-11-17 20:58:08,243 - INFO - Segment 3: ['taki', 'jest', 'rozwi¹zaniem', 'podstawowego', 'problemu']
-2024-11-17 20:58:08,243 - INFO - Segment 4: ['jak', 'wprawiæ', 'Cia³o', 'w', 'ruch']
-2024-11-17 20:58:08,244 - INFO - Segment 5: ['Jeœli', 'nie', 'ma', '¿adnego', 'zewnêtrznego']
-2024-11-17 20:58:08,244 - INFO - Segment 6: ['elementu', 'od', 'którego', 'mog³oby', 'siê']
-2024-11-17 20:58:08,244 - INFO - Segment 7: ['ono', 'odepchn¹æ', 'lub', 'który', 'móg³by']
-2024-11-17 20:58:08,244 - INFO - Segment 8: ['cia³o', 'popchn¹æ', 'aby', 'lepiej', 'zrozumieæ']
-2024-11-17 20:58:08,244 - INFO - Segment 9: ['tê', 'sytuacjê', 'czytelnik', 'powinien', 'sobie']
-2024-11-17 20:58:08,244 - INFO - Segment 10: ['wyobraziæ', '¿e', 'stoi', 'na', 'œrodku']
-2024-11-17 20:58:08,244 - INFO - Segment 11: ['idealnie', 'œliskiej', 'tafli', 'zamarzniêtego', 'jeziora']
-2024-11-17 20:58:08,244 - INFO - Utworzono 11 segmentów po 5 s³ów
+2024-11-17 20:58:08,243 - INFO - Segment 1: ['piï¿½knym', 'Przykï¿½adem', 'zastosowania', 'zasady', 'zachowania']
+2024-11-17 20:58:08,243 - INFO - Segment 2: ['pï¿½du', 'jest', 'napï¿½d', 'rakietowy', 'napï¿½d']
+2024-11-17 20:58:08,243 - INFO - Segment 3: ['taki', 'jest', 'rozwiï¿½zaniem', 'podstawowego', 'problemu']
+2024-11-17 20:58:08,243 - INFO - Segment 4: ['jak', 'wprawiï¿½', 'Ciaï¿½o', 'w', 'ruch']
+2024-11-17 20:58:08,244 - INFO - Segment 5: ['Jeï¿½li', 'nie', 'ma', 'ï¿½adnego', 'zewnï¿½trznego']
+2024-11-17 20:58:08,244 - INFO - Segment 6: ['elementu', 'od', 'ktï¿½rego', 'mogï¿½oby', 'siï¿½']
+2024-11-17 20:58:08,244 - INFO - Segment 7: ['ono', 'odepchnï¿½ï¿½', 'lub', 'ktï¿½ry', 'mï¿½gï¿½by']
+2024-11-17 20:58:08,244 - INFO - Segment 8: ['ciaï¿½o', 'popchnï¿½ï¿½', 'aby', 'lepiej', 'zrozumieï¿½']
+2024-11-17 20:58:08,244 - INFO - Segment 9: ['tï¿½', 'sytuacjï¿½', 'czytelnik', 'powinien', 'sobie']
+2024-11-17 20:58:08,244 - INFO - Segment 10: ['wyobraziï¿½', 'ï¿½e', 'stoi', 'na', 'ï¿½rodku']
+2024-11-17 20:58:08,244 - INFO - Segment 11: ['idealnie', 'ï¿½liskiej', 'tafli', 'zamarzniï¿½tego', 'jeziora']
+2024-11-17 20:58:08,244 - INFO - Utworzono 11 segmentï¿½w po 5 sï¿½ï¿½w
 2024-11-17 20:58:10,883 - INFO - Segment data saved successfully to segment_data.json
 2024-11-17 20:58:13,678 - INFO - Segment data saved successfully to segment_data.json
 2024-11-17 20:58:13,691 - INFO - Successfully processed audio file. Found 11 segments
@@ -84,42 +84,42 @@
 2024-11-17 21:20:23,973 - INFO - Window initialization started
 2024-11-17 21:21:30,133 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:21:54,560 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:22:04,953 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:22:15,494 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:22:04,953 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:22:15,494 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 21:28:50,500 - INFO - Window initialization started
 2024-11-17 21:29:01,572 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:29:24,798 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:29:55,337 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:30:00,128 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 21:30:00,256 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:29:55,337 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:30:00,128 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 21:30:00,256 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 21:30:08,137 - INFO - Window initialization started
 2024-11-17 21:30:17,593 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:30:34,467 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:31:33,220 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:31:38,356 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:31:33,220 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:31:38,356 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 21:33:26,826 - INFO - Window initialization started
 2024-11-17 21:33:38,816 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:34:05,884 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:34:16,719 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:34:24,170 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 21:34:24,281 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:34:16,719 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:34:24,170 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 21:34:24,281 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 21:43:11,697 - INFO - Window initialization started
 2024-11-17 21:43:26,033 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:43:48,205 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:44:36,785 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:44:41,280 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:44:36,785 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:44:41,280 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 21:47:28,297 - INFO - Window initialization started
 2024-11-17 21:47:40,742 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 21:48:01,424 - INFO - Created 11 segments of 5 words each
-2024-11-17 21:48:07,739 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:48:13,735 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-17 21:48:21,181 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:48:26,660 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-17 21:48:34,289 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:48:45,426 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-17 21:48:48,551 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 21:48:58,554 - INFO - Rozpoczêto nagrywanie
-2024-11-17 21:49:03,455 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 21:48:07,739 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:48:13,735 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-17 21:48:21,181 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:48:26,660 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-17 21:48:34,289 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:48:45,426 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-17 21:48:48,551 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 21:48:58,554 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 21:49:03,455 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 22:09:43,779 - INFO - Window initialization started
 2024-11-17 22:09:53,511 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 22:10:11,665 - INFO - Created 11 segments of 5 words each
@@ -127,43 +127,43 @@
 2024-11-17 22:51:45,165 - INFO - Window initialization started
 2024-11-17 22:54:15,196 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 22:55:14,969 - INFO - Created 11 segments of 5 words each
-2024-11-17 22:55:41,230 - INFO - Rozpoczêto nagrywanie
-2024-11-17 22:55:48,652 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 22:55:57,897 - INFO - Rozpoczêto nagrywanie
-2024-11-17 22:56:06,032 - WARNING - Nie rozpoznano ¿adnych s³ów
+2024-11-17 22:55:41,230 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 22:55:48,652 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 22:55:57,897 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 22:56:06,032 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
 2024-11-17 22:57:57,970 - INFO - Window initialization started
 2024-11-17 22:58:08,874 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 22:58:37,740 - INFO - Created 11 segments of 5 words each
-2024-11-17 22:58:49,644 - INFO - Rozpoczêto nagrywanie
-2024-11-17 22:58:59,785 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 22:59:01,461 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-17 22:59:45,442 - INFO - Rozpoczêto nagrywanie
-2024-11-17 22:59:54,278 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 22:59:54,331 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 22:58:49,644 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 22:58:59,785 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 22:59:01,461 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-17 22:59:45,442 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 22:59:54,278 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 22:59:54,331 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 23:00:18,185 - INFO - Window initialization started
 2024-11-17 23:00:29,193 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 23:00:48,438 - INFO - Created 11 segments of 5 words each
-2024-11-17 23:02:50,298 - INFO - Rozpoczêto nagrywanie
-2024-11-17 23:02:57,899 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 23:02:58,349 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 23:02:50,298 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 23:02:57,899 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 23:02:58,349 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-17 23:09:31,716 - INFO - Window initialization started
 2024-11-17 23:10:36,105 - INFO - Window initialization started
 2024-11-17 23:10:44,581 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-17 23:11:18,192 - INFO - Created 11 segments of 5 words each
-2024-11-17 23:12:23,414 - INFO - Rozpoczêto nagrywanie
-2024-11-17 23:12:50,524 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-17 23:12:50,948 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-17 23:12:23,414 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-17 23:12:50,524 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-17 23:12:50,948 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-22 22:09:24,663 - INFO - Window initialization started
 2024-11-22 22:09:41,753 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-11-22 22:09:58,248 - INFO - Created 11 segments of 5 words each
-2024-11-22 22:10:14,069 - INFO - Rozpoczêto nagrywanie
-2024-11-22 22:10:18,886 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-22 22:10:21,461 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-22 22:11:03,256 - INFO - Rozpoczêto nagrywanie
-2024-11-22 22:11:11,734 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-11-22 22:11:29,566 - INFO - Rozpoczêto nagrywanie
-2024-11-22 22:11:36,603 - WARNING - Nie rozpoznano ¿adnych s³ów
-2024-11-22 22:11:36,690 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-11-22 22:10:14,069 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-22 22:10:18,886 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-22 22:10:21,461 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-22 22:11:03,256 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-22 22:11:11,734 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-11-22 22:11:29,566 - INFO - Rozpoczï¿½to nagrywanie
+2024-11-22 22:11:36,603 - WARNING - Nie rozpoznano ï¿½adnych sï¿½ï¿½w
+2024-11-22 22:11:36,690 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-11-22 22:11:37,495 - ERROR - Error updating timer label: Internal C++ object (PySide6.QtWidgets.QLabel) already deleted.
 2024-12-03 17:26:56,989 - INFO - Window initialization started
 2024-12-03 17:27:23,921 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
@@ -181,27 +181,27 @@
 2024-12-03 17:58:29,782 - INFO - Starting audio processing for: D:/github/UwuBis/audio/demony\31wiele_demonow_czesc_4.wav
 2024-12-03 17:58:34,036 - INFO - Created 1 segments of 5 words each
 2024-12-03 17:58:55,061 - ERROR - Error in verify_user_audio: 
-2024-12-03 17:58:57,888 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-12-03 17:58:57,888 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-12-03 17:59:01,212 - ERROR - Error in verify_user_audio: 
-2024-12-03 17:59:01,319 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-12-03 17:59:18,939 - INFO - Rozpoczêto nagrywanie
+2024-12-03 17:59:01,319 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-12-03 17:59:18,939 - INFO - Rozpoczï¿½to nagrywanie
 2024-12-03 18:39:56,957 - INFO - Window initialization started
 2024-12-03 18:40:12,422 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-12-03 18:40:59,731 - INFO - Created 11 segments of 5 words each
 2024-12-03 18:42:03,072 - ERROR - Error in verify_user_audio: 
-2024-12-03 18:42:03,525 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-12-03 18:42:03,525 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-12-03 18:42:03,992 - ERROR - Error updating timer label: Internal C++ object (PySide6.QtWidgets.QLabel) already deleted.
-2024-12-03 18:42:10,671 - INFO - Rozpoczêto nagrywanie
-2024-12-03 18:42:13,912 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-12-03 18:42:18,324 - INFO - Rozpoczêto nagrywanie
-2024-12-03 18:42:23,596 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-12-03 18:42:10,671 - INFO - Rozpoczï¿½to nagrywanie
+2024-12-03 18:42:13,912 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-12-03 18:42:18,324 - INFO - Rozpoczï¿½to nagrywanie
+2024-12-03 18:42:23,596 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-12-03 18:42:47,005 - ERROR - Error in verify_user_audio: 
-2024-12-03 18:42:47,069 - INFO - Zapisano wynik dla u¿ytkownika test
-2024-12-03 18:42:52,594 - INFO - Rozpoczêto nagrywanie
-2024-12-03 18:42:57,629 - INFO - Zapisano wynik dla u¿ytkownika test
+2024-12-03 18:42:47,069 - INFO - Zapisano wynik dla uï¿½ytkownika test
+2024-12-03 18:42:52,594 - INFO - Rozpoczï¿½to nagrywanie
+2024-12-03 18:42:57,629 - INFO - Zapisano wynik dla uï¿½ytkownika test
 2024-12-03 19:01:55,737 - INFO - Window initialization started
 2024-12-03 19:02:16,071 - INFO - Starting audio processing for: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
-2024-12-03 19:02:45,253 - ERROR - B³¹d podczas rozpoznawania s³ów: name 'nltk' is not defined
+2024-12-03 19:02:45,253 - ERROR - Bï¿½ï¿½d podczas rozpoznawania sï¿½ï¿½w: name 'nltk' is not defined
 2024-12-03 19:02:45,254 - ERROR - No words recognized in file
 2024-12-03 19:02:45,254 - ERROR - Audio processing error: Failed to load audio file
 2024-12-03 19:07:08,653 - INFO - Window initialization started
@@ -231,9 +231,9 @@
 
 2024-12-03 19:07:46,512 - ERROR - No words recognized in file
 2024-12-03 19:07:46,512 - ERROR - Audio processing error: Failed to load audio file
-2024-12-03 19:12:45,873 - INFO - Inicjalizacja okna g³ównego
-2024-12-03 19:12:57,111 - INFO - Rozpoczêcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
-2024-12-03 19:13:33,590 - ERROR - B³¹d podczas rozpoznawania s³ów: 
+2024-12-03 19:12:45,873 - INFO - Inicjalizacja okna gï¿½ï¿½wnego
+2024-12-03 19:12:57,111 - INFO - Rozpoczï¿½cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\lesmian1.wav
+2024-12-03 19:13:33,590 - ERROR - Bï¿½ï¿½d podczas rozpoznawania sï¿½ï¿½w: 
 **********************************************************************
   Resource [93mpunkt_tab[0m not found.
   Please use the NLTK Downloader to obtain the resource:
@@ -256,13 +256,13 @@
     - 'E:\\nltk_data'
 **********************************************************************
 
-2024-12-03 19:13:33,591 - ERROR - Nie rozpoznano ¿adnych s³ów w pliku
-2024-12-03 19:13:33,591 - ERROR - B³¹d podczas przetwarzania pliku audio: Nie uda³o siê za³adowaæ pliku audio
-2024-12-03 19:20:58,752 - INFO - Inicjalizacja okna g³ównego
-2024-12-03 19:21:09,869 - INFO - Rozpoczêcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
-2024-12-03 19:25:16,227 - INFO - Inicjalizacja okna g³ównego
-2024-12-03 19:25:27,716 - INFO - Rozpoczêcie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\audio2.wav
-2024-12-03 19:25:44,834 - ERROR - B³¹d podczas rozpoznawania s³ów: 
+2024-12-03 19:13:33,591 - ERROR - Nie rozpoznano ï¿½adnych sï¿½ï¿½w w pliku
+2024-12-03 19:13:33,591 - ERROR - Bï¿½ï¿½d podczas przetwarzania pliku audio: Nie udaï¿½o siï¿½ zaï¿½adowaï¿½ pliku audio
+2024-12-03 19:20:58,752 - INFO - Inicjalizacja okna gï¿½ï¿½wnego
+2024-12-03 19:21:09,869 - INFO - Rozpoczï¿½cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-03 19:25:16,227 - INFO - Inicjalizacja okna gï¿½ï¿½wnego
+2024-12-03 19:25:27,716 - INFO - Rozpoczï¿½cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\audio2.wav
+2024-12-03 19:25:44,834 - ERROR - Bï¿½ï¿½d podczas rozpoznawania sï¿½ï¿½w: 
 **********************************************************************
   Resource [93mpunkt_tab[0m not found.
   Please use the NLTK Downloader to obtain the resource:
@@ -285,8 +285,8 @@
     - 'E:\\nltk_data'
 **********************************************************************
 
-2024-12-03 19:25:44,834 - ERROR - Nie rozpoznano ¿adnych s³ów w pliku
-2024-12-03 19:25:44,834 - ERROR - B³¹d podczas przetwarzania pliku audio: Nie uda³o siê za³adowaæ pliku audio
+2024-12-03 19:25:44,834 - ERROR - Nie rozpoznano ï¿½adnych sï¿½ï¿½w w pliku
+2024-12-03 19:25:44,834 - ERROR - Bï¿½ï¿½d podczas przetwarzania pliku audio: Nie udaï¿½o siï¿½ zaï¿½adowaï¿½ pliku audio
 2024-12-03 19:45:45,951 - INFO - Inicjalizacja okna gÅ‚Ã³wnego
 2024-12-03 19:45:57,375 - INFO - RozpoczÄ™cie przetwarzania pliku audio: D:/github/UwuBis/audio/krzys_audio\TAYLOR__Mechanika.wav
 2024-12-03 19:46:24,167 - INFO - Utworzono 11 segmentÃ³w po 5 sÅ‚Ã³w kaÅ¼dy
