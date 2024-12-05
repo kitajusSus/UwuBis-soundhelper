@@ -7,7 +7,7 @@ soundfile==0.12.1
 sounddevice==0.4.6
 vosk==0.3.45
 openpyxl==3.1.2
-librosa==0.10.0.post2
+librosa==0.10.0.
 numba==0.57.1
 scipy==1.11.3
 audioread==3.0.0
