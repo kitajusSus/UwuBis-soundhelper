@@ -2,6 +2,7 @@ PySide6
 SpeechRecognition
 pandas
 numpy
+flask
 pygame
 soundfile
 sounddevice
