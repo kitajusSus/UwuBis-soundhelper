@@ -10,3 +10,4 @@ openpyxl
 librosa
 scipy
 audioread
+gunicorn
