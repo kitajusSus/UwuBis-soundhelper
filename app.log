@@ -356,3 +356,14 @@
 2024-12-03 22:44:37,916 - INFO - Słowa użytkownika: ['innym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
 2024-12-03 22:44:37,916 - INFO - Wynik podobieństwa: 0.6
 2024-12-03 22:44:38,359 - INFO - Zapisano wynik dla użytkownika test
+2024-12-12 19:39:23,557 - INFO - Inicjalizacja okna głównego
+2024-12-12 19:39:36,583 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-12 19:39:39,154 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-12 19:39:39,155 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-12 19:39:39,181 - INFO - Utworzono 11 segmentów po 5 słów każdy
+2024-12-12 19:39:46,509 - INFO - Rozpoczynam nagrywanie...
+2024-12-12 19:39:56,674 - INFO - Zakończono nagrywanie.
+2024-12-12 19:39:57,689 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania 
+2024-12-12 19:39:57,690 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-12 19:39:57,690 - INFO - Wynik podobieństwa: 0.8
+2024-12-12 19:39:58,192 - INFO - Zapisano wynik dla użytkownika test

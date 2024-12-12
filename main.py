@@ -9,13 +9,14 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                                QMessageBox, QFileDialog, QTextEdit, QCheckBox)
 from PySide6.QtCore import Qt, QTimer
 from library import zapisz_wynik, AUDIOLIB
-from config import Config  # Upewnij się, że m asz plik config.py z klasą Config
-import spacy  # Importujemy spaCy
-#nie działa github
+from config import Config  # Upewnij się, że masz plik config.py z klasą Config
+import spacy  # Importujemy spacy
+
 
 # Ładujemy model języka polskiego
-nlp = spacy.load('pl_core_news_sm')
+nlp = spacy.load('models/pl_core_news_sm')
 
+# Konfiguracja logowania
 logging.basicConfig(
     filename='app.log',
     level=logging.INFO,
@@ -24,7 +25,6 @@ logging.basicConfig(
 )
 
 class MainWindow(QMainWindow):
-
     def __init__(self):
         super().__init__()
         logging.info("Inicjalizacja okna głównego")
@@ -32,8 +32,8 @@ class MainWindow(QMainWindow):
         # Inicjalizacja zmiennych
         self.recognizer = sr.Recognizer()
         self.sr = sr
-        self.config = Config()
-        self.audio_helper = AUDIOLIB(self.config)
+        self.config = Config()  # Inicjalizujemy konfigurację z pliku config.py
+        self.audio_helper = AUDIOLIB(self.config)  # Inicjalizujemy bibliotekę audio
         self.current_segment = 0
         self.total_segments = 0
         self.current_segment_words = []
@@ -57,6 +57,7 @@ class MainWindow(QMainWindow):
     def showLoginScreen(self):
         self.clearLayout()
 
+        # Ekran logowania
         login_label = QLabel("Login:")
         self.login_input = QLineEdit()
         login_button = QPushButton("Zaloguj się")
@@ -76,6 +77,7 @@ class MainWindow(QMainWindow):
     def showFolderSelection(self):
         self.clearLayout()
 
+        # Wybór folderu z plikami audio
         self.auto_process_checkbox = QCheckBox("Automatycznie przetwarzaj wszystkie pliki audio")
         select_folder_btn = QPushButton("Wybierz folder z plikami audio")
         select_folder_btn.clicked.connect(self.selectAudioFolder)
@@ -93,6 +95,7 @@ class MainWindow(QMainWindow):
     def showAudioFiles(self):
         self.clearLayout()
 
+        # Wyświetlenie listy plików audio
         try:
             audio_files = [f for f in os.listdir(self.katalog_audio) if f.endswith('.wav')]
             if not audio_files:
@@ -216,7 +219,6 @@ class MainWindow(QMainWindow):
             if os.path.exists(temp_audio):
                 os.remove(temp_audio)     
 
-
     def showSegmentResults(self, repeated_words, is_replay=False):
         self.clearLayout()
 
@@ -310,11 +312,14 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
-    sys.exit(app.exec())
-
-
-# DZIENNIK POKŁADOWY
+    sys.exit(app.exec())# DZIENNIK POKŁADOWY
 ## 03.12.2024
 """
 taka sciana tekstu byle tylko wybombiło ten program gdy akurat NAPRAWIŁEM WSZYSTKIE BLEDY ALE TERAZ NAGLE STWIERDZA ZE NIE WIDZI NICZEGO I NIE WLACZY AUDIO
+"""
+## 12.12.2024
+"""
+dziennnik pokładowy, karol odpadł musze dowieźć projekt do konca, moze i ja przeminę ale chwała wydziału fizyki bedzie trwać wiecznie (wszystko po przecinku wygenerował COPILOT SAMODZIELNIE XDDDDDDDDDDDD) 
+- postaram się rpzygotować działający exe tak by wysłać dla Prof. Sz . JUZ MI SIE TO NUDZI GIGA NIE CHCE MI SIE, ALE NO CÓŻ. 
+- jesli nie zadziała to zawsze moge poprostu przeniesc całe skupienie na implementacją na zaimplantowanych, tego tez nie umiem bedzie wysoko. Karol help. 
 """

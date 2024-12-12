@@ -33,13 +33,39 @@ python main_new.py
 - [QTPY](https://doc.qt.io/qtforpython-6/overviews/timers.html)
 ## 0.2 Ogólne wytłumaczenie poszczególnych funkcji. 
 
-1. Losowanie pliku audio: Skrypt losuje plik audio z katalogu.
-2. Odtwarzanie pliku audio: Skrypt odtwarza wybrany plik audio, aby użytkownik mógł go usłyszeć.
-3. Nagrywanie odpowiedzi użytkownika: Po odtworzeniu pliku audio, skrypt prosi użytkownika o powtórzenie usłyszanych słów i nagrywa jego odpowiedź.
-4. Rozpoznawanie mowy: Skrypt używa biblioteki speechrecognition, aby rozpoznać słowa wypowiedziane przez użytkownika.
-5. Porównywanie słów: Skrypt porównuje słowa wypowiedziane przez użytkownika z oryginalnymi słowami z pliku audio.
-6. Zapisywanie wyników: Skrypt zapisuje wyniki do pliku Excel, w którym znajdują się informacje o poprawnie i niepoprawnie powtórzonych słowach.
 
+### Importy
+- `import os`, `import sys`, `import time`, `import threading`: Importowanie standardowych bibliotek Pythona.
+- `import speech_recognition as sr`: Importowanie biblioteki do rozpoznawania mowy.
+- `import logging`: Importowanie biblioteki do logowania.
+- `from PySide6.QtWidgets import ...`: Importowanie komponentów GUI z PySide6.
+- `from PySide6.QtCore import Qt, QTimer`: Importowanie dodatkowych komponentów z PySide6.
+- `from library import zapisz_wynik, AUDIOLIB`: Importowanie funkcji i klas z pliku library.py.
+- `from config import Config`: Importowanie klasy Config z pliku config.py.
+- `import spacy`: Importowanie biblioteki spaCy.
+
+### Inicjalizacja
+- `nlp = spacy.load(...)`: Ładowanie modelu języka polskiego spaCy.
+- `logging.basicConfig(...)`: Konfiguracja logowania.
+
+### Klasa MainWindow
+- `class MainWindow(QMainWindow)`: Klasa głównego okna aplikacji.
+- `def __init__(self)`: Konstruktor klasy MainWindow.
+- `def initUI(self)`: Funkcja inicjalizująca interfejs użytkownika.
+- `def showLoginScreen(self)`: Funkcja wyświetlająca ekran logowania.
+- `def handleLogin(self)`: Funkcja obsługująca logowanie użytkownika.
+- `def showFolderSelection(self)`: Funkcja wyświetlająca ekran wyboru folderu.
+- `def selectAudioFolder(self)`: Funkcja obsługująca wybór folderu z plikami audio.
+- `def showAudioFiles(self)`: Funkcja wyświetlająca listę plików audio.
+- `def handleAudioFileSelection(self)`: Funkcja obsługująca wybór pliku audio.
+- `def startSegmentTest(self)`: Funkcja rozpoczynająca test segmentu.
+- `def playCurrentSegment(self)`: Funkcja odtwarzająca bieżący segment.
+- `def confirmRepetition(self)`: Funkcja potwierdzająca powtórzenie segmentu.
+- `def showSegmentResults(self)`: Funkcja wyświetlająca wyniki segmentu.
+- `def showReferenceWords(self)`: Funkcja wyświetlająca słowa referencyjne.
+- `def replayCurrentSegment(self)`: Funkcja powtarzająca odtwarzanie bieżącego segmentu.
+- `def nextSegment(self)`: Funkcja przechodząca do następnego segmentu.
+- `def clearLayout(self)`: Funkcja czyszcząca układ GUI.
 
 ### 0.2.1 Schemat Działania funkcji main.py
 ```mermaid

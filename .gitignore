@@ -4,3 +4,9 @@ dist/
 build/
 app.log
 models/
+UwuBis.spec
+audio/
+__zig/
+__zig-cache/
+__pycache/
+
