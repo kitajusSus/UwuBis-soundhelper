@@ -44,28 +44,64 @@ python main_new.py
 - `from config import Config`: Importowanie klasy Config z pliku config.py.
 - `import spacy`: Importowanie biblioteki spaCy.
 
+#### Licencje użytych bibliotek
+
+- **speech_recognition**: Licencja MIT
+- **PySide6**: Licencja LGPL
+- **spacy**: Licencja MIT
+- **sounddevice**: Licencja BSD
+- **soundfile**: Licencja BSD
+- **pygame**: Licencja LGPL
+- **vosk**: Licencja Apache 2.0
+- **pandas**: Licencja BSD
+- **numpy**: Licencja BSD
+- **librosa**: Licencja ISC
+Wieęcej informacji w pliku [LICENSE](LICENSE)
 ### Inicjalizacja
 - `nlp = spacy.load(...)`: Ładowanie modelu języka polskiego spaCy.
 - `logging.basicConfig(...)`: Konfiguracja logowania.
 
 ### Klasa MainWindow
-- `class MainWindow(QMainWindow)`: Klasa głównego okna aplikacji.
-- `def __init__(self)`: Konstruktor klasy MainWindow.
-- `def initUI(self)`: Funkcja inicjalizująca interfejs użytkownika.
-- `def showLoginScreen(self)`: Funkcja wyświetlająca ekran logowania.
-- `def handleLogin(self)`: Funkcja obsługująca logowanie użytkownika.
-- `def showFolderSelection(self)`: Funkcja wyświetlająca ekran wyboru folderu.
-- `def selectAudioFolder(self)`: Funkcja obsługująca wybór folderu z plikami audio.
-- `def showAudioFiles(self)`: Funkcja wyświetlająca listę plików audio.
-- `def handleAudioFileSelection(self)`: Funkcja obsługująca wybór pliku audio.
-- `def startSegmentTest(self)`: Funkcja rozpoczynająca test segmentu.
-- `def playCurrentSegment(self)`: Funkcja odtwarzająca bieżący segment.
-- `def confirmRepetition(self)`: Funkcja potwierdzająca powtórzenie segmentu.
-- `def showSegmentResults(self)`: Funkcja wyświetlająca wyniki segmentu.
-- `def showReferenceWords(self)`: Funkcja wyświetlająca słowa referencyjne.
-- `def replayCurrentSegment(self)`: Funkcja powtarzająca odtwarzanie bieżącego segmentu.
-- `def nextSegment(self)`: Funkcja przechodząca do następnego segmentu.
-- `def clearLayout(self)`: Funkcja czyszcząca układ GUI.
+
+
+## Plik: `main.py`
+
+- **`class MainWindow(QMainWindow)`**: Główna klasa aplikacji definiująca interfejs użytkownika i logikę programu.
+  - **`def __init__(self)`**: Inicjalizuje główne okno aplikacji, konfigurując rozpoznawanie mowy, ładowanie modelu językowego oraz ustawienia interfejsu użytkownika.
+  - **`def initUI(self)`**: Tworzy i rozmieszcza elementy interfejsu użytkownika, takie jak przyciski, pola tekstowe i listy.
+  - **`def showLoginScreen(self)`**: Wyświetla ekran logowania, umożliwiając użytkownikowi wprowadzenie nazwy użytkownika.
+  - **`def handleLogin(self)`**: Obsługuje proces logowania; po wprowadzeniu prawidłowego loginu przechodzi do następnego ekranu.
+  - **`def showFolderSelection(self)`**: Wyświetla interfejs wyboru folderu z plikami audio oraz opcję automatycznego przetwarzania.
+  - **`def selectAudioFolder(self)`**: Otwiera okno dialogowe do wyboru folderu zawierającego pliki audio i zapisuje wybraną ścieżkę.
+  - **`def showAudioFiles(self)`**: Wyświetla listę plików audio znajdujących się w wybranym folderze.
+  - **`def handleAudioFileSelection(self)`**: Obsługuje wybór konkretnego pliku audio z listy i inicjuje jego przetwarzanie.
+  - **`def startSegmentTest(self)`**: Rozpoczyna test dla aktualnie wybranego segmentu audio, wyświetlając odpowiednie informacje i opcje.
+  - **`def playCurrentSegment(self)`**: Odtwarza bieżący segment audio i przygotowuje interfejs do nagrywania powtórzenia przez użytkownika.
+  - **`def confirmRepetition(self)`**: Rozpoczyna nagrywanie głosu użytkownika, umożliwiając mu powtórzenie usłyszanego segmentu.
+  - **`def showSegmentResults(self, repeated_words, is_replay=False)`**: Wyświetla wyniki porównania słów wypowiedzianych przez użytkownika z oryginalnym segmentem.
+  - **`def showReferenceWords(self, results_text, current_words, repeated_words, button)`**: Wyświetla listę słów referencyjnych dla danego segmentu, wskazując poprawne i niepoprawne powtórzenia.
+  - **`def replayCurrentSegment(self)`**: Pozwala na ponowne odtworzenie bieżącego segmentu audio.
+  - **`def nextSegment(self)`**: Przechodzi do następnego segmentu audio w teście.
+  - **`def clearLayout(self)`**: Czyści bieżący układ interfejsu użytkownika, usuwając wszystkie widżety.
+  - **`def clearLayoutHelper(self, layout)`**: Pomocnicza funkcja do rekurencyjnego czyszczenia zagnieżdżonych układów.
+
+plik [library.py](library.py)
+
+ **`class AUDIOLIB`**: Klasa odpowiedzialna za operacje na plikach audio, takie jak ładowanie, segmentacja, odtwarzanie oraz weryfikacja nagrań użytkownika.
+  - **`def __init__(self, config)`**: Inicjalizuje obiekt klasy, ładując model Vosk do rozpoznawania mowy i ustawiając konfigurację.
+  - **`def load_audio_file(self, file_path)`**: Ładuje plik audio, rozpoznaje zawarte w nim słowa i dzieli go na segmenty o określonej liczbie słów.
+  - **`def play_segment(self, segment_idx)`**: Odtwarza określony segment audio, jeśli nie został jeszcze ukończony przez użytkownika.
+  - **`def _play_segment_audio(self)`**: Wewnętrzna metoda odtwarzająca bieżący segment audio za pomocą biblioteki `pygame`.
+  - **`def _recognize_words(self, file_path)`**: Rozpoznaje słowa w pliku audio za pomocą modelu Vosk, zwracając listę zidentyfikowanych słów.
+  - **`def replay_current_segment(self)`**: Powtarza odtwarzanie aktualnego segmentu audio.
+  - **`def get_total_segments(self)`**: Zwraca całkowitą liczbę segmentów audio.
+  - **`def get_current_segment_words(self)`**: Zwraca listę słów dla bieżącego segmentu.
+  - **`def get_segment_words(self, segment_idx)`**: Pobiera listę słów dla określonego segmentu na podstawie indeksu.
+  - **`def mark_segment_complete(self, segment_idx, results)`**: Oznacza dany segment jako ukończony i zapisuje wyniki.
+  - **`def is_segment_complete(self, segment_idx)`**: Sprawdza, czy `dany segment został ukończony przez użytkownika.
+  - **`def _update_current_segment_audio(self)`**: Aktualizuje dane audio dla bieżącego segmentu, wyznaczając odpowiedni zakres czasowy.
+  - **`def verify_user_audio(self, segment_idx, audio_file)`**: Weryfikuje nagranie użytkownika, porównując je z referencyjnym segmentem za pomocą modelu Vosk, i oblicza stopień podobieństwa.
+- **`def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu)`**: Zapis ::contentReference[oaicite:0]{index=0}
 
 ### 0.2.1 Schemat Działania funkcji main.py
 ```mermaid
