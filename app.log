@@ -367,3 +367,471 @@
 2024-12-12 19:39:57,690 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
 2024-12-12 19:39:57,690 - INFO - Wynik podobieństwa: 0.8
 2024-12-12 19:39:58,192 - INFO - Zapisano wynik dla użytkownika test
+2024-12-12 23:55:21,870 - INFO - Inicjalizacja okna głównego
+2024-12-12 23:55:37,358 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-12 23:55:40,147 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-12 23:55:40,147 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-12 23:55:40,171 - INFO - Utworzono 13 segmentów po 5 słów każdy
+2024-12-12 23:55:47,097 - INFO - Rozpoczynam nagrywanie...
+2024-12-12 23:55:57,279 - INFO - Zakończono nagrywanie.
+2024-12-12 23:55:58,169 - INFO - Rozpoznany tekst użytkownika: tu jestem w mrokach ziemi  
+2024-12-12 23:55:58,169 - INFO - Słowa użytkownika: ['tu', 'jestem', 'w', 'mrokach', 'ziemi'], Słowa referencyjne: ['tu', 'jestem', 'w', 'mrokach', 'ziemi']
+2024-12-12 23:55:58,169 - INFO - Wynik podobieństwa: 1.0
+2024-12-12 23:55:58,685 - INFO - Zapisano wynik dla użytkownika test
+2024-12-12 23:56:09,658 - INFO - Rozpoczynam nagrywanie...
+2024-12-12 23:56:19,819 - INFO - Zakończono nagrywanie.
+2024-12-12 23:56:20,738 - INFO - Rozpoznany tekst użytkownika: jestem tam jeszcze 
+2024-12-12 23:56:20,738 - INFO - Słowa użytkownika: ['jestem', 'tam', 'jeszcze'], Słowa referencyjne: ['jestem', 'tam', 'jeszcze', 'w', 'sumie']
+2024-12-12 23:56:20,738 - INFO - Wynik podobieństwa: 0.6
+2024-12-12 23:56:20,819 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:04:17,498 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:04:35,255 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:04:38,097 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-13 00:04:38,097 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-13 00:04:38,122 - INFO - Utworzono 13 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:06:01,828 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:06:10,802 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:06:13,578 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-13 00:06:13,578 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-13 00:06:13,602 - INFO - Utworzono 13 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:10:15,645 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:11:38,373 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:11:41,126 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-13 00:11:41,126 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-13 00:11:41,150 - INFO - Utworzono 13 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:11:47,614 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:11:57,769 - INFO - Zakończono nagrywanie.
+2024-12-13 00:11:58,727 - INFO - Rozpoznany tekst użytkownika: tu jestem w mrokach ziemi  
+2024-12-13 00:11:58,728 - INFO - Słowa użytkownika: ['tu', 'jestem', 'w', 'mrokach', 'ziemi'], Słowa referencyjne: ['tu', 'jestem', 'w', 'mrokach', 'ziemi']
+2024-12-13 00:11:58,728 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:11:59,187 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:12:09,738 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:12:19,909 - INFO - Zakończono nagrywanie.
+2024-12-13 00:12:20,794 - INFO - Rozpoznany tekst użytkownika: jestem tam jeszcze 
+2024-12-13 00:12:20,795 - INFO - Słowa użytkownika: ['jestem', 'tam', 'jeszcze'], Słowa referencyjne: ['jestem', 'tam', 'jeszcze', 'w', 'sumie']
+2024-12-13 00:12:20,795 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 00:12:20,874 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:15:28,415 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:15:42,363 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:15:42,367 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:15:42,367 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:15:46,245 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:15:46,250 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:15:46,250 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:15:48,845 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 00:15:48,868 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:15:48,868 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:17:09,375 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:17:19,657 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav
+2024-12-13 00:17:19,689 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav, samplerate: 44100
+2024-12-13 00:17:19,689 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:17:19,689 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:18:15,778 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav
+2024-12-13 00:18:15,780 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav, samplerate: 44100
+2024-12-13 00:18:15,780 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\audio1.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:18:15,780 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:18:24,780 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:18:34,947 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:18:34,951 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav, samplerate: 44100
+2024-12-13 00:18:34,952 - ERROR - Błąd podczas ładowania pliku audio 'D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav': 'AUDIOLIB' object has no attribute '_recognize_words'
+2024-12-13 00:18:34,952 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 00:23:23,730 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:23:40,918 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 00:23:40,923 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav, samplerate: 44100
+2024-12-13 00:23:43,706 - INFO - Rozpoznany tekst: tu jestem w mrokach ziemi jestem tam jeszcze w sumie gwiazd gdzie niecały mgle bożej się nim jeszcze gdzie powietrze drżąc ustnie sny mówi i grami jestem jeszcze dalej poza tymi snami zewsząd idę ku sobie wszędzie na nie czekam tu się spieszę do śpiewam tam do dziś nie zwleka a powinno się zatrzymać glenn nie zadziałało tym razem i tak to zapisze i wyślę
+2024-12-13 00:23:43,706 - INFO - Tokenizowane słowa: ['tu', 'jestem', 'w', 'mrokach', 'ziemi', 'jestem', 'tam', 'jeszcze', 'w', 'sumie', 'gwiazd', 'gdzie', 'niecały', 'mgle', 'bożej', 'się', 'nim', 'jeszcze', 'gdzie', 'powietrze', 'drżąc', 'ustnie', 'sny', 'mówi', 'i', 'grami', 'jestem', 'jeszcze', 'dalej', 'poza', 'tymi', 'snami', 'zewsząd', 'idę', 'ku', 'sobie', 'wszędzie', 'na', 'nie', 'czekam', 'tu', 'się', 'spieszę', 'do', 'śpiewam', 'tam', 'do', 'dziś', 'nie', 'zwleka', 'a', 'powinno', 'się', 'zatrzymać', 'glenn', 'nie', 'zadziałało', 'tym', 'razem', 'i', 'tak', 'to', 'zapisze', 'i', 'wyślę']
+2024-12-13 00:23:43,729 - INFO - Utworzono 13 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:23:50,320 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:24:00,490 - INFO - Zakończono nagrywanie.
+2024-12-13 00:24:01,482 - INFO - Rozpoznany tekst użytkownika: tu jestem w mrokach ziemi  
+2024-12-13 00:24:01,482 - INFO - Słowa użytkownika: ['tu', 'jestem', 'w', 'mrokach', 'ziemi'], Słowa referencyjne: ['tu', 'jestem', 'w', 'mrokach', 'ziemi']
+2024-12-13 00:24:01,482 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:24:01,957 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:24:11,610 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:24:21,772 - INFO - Zakończono nagrywanie.
+2024-12-13 00:24:22,704 - INFO - Rozpoznany tekst użytkownika: jestem tam jeszcze  
+2024-12-13 00:24:22,704 - INFO - Słowa użytkownika: ['jestem', 'tam', 'jeszcze'], Słowa referencyjne: ['jestem', 'tam', 'jeszcze', 'w', 'sumie']
+2024-12-13 00:24:22,704 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 00:24:22,786 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:29:44,715 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:29:56,517 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 00:29:56,521 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 00:29:59,183 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 00:29:59,184 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 00:29:59,214 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:30:04,368 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:30:14,525 - INFO - Zakończono nagrywanie.
+2024-12-13 00:30:15,566 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania 
+2024-12-13 00:30:15,567 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 00:30:15,567 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:30:16,040 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:30:31,481 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:30:41,632 - INFO - Zakończono nagrywanie.
+2024-12-13 00:30:42,653 - INFO - Rozpoznany tekst użytkownika: zachowania pędu jest napęd rakietowy  
+2024-12-13 00:30:42,653 - INFO - Słowa użytkownika: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy']
+2024-12-13 00:30:42,653 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:30:42,736 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:30:51,549 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:31:01,697 - INFO - Zakończono nagrywanie.
+2024-12-13 00:31:02,644 - INFO - Rozpoznany tekst użytkownika: napęd taki jest rozwiązaniem  
+2024-12-13 00:31:02,644 - INFO - Słowa użytkownika: ['napęd', 'taki', 'jest', 'rozwiązaniem'], Słowa referencyjne: ['napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego']
+2024-12-13 00:31:02,644 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:31:02,727 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:31:13,027 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:31:23,179 - INFO - Zakończono nagrywanie.
+2024-12-13 00:31:24,139 - INFO - Rozpoznany tekst użytkownika: podstawowego problemu jak w pracy  
+2024-12-13 00:31:24,139 - INFO - Słowa użytkownika: ['podstawowego', 'problemu', 'jak', 'w', 'pracy'], Słowa referencyjne: ['problemu', 'jak', 'wprawić', 'ciało', 'w']
+2024-12-13 00:31:24,139 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 00:31:24,223 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:33:06,871 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:33:18,580 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio2.wav
+2024-12-13 00:33:18,593 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\audio2.wav, samplerate: 44100
+2024-12-13 00:33:19,421 - INFO - Rozpoznany tekst: panno święta co jasnej bronisz częstochowy
+2024-12-13 00:33:19,421 - INFO - Tokenizowane słowa: ['panno', 'święta', 'co', 'jasnej', 'bronisz', 'częstochowy']
+2024-12-13 00:33:19,427 - INFO - Utworzono 1 segmentów po 5 słów każdy.
+2024-12-13 00:33:28,844 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:33:39,012 - INFO - Zakończono nagrywanie.
+2024-12-13 00:33:40,076 - INFO - Rozpoznany tekst użytkownika: panno święta co jasne i bronisz częstochowy 
+2024-12-13 00:33:40,076 - INFO - Słowa użytkownika: ['panno', 'święta', 'co', 'jasne', 'i', 'bronisz', 'częstochowy'], Słowa referencyjne: ['panno', 'święta', 'co', 'jasnej', 'bronisz']
+2024-12-13 00:33:40,076 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:33:40,556 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:34:00,198 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:34:12,432 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 00:34:12,436 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 00:34:15,144 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 00:34:15,144 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 00:34:15,174 - INFO - Utworzono 11 segmentów po 5 słów każdy.
+2024-12-13 00:34:21,167 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:34:31,342 - INFO - Zakończono nagrywanie.
+2024-12-13 00:34:32,336 - INFO - Rozpoznany tekst użytkownika: w pięknym przykładem zastosowania zasady zachowania 
+2024-12-13 00:34:32,336 - INFO - Słowa użytkownika: ['w', 'pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 00:34:32,336 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:34:32,812 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:34:44,393 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:34:54,549 - INFO - Zakończono nagrywanie.
+2024-12-13 00:34:55,651 - INFO - Rozpoznany tekst użytkownika: zachowania pędu jest napęd rakietowy 
+2024-12-13 00:34:55,651 - INFO - Słowa użytkownika: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy']
+2024-12-13 00:34:55,651 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:34:55,741 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:35:07,358 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:35:17,523 - INFO - Zakończono nagrywanie.
+2024-12-13 00:35:18,501 - INFO - Rozpoznany tekst użytkownika: napęd taki jest rozwiązaniem  
+2024-12-13 00:35:18,501 - INFO - Słowa użytkownika: ['napęd', 'taki', 'jest', 'rozwiązaniem'], Słowa referencyjne: ['napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego']
+2024-12-13 00:35:18,501 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:35:18,590 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:35:29,457 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:35:39,621 - INFO - Zakończono nagrywanie.
+2024-12-13 00:35:40,707 - INFO - Rozpoznany tekst użytkownika: podstawowego problemu jak w pracy  
+2024-12-13 00:35:40,707 - INFO - Słowa użytkownika: ['podstawowego', 'problemu', 'jak', 'w', 'pracy'], Słowa referencyjne: ['problemu', 'jak', 'wprawić', 'ciało', 'w']
+2024-12-13 00:35:40,707 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 00:35:40,805 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:41:36,827 - INFO - Inicjalizacja okna głównego
+2024-12-13 00:41:46,055 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 00:41:46,059 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 00:41:48,735 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 00:41:48,735 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 00:41:48,765 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 00:41:53,792 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:42:03,956 - INFO - Zakończono nagrywanie.
+2024-12-13 00:42:04,990 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania 
+2024-12-13 00:42:04,990 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'zachowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 00:42:04,990 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:42:05,453 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:42:15,238 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:42:25,388 - INFO - Zakończono nagrywanie.
+2024-12-13 00:42:26,461 - INFO - Rozpoznany tekst użytkownika: zasady zachowania pędu jest napęd rakietowy 
+2024-12-13 00:42:26,461 - INFO - Słowa użytkownika: ['zasady', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy']
+2024-12-13 00:42:26,461 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:42:26,550 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:42:34,990 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:42:45,153 - INFO - Zakończono nagrywanie.
+2024-12-13 00:42:46,214 - INFO - Rozpoznany tekst użytkownika: nocnym z takim jest rozwiązaniem podstawowego 
+2024-12-13 00:42:46,214 - INFO - Słowa użytkownika: ['nocnym', 'z', 'takim', 'jest', 'rozwiązaniem', 'podstawowego'], Słowa referencyjne: ['napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego']
+2024-12-13 00:42:46,214 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 00:42:46,304 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:42:58,259 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:43:08,418 - INFO - Zakończono nagrywanie.
+2024-12-13 00:43:09,524 - INFO - Rozpoznany tekst użytkownika: rozwiązaniem podstawowego problemu jak wprawić ciało 
+2024-12-13 00:43:09,524 - INFO - Słowa użytkownika: ['rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało'], Słowa referencyjne: ['problemu', 'jak', 'wprawić', 'ciało', 'w']
+2024-12-13 00:43:09,524 - INFO - Wynik podobieństwa: 0.8
+2024-12-13 00:43:09,613 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 00:43:25,264 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 00:43:35,424 - INFO - Zakończono nagrywanie.
+2024-12-13 00:43:36,559 - INFO - Rozpoznany tekst użytkownika: jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego 
+2024-12-13 00:43:36,559 - INFO - Słowa użytkownika: ['jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego'], Słowa referencyjne: ['ruch', 'jeśli', 'nie', 'ma', 'żadnego']
+2024-12-13 00:43:36,559 - INFO - Wynik podobieństwa: 1.0
+2024-12-13 00:43:36,648 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 01:06:24,613 - INFO - Inicjalizacja okna głównego
+2024-12-13 01:06:37,663 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/demony\31wiele_demonow_czesc_3.wav
+2024-12-13 01:06:37,692 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/demony\31wiele_demonow_czesc_3.wav, samplerate: 32000
+2024-12-13 01:06:38,889 - INFO - Rozpoznany tekst: znikała na krótko na dwie trzy godziny ale w środku nocy
+2024-12-13 01:06:38,889 - INFO - Tokenizowane słowa: ['znikała', 'na', 'krótko', 'na', 'dwie', 'trzy', 'godziny', 'ale', 'w', 'środku', 'nocy']
+2024-12-13 01:06:38,902 - INFO - Utworzono 3 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 01:06:52,120 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 01:07:02,279 - INFO - Zakończono nagrywanie.
+2024-12-13 01:07:02,995 - INFO - Rozpoznany tekst użytkownika:  
+2024-12-13 01:07:02,996 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['znikała', 'na', 'krótko', 'na', 'dwie']
+2024-12-13 01:07:02,996 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 01:07:03,020 - ERROR - Błąd podczas zapisywania wyniku: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2024-12-13 01:07:03,020 - ERROR - Błąd podczas nagrywania: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2024-12-13 01:08:25,052 - INFO - Inicjalizacja okna głównego
+2024-12-13 01:08:51,029 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 01:08:51,033 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 01:08:53,808 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 01:08:53,808 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 01:08:53,839 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 01:09:00,452 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 01:09:10,630 - INFO - Zakończono nagrywanie.
+2024-12-13 01:09:11,443 - INFO - Rozpoznany tekst użytkownika: hmm 
+2024-12-13 01:09:11,443 - INFO - Słowa użytkownika: ['hmm'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 01:09:11,443 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 01:09:11,980 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 01:11:22,353 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 01:11:32,513 - INFO - Zakończono nagrywanie.
+2024-12-13 01:11:33,311 - INFO - Rozpoznany tekst użytkownika:  
+2024-12-13 01:11:33,312 - INFO - Słowa użytkownika: [], Słowa referencyjne: ['zachowania', 'pędu', 'jest', 'napęd', 'rakietowy']
+2024-12-13 01:11:33,312 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 01:11:33,398 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 13:19:58,444 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:20:17,910 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:20:17,983 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:20:20,627 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:20:20,627 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:20:20,654 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:24:57,873 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:25:16,866 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:25:16,870 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:25:19,433 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:25:19,433 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:25:19,460 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:26:00,326 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 13:26:10,491 - INFO - Zakończono nagrywanie.
+2024-12-13 13:26:11,574 - INFO - Rozpoznany tekst użytkownika: stosowanie zasady zachowania pędu jest napęd rakietowy 
+2024-12-13 13:26:11,574 - INFO - Słowa użytkownika: ['stosowanie', 'zasady', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 13:26:11,574 - INFO - Wynik podobieństwa: 0.2
+2024-12-13 13:26:14,468 - INFO - Zapisano wynik dla użytkownika 2
+2024-12-13 13:29:18,197 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:29:32,739 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:29:32,744 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:29:35,485 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:29:35,485 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:29:35,516 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:31:09,101 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:32:13,232 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:32:13,236 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:32:15,971 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:32:15,971 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:32:16,000 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:32:25,012 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 13:32:35,167 - INFO - Zakończono nagrywanie.
+2024-12-13 13:32:36,034 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem  
+2024-12-13 13:32:36,034 - INFO - Słowa użytkownika: ['pięknym', 'przykładem'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 13:32:36,034 - INFO - Wynik podobieństwa: 0.4
+2024-12-13 13:32:36,423 - INFO - Zapisano wynik dla użytkownika SS
+2024-12-13 13:36:15,521 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:36:24,723 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:36:24,726 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:36:27,260 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:36:27,260 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:36:27,287 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:36:35,897 - INFO - Rozpoczynam nagrywanie w wątku roboczym...
+2024-12-13 13:36:46,068 - INFO - Zakończono nagrywanie.
+2024-12-13 13:36:46,882 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem  
+2024-12-13 13:36:46,882 - INFO - Słowa użytkownika: ['pięknym', 'przykładem'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 13:36:46,882 - INFO - Wynik podobieństwa: 0.4
+2024-12-13 13:36:47,356 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 13:44:24,009 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:44:33,776 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:44:33,780 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:44:36,297 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:44:36,297 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:44:36,323 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:44:55,464 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 13:45:05,620 - INFO - Zakończono nagrywanie.
+2024-12-13 13:45:06,415 - INFO - Rozpoznany tekst użytkownika: przykładem  
+2024-12-13 13:45:06,416 - INFO - Słowa użytkownika: ['przykładem'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 13:45:06,416 - INFO - Wynik podobieństwa: 0.2
+2024-12-13 13:45:06,856 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 13:48:25,494 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:49:49,287 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:49:49,292 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:49:51,842 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:49:51,842 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:49:51,868 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:50:19,092 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:57:59,551 - INFO - Inicjalizacja okna głównego
+2024-12-13 13:58:19,403 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 13:58:19,406 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 13:58:21,907 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 13:58:21,907 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 13:58:21,933 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 13:58:47,324 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 13:58:57,475 - INFO - Zakończono nagrywanie.
+2024-12-13 13:58:58,538 - INFO - Rozpoznany tekst użytkownika: innym przykładem zastosowania  
+2024-12-13 13:58:58,538 - INFO - Słowa użytkownika: ['innym', 'przykładem', 'zastosowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 13:58:58,538 - INFO - Wynik podobieństwa: 0.4
+2024-12-13 13:58:58,983 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 14:04:10,457 - INFO - Inicjalizacja okna głównego
+2024-12-13 14:21:45,063 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 14:21:45,067 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 14:21:47,555 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 14:21:47,555 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 14:21:47,581 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 14:24:48,617 - INFO - Inicjalizacja okna głównego
+2024-12-13 14:24:58,642 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 14:24:58,646 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 14:25:01,145 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 14:25:01,145 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 14:25:01,171 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 14:25:32,336 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 14:25:42,503 - INFO - Zakończono nagrywanie.
+2024-12-13 14:25:43,368 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania  
+2024-12-13 14:25:43,369 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zastosowania'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 14:25:43,369 - INFO - Wynik podobieństwa: 0.6
+2024-12-13 14:31:09,674 - INFO - Inicjalizacja okna głównego
+2024-12-13 17:24:22,266 - INFO - Inicjalizacja okna głównego
+2024-12-13 17:24:31,913 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 17:24:31,918 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 17:24:34,455 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 17:24:34,456 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 17:24:34,484 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 17:25:13,032 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 17:25:23,209 - INFO - Zakończono nagrywanie.
+2024-12-13 17:25:24,287 - INFO - Rozpoznany tekst użytkownika: zastosowanie zasady zachowania pędu jest napęd rakietowy 
+2024-12-13 17:25:24,287 - INFO - Słowa użytkownika: ['zastosowanie', 'zasady', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 17:25:24,287 - INFO - Wynik podobieństwa: 0.2
+2024-12-13 17:25:24,748 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 17:35:04,673 - INFO - Inicjalizacja okna głównego
+2024-12-13 17:35:15,147 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 17:35:15,151 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 17:35:17,811 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 17:35:17,811 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 17:35:17,840 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 17:35:58,856 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 17:36:09,043 - INFO - Zakończono nagrywanie.
+2024-12-13 17:36:10,076 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zasad  
+2024-12-13 17:36:10,076 - INFO - Słowa użytkownika: ['pięknym', 'przykładem', 'zasad'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 17:36:10,076 - INFO - Wynik podobieństwa: 0.4
+2024-12-13 17:36:10,557 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 17:48:21,145 - INFO - Inicjalizacja okna głównego
+2024-12-13 17:48:32,709 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 17:48:32,712 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 17:48:35,403 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 17:48:35,403 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 17:48:35,433 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 17:48:59,547 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 17:49:09,728 - INFO - Zakończono nagrywanie.
+2024-12-13 17:49:10,775 - INFO - Rozpoznany tekst użytkownika: aby lepiej zrozumieć tę sytuację czytelnik  
+2024-12-13 17:49:10,775 - INFO - Słowa użytkownika: ['aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 17:49:10,775 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 17:49:11,247 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 17:49:48,142 - INFO - Inicjalizacja okna głównego
+2024-12-13 17:50:00,051 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 17:50:00,055 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 17:50:02,748 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 17:50:02,748 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 17:50:02,778 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 17:50:13,658 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 17:50:23,848 - INFO - Zakończono nagrywanie.
+2024-12-13 17:50:24,960 - INFO - Rozpoznany tekst użytkownika: tego elementu od którego mogłoby się ono 
+2024-12-13 17:50:24,961 - INFO - Słowa użytkownika: ['tego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 17:50:24,961 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 17:50:25,377 - INFO - Zapisano wynik dla użytkownika tss
+2024-12-13 18:57:45,367 - INFO - Inicjalizacja okna głównego
+2024-12-13 18:58:27,642 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 18:58:27,652 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 18:58:30,228 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 18:58:30,228 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 18:58:30,256 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 18:58:51,632 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 18:59:01,805 - INFO - Zakończono nagrywanie.
+2024-12-13 18:59:02,799 - INFO - Rozpoznany tekst użytkownika: ma pan takie jest rozwiązaniem podstawowym  
+2024-12-13 18:59:02,799 - INFO - Słowa użytkownika: ['ma', 'pan', 'takie', 'jest', 'rozwiązaniem', 'podstawowym'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 18:59:02,799 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 18:59:04,772 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 19:02:37,315 - INFO - Inicjalizacja okna głównego
+2024-12-13 19:02:47,297 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 19:02:47,301 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 19:02:50,080 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 19:02:50,080 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 19:02:50,111 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 19:03:04,095 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 19:03:14,493 - INFO - Zakończono nagrywanie.
+2024-12-13 19:03:15,465 - INFO - Rozpoznany tekst użytkownika: nie ma żadnego zewnętrznego elementu  
+2024-12-13 19:03:15,465 - INFO - Słowa użytkownika: ['nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 19:03:15,465 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 19:03:15,945 - INFO - Zapisano wynik dla użytkownika TEST
+2024-12-13 19:17:20,771 - INFO - Inicjalizacja okna głównego
+2024-12-13 19:17:30,187 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 19:17:30,191 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 19:17:32,886 - INFO - Rozpoznany tekst: pięknym przykładem zastosowania zasady do zachowania pędu jest napęd rakietowy napęd taki jest rozwiązaniem podstawowego problemu jak wprawić ciało w ruch jeśli nie ma żadnego zewnętrznego elementu od którego mogłoby się ono odepchnąć lub który mógłby ciało popchnąć aby lepiej zrozumieć tę sytuację czytelnik powinien sobie wyobrazić że stoi na środku idealnie śliskiej tafli zamarznięte jeziora
+2024-12-13 19:17:32,886 - INFO - Tokenizowane słowa: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do', 'zachowania', 'pędu', 'jest', 'napęd', 'rakietowy', 'napęd', 'taki', 'jest', 'rozwiązaniem', 'podstawowego', 'problemu', 'jak', 'wprawić', 'ciało', 'w', 'ruch', 'jeśli', 'nie', 'ma', 'żadnego', 'zewnętrznego', 'elementu', 'od', 'którego', 'mogłoby', 'się', 'ono', 'odepchnąć', 'lub', 'który', 'mógłby', 'ciało', 'popchnąć', 'aby', 'lepiej', 'zrozumieć', 'tę', 'sytuację', 'czytelnik', 'powinien', 'sobie', 'wyobrazić', 'że', 'stoi', 'na', 'środku', 'idealnie', 'śliskiej', 'tafli', 'zamarznięte', 'jeziora']
+2024-12-13 19:17:32,916 - INFO - Utworzono 12 segmentów. Ostatni segment może mieć mniej niż 5 słów.
+2024-12-13 19:18:25,734 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 19:18:35,923 - INFO - Zakończono nagrywanie.
+2024-12-13 19:18:36,878 - INFO - Rozpoznany tekst użytkownika: jest rozwiązaniem podstawowego  
+2024-12-13 19:18:36,878 - INFO - Słowa użytkownika: ['jest', 'rozwiązaniem', 'podstawowego'], Słowa referencyjne: ['pięknym', 'przykładem', 'zastosowania', 'zasady', 'do']
+2024-12-13 19:18:36,878 - INFO - Wynik podobieństwa: 0.0
+2024-12-13 19:18:37,357 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 19:49:52,856 - INFO - Inicjalizacja okna głównego
+2024-12-13 19:50:10,536 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 19:50:10,540 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 19:50:13,279 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 19:50:13,279 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 19:50:18,921 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 19:50:18,925 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 19:50:21,630 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 19:50:21,630 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 19:51:53,152 - INFO - Inicjalizacja okna głównego
+2024-12-13 19:52:03,428 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 19:52:03,433 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 19:52:06,152 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 19:52:06,152 - ERROR - Błąd podczas przetwarzania pliku audio: Nie udało się załadować pliku audio
+2024-12-13 20:04:03,229 - INFO - Inicjalizacja okna głównego
+2024-12-13 20:04:12,415 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 20:04:12,419 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 20:04:15,150 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 20:04:15,150 - ERROR - Błąd: Nie udało się załadować pliku audio
+2024-12-13 20:10:07,339 - INFO - Inicjalizacja okna głównego
+2024-12-13 20:10:54,198 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-13 20:10:54,200 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-13 20:10:56,905 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 20:10:56,905 - ERROR - Błąd: Nie udało się załadować pliku audio
+2024-12-13 20:14:58,998 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-13 20:14:59,036 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav, samplerate: 44100
+2024-12-13 20:15:01,914 - ERROR - Nie rozpoznano żadnych słów w pliku
+2024-12-13 20:15:01,914 - ERROR - Błąd: Nie udało się załadować pliku audio
+2024-12-13 20:19:06,229 - INFO - Inicjalizacja okna głównego
+2024-12-13 20:19:14,748 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-13 20:19:14,750 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-13 20:19:27,563 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:19:37,742 - INFO - Zakończono nagrywanie.
+2024-12-13 20:19:38,842 - INFO - Rozpoznany tekst użytkownika: jestem przykładem  
+2024-12-13 20:19:39,332 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 20:21:20,275 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:21:30,417 - INFO - Zakończono nagrywanie.
+2024-12-13 20:21:31,407 - INFO - Rozpoznany tekst użytkownika: ciało w ruch jeśli nie ma żadnego  
+2024-12-13 20:21:31,524 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 20:38:08,315 - INFO - Inicjalizacja okna głównego
+2024-12-13 20:38:24,985 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-13 20:38:24,989 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-13 20:38:40,977 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:38:51,133 - INFO - Zakończono nagrywanie.
+2024-12-13 20:38:52,159 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania  
+2024-12-13 20:38:52,169 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-13 20:38:52,626 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 20:39:11,273 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:39:21,450 - INFO - Zakończono nagrywanie.
+2024-12-13 20:39:22,439 - INFO - Rozpoznany tekst użytkownika: pięknym przykładem zastosowania zasady zachowania  
+2024-12-13 20:39:22,447 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-13 20:39:22,555 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 20:39:30,799 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:39:40,949 - INFO - Zakończono nagrywanie.
+2024-12-13 20:39:42,087 - INFO - Rozpoznany tekst użytkownika: zasady zachowania pędu jest napędem rakietowym  
+2024-12-13 20:39:42,097 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-13 20:39:42,176 - INFO - Zapisano wynik dla użytkownika test
+2024-12-13 20:39:53,398 - INFO - Rozpoczynam nagrywanie...
+2024-12-13 20:40:03,567 - INFO - Zakończono nagrywanie.
+2024-12-13 20:40:04,961 - INFO - Rozpoznany tekst użytkownika: zasady zachowania pędu jest napęd rakietowy  
+2024-12-13 20:40:05,008 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-13 20:40:05,115 - INFO - Zapisano wynik dla użytkownika test
