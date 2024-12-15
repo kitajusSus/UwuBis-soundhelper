@@ -101,7 +101,7 @@ plik [library.py](library.py)
   - **`def is_segment_complete(self, segment_idx)`**: Sprawdza, czy `dany segment został ukończony przez użytkownika.
   - **`def _update_current_segment_audio(self)`**: Aktualizuje dane audio dla bieżącego segmentu, wyznaczając odpowiedni zakres czasowy.
   - **`def verify_user_audio(self, segment_idx, audio_file)`**: Weryfikuje nagranie użytkownika, porównując je z referencyjnym segmentem za pomocą modelu Vosk, i oblicza stopień podobieństwa.
-- **`def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu)`**: Zapis ::contentReference[oaicite:0]{index=0}
+- **`def zapisz_wynik(login, nazwa_audio, poprawne_słowa, powtórzone_słowa, słowa, folder_zapisu)`**: Zapis 
 
 ### 0.2.1 Schemat Działania funkcji main.py
 ```mermaid
