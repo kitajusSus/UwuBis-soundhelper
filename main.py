@@ -14,9 +14,7 @@ from PySide6.QtCore import Qt, QTimer, Signal, Slot
 from library import zapisz_wynik, AUDIOLIB
 from config import Config
 
-# Ładujemy model języka polskiego (jeśli konieczne)
-# Jeśli używasz modelu językowego z Vosk, ten krok może być niepotrzebny
-# Upewnij się, że model obsługuje język polski
+
 
 logging.basicConfig(
     filename='app.log',
@@ -371,13 +369,7 @@ class MainWindow(QMainWindow):
         self.finishedRecording.emit(user_words, self.reference_words)
         if os.path.exists(temp_audio):
             os.remove(temp_audio)
-        
-        try:
-            logging.info(f"{segment_info} - Słowa referencyjne: {', '.join(reference_words)}")
-            logging.info(f"{segment_info} - Słowa użytkownika: {', '.join(user_words)}")
-        except Exception as e:
-            logging.error(f"Błąd podczas logowania słów: {str(e)}")
-
+       
     @Slot(list, list)
     def showSegmentResults(self, user_words, reference_words, is_replay=False):
         self.clearLayout()
@@ -440,6 +432,13 @@ class MainWindow(QMainWindow):
         btn_layout.addWidget(finish_btn)
 
         self.layout.addLayout(btn_layout)
+         
+        try:
+            logging.info(f"{segment_info} - Słowa referencyjne: {', '.join(reference_words)}")
+            logging.info(f"{segment_info} - Słowa użytkownika: {', '.join(user_words)}")
+        except Exception as e:
+            logging.error(f"Błąd podczas logowania słów: {str(e)}")
+
 
         nazwa_pliku = os.path.basename(self.plik_audio)
         poprawne_słowa = [w for w in user_words if w.lower() in reference_words_lower]

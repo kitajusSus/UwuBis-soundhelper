@@ -835,3 +835,25 @@
 2024-12-13 20:40:04,961 - INFO - Rozpoznany tekst użytkownika: zasady zachowania pędu jest napęd rakietowy  
 2024-12-13 20:40:05,008 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
 2024-12-13 20:40:05,115 - INFO - Zapisano wynik dla użytkownika test
+2024-12-15 20:58:44,793 - INFO - Inicjalizacja okna głównego
+2024-12-15 20:59:02,413 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-15 20:59:02,490 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-15 20:59:48,445 - INFO - Rozpoczynam nagrywanie...
+2024-12-15 20:59:58,600 - INFO - Zakończono nagrywanie.
+2024-12-15 20:59:59,873 - INFO - Rozpoznany tekst użytkownika: żadnego zewnętrznego elementu od którego mogłoby się jeszcze program jakby daje kontekst w sensie
+2024-12-15 20:59:59,954 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-15 21:00:02,832 - INFO - Zapisano wynik dla użytkownika karol
+2024-12-15 21:00:30,330 - INFO - Rozpoczynam nagrywanie...
+2024-12-15 21:00:40,509 - INFO - Zakończono nagrywanie.
+2024-12-15 21:00:41,753 - INFO - Rozpoznany tekst użytkownika: jak bo zakładam że jak to jest to słowo którego my potrzebujemy i czekamy sobie kulturalne dziesięć sekund taką
+2024-12-15 21:00:41,764 - ERROR - Błąd podczas logowania słów: name 'segment_info' is not defined
+2024-12-15 21:00:41,821 - INFO - Zapisano wynik dla użytkownika karol
+2024-12-15 21:05:44,903 - INFO - Inicjalizacja okna głównego
+2024-12-15 21:05:55,446 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/demony\31wiele_demonow_czesc_4.wav
+2024-12-15 21:05:55,481 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/demony\31wiele_demonow_czesc_4.wav, samplerate: 32000
+2024-12-15 21:06:07,875 - INFO - Rozpoczynam nagrywanie...
+2024-12-15 21:06:18,015 - INFO - Zakończono nagrywanie.
+2024-12-15 21:06:19,036 - INFO - Rozpoznany tekst użytkownika: najprzód zapalała lampkę nocną  
+2024-12-15 21:06:19,045 - INFO - Zakres słów 1 - 3 z 9 - Słowa referencyjne: najprzód, zapalała, lampkę
+2024-12-15 21:06:19,045 - INFO - Zakres słów 1 - 3 z 9 - Słowa użytkownika: najprzód, zapalała, lampkę, nocną
+2024-12-15 21:06:19,447 - INFO - Zapisano wynik dla użytkownika 5tes
