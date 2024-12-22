@@ -1012,3 +1012,104 @@ django.template.exceptions.TemplateDoesNotExist: audioapp/index.html
 2024-12-22 23:38:50,948 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
 2024-12-22 23:38:50,950 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
 2024-12-22 23:39:08,569 - INFO - Ostatni segment (ms): 9138 - 12402
+2024-12-22 23:44:48,579 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:45:00,416 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:45:00,418 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:45:15,678 - INFO - Ostatni segment (ms): 13838 - 17422
+2024-12-22 23:51:54,412 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:52:48,541 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:52:48,543 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:53:05,598 - INFO - Ostatni segment (ms): 14360 - 17624
+2024-12-22 23:53:10,899 - INFO - Ostatni segment (ms): 14360 - 17624
+2024-12-22 23:57:03,233 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:57:26,069 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:57:26,071 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:57:39,459 - INFO - Ostatni segment (ms): 10966 - 12758
+2024-12-22 23:57:48,199 - INFO - Ostatni segment (ms): 16188 - 17788
+2024-12-22 23:57:51,003 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 23:58:01,177 - INFO - Zakończono nagrywanie.
+2024-12-22 23:58:02,082 - INFO - Rozpoznany tekst użytkownika:  Mógł by ci albo pofchnąć.
+2024-12-22 23:58:02,472 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-22 23:58:02,512 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-22 23:58:26,210 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav
+2024-12-22 23:58:26,257 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika.wav, samplerate: 44100
+2024-12-22 23:58:36,791 - INFO - Ostatni segment (ms): 0 - 2507
+2024-12-22 23:58:40,509 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 23:58:50,657 - INFO - Zakończono nagrywanie.
+2024-12-22 23:58:51,608 - INFO - Rozpoznany tekst użytkownika:  Pięknym przykładem zastosowania zasady zachowania.
+2024-12-22 23:58:51,646 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-22 23:58:51,684 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-23 00:00:07,988 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav
+2024-12-23 00:00:08,034 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\lesmian1.wav, samplerate: 44100
+2024-12-23 00:00:19,882 - INFO - Ostatni segment (ms): 0 - 3622
+2024-12-23 00:00:26,903 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:00:37,058 - INFO - Zakończono nagrywanie.
+2024-12-23 00:00:38,021 - INFO - Rozpoznany tekst użytkownika:  Tu jestem w mrokach ziemi jestem.
+2024-12-23 00:00:38,155 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-23 00:00:38,196 - INFO - Zapisano wynik dla użytkownika 2212
+2024-12-23 00:12:07,441 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:12:18,355 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:12:18,357 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:12:31,307 - INFO - Ostatni segment (ms): 16188 - 17980
+2024-12-23 00:12:34,435 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:12:44,595 - INFO - Zakończono nagrywanie.
+2024-12-23 00:12:45,559 - INFO - Rozpoznany tekst użytkownika:  Mógł by ciało pawchnąć ale lepiej.
+2024-12-23 00:16:31,764 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:16:45,780 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:16:45,782 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:17:12,117 - INFO - Ostatni segment (ms): 13577 - 15241
+2024-12-23 00:17:14,436 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:17:24,611 - INFO - Zakończono nagrywanie.
+2024-12-23 00:17:25,542 - INFO - Rozpoznany tekst użytkownika:  którego mogłoby się ona odepręcić.
+2024-12-23 00:21:15,251 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:21:25,223 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:21:25,225 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:21:36,165 - INFO - Ostatni segment (ms): 0 - 2304
+2024-12-23 00:21:40,042 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:21:50,208 - INFO - Zakończono nagrywanie.
+2024-12-23 00:21:51,152 - INFO - Rozpoznany tekst użytkownika:  Piennym przykładem zastosowania zasady zachowania.
+2024-12-23 00:22:46,559 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:22:55,303 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:22:55,305 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:23:08,089 - INFO - Ostatni segment (ms): 10705 - 11857
+2024-12-23 00:23:10,090 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:23:20,261 - INFO - Zakończono nagrywanie.
+2024-12-23 00:23:23,711 - INFO - Rozpoznany tekst użytkownika:  Jeśli nie może do niego ze
+2024-12-23 00:24:49,447 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:25:48,703 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:25:58,371 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:25:58,373 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:26:15,736 - INFO - Ostatni segment (ms): 15927 - 19191
+2024-12-23 00:26:20,658 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:26:30,815 - INFO - Zakończono nagrywanie.
+2024-12-23 00:26:31,863 - INFO - Rozpoznany tekst użytkownika:  który mógłby ci o popchnąć, aby lepiej zrozumieć te sytuacje.
+2024-12-23 00:32:20,711 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:32:51,983 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:32:51,985 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:33:05,145 - INFO - Ostatni segment (ms): 13577 - 15433
+2024-12-23 00:33:08,000 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:33:18,165 - INFO - Zakończono nagrywanie.
+2024-12-23 00:33:19,086 - INFO - Rozpoznany tekst użytkownika:  z którego mogłoby się ono odeprąć.
+2024-12-23 00:34:55,186 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:35:16,227 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:35:16,229 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:35:26,076 - INFO - Ostatni segment (ms): 0 - 1344
+2024-12-23 00:35:28,224 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:35:38,388 - INFO - Zakończono nagrywanie.
+2024-12-23 00:35:39,226 - INFO - Rozpoznany tekst użytkownika:  Piękny przykładem za...
+2024-12-23 00:36:03,935 - INFO - Inicjalizacja okna głównego
+2024-12-23 00:36:13,551 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:36:13,553 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:36:24,538 - INFO - Ostatni segment (ms): 0 - 1152
+2024-12-23 00:36:26,578 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:36:36,752 - INFO - Zakończono nagrywanie.
+2024-12-23 00:36:37,617 - INFO - Rozpoznany tekst użytkownika:  Pięknym przykładem.
+2024-12-23 00:36:38,161 - INFO - Zapisano wynik dla użytkownika 1
+2024-12-23 00:36:38,207 - INFO - Zapisano wynik dla użytkownika 1
+2024-12-23 00:36:54,293 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-23 00:36:54,295 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-23 00:37:10,082 - INFO - Rozpoczynam nagrywanie...
+2024-12-23 00:37:20,257 - INFO - Zakończono nagrywanie.
+2024-12-23 00:37:24,238 - INFO - Rozpoznany tekst użytkownika:  Mbage USB Chare Ono danency
+2024-12-23 00:37:24,284 - INFO - Zapisano wynik dla użytkownika 1
+2024-12-23 00:37:24,329 - INFO - Zapisano wynik dla użytkownika 1

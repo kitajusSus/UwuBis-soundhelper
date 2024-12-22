@@ -7,7 +7,9 @@ import numpy as np
 import soundfile as sf
 import sounddevice as sd
 import pygame
-
+from thefuzz import fuzz
+import string
+import re
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QPushButton, QLabel, QLineEdit, QListWidget,
@@ -506,6 +508,76 @@ class MainWindow(QMainWindow):
 
         self.layout.addWidget(change_selection_btn)
 
+    def prepareRecording(self):
+        """Ekran przed nagrywaniem, odliczanie itd."""
+        self.clearLayout()
+    
+        info_label = QLabel("ZACZNIJ MÓWIĆ TO CO USŁYSZAŁEŚ WCZEŚNIEJ!")
+        info_label.setAlignment(Qt.AlignCenter)
+        self.layout.addWidget(info_label)
+
+        self.recording_time_left = 10
+        self.recording_label = QLabel("")
+        self.recording_label.setAlignment(Qt.AlignCenter)
+        self.recording_label.setStyleSheet("font-size:20px;")
+        self.layout.addWidget(self.recording_label)
+
+        # Start nagrywania w osobnym wątku
+        threading.Thread(target=self.record_audio, daemon=True).start()
+    
+        # Timer do aktualizacji odliczania
+        self.record_timer = QTimer(self)
+        self.record_timer.timeout.connect(self.update_recording_countdown)
+        self.record_timer.start(1000)
+        self.update_recording_label()
+    def update_recording_countdown(self):
+        self.recording_time_left -= 1
+        self.update_recording_label()
+        if self.recording_time_left <= 0:
+            self.record_timer.stop()
+
+    def update_recording_label(self):
+        self.recording_label.setText(f"Pozostało: {self.recording_time_left} s")
+
+    def record_audio(self):
+        """Faktyczne nagrywanie przy pomocy sounddevice."""
+        duration = 10
+        fs = 16000
+        channels = 1
+        temp_audio = "temp_user_audio.wav"
+
+        logging.info("Rozpoczynam nagrywanie...")
+        try:
+            recording = sd.rec(int(duration * fs), samplerate=fs, channels=channels, dtype='int16')
+            sd.wait()
+            sf.write(temp_audio, recording, fs)
+            logging.info("Zakończono nagrywanie.")
+        except Exception as e:
+            logging.error(f"Błąd podczas nagrywania: {str(e)}")
+            return
+
+    # Transkrypcja usera
+        user_words = self.audio_helper.verify_user_audio(temp_audio)
+
+    # W momencie zakończenia nagrywania -> sygnał
+        self.finishedRecording.emit(user_words, self.reference_words)
+
+        # Usuwamy temp audio
+        if os.path.exists(temp_audio):
+            os.remove(temp_audio)
+    def normalize_word(self, word: str) -> str:
+        word = word.strip(string.punctuation + " \t\n\r")
+        word = word.lower()
+        return word
+
+    def are_words_similar(self,user_word: str, ref_word: str, threshold=80) -> bool:
+        user_norm = self.normalize_word(user_word)
+        ref_norm = self.normalize_word(ref_word)
+        similarity = fuzz.ratio(user_norm, ref_norm)
+
+        return similarity >= threshold 
+
+
     @Slot(list, list)
     def showSegmentResults(self, user_words, reference_words, is_replay=False):
         """
@@ -524,19 +596,25 @@ class MainWindow(QMainWindow):
             self.results_text.append("Tryb YouTube Slider - Ostatni fragment\n")
         self.results_text.append(f"Liczba słów referencyjnych: {len(reference_words)}")
 
-        reference_words_lower = [rw.lower() for rw in reference_words]
-        poprawne_słowa = [w for w in user_words if w.lower() in reference_words_lower]
+        
+        # Wyliczamy poprawne słowa
+        poprawne_słowa = []
+        for w in user_words:
+        # Jeżeli w jest podobne do któregokolwiek ref_word z progiem 80%,
+        # uznajemy je za poprawne
+            if any(self.are_words_similar(w, rw, 80) for rw in reference_words):
+                poprawne_słowa.append(w)
+
         wynik = f"{len(poprawne_słowa)}/{len(reference_words)}"
         self.results_text.append(f"Wynik: {wynik}\n")
 
-        # Wyświetlamy słowa użytkownika (w kolejności)
+         # Wyświetlamy słowa użytkownika w kolejności (z informacją poprawne/nie)
         self.results_text.append("** Twoje słowa (w kolejności):")
         for w in user_words:
-            if w.lower() in reference_words_lower:
+            if any(self.are_words_similar(w, rw, 80) for rw in reference_words):
                 self.results_text.append(f"  ✓ {w}")
             else:
                 self.results_text.append(f"  ✗ {w}")
-
         # Słowa referencyjne – NA RAZIE NIE POKAZUJEMY
         self.hidden_reference_words = reference_words  # Zapisujemy, by pokazać później
 
@@ -551,7 +629,7 @@ class MainWindow(QMainWindow):
 
         # ... plus reszta Twoich przycisków (powtórz, zmień wybór, zapisz_wynik etc.)
         # np.:
-
+        self.layout.addWidget(self.results_text)
         back_btn = QPushButton("Zmień plik audio")
         style_button(back_btn)
         back_btn.clicked.connect(self.showAudioFiles)
