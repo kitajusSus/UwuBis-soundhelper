@@ -857,3 +857,158 @@
 2024-12-15 21:06:19,045 - INFO - Zakres słów 1 - 3 z 9 - Słowa referencyjne: najprzód, zapalała, lampkę
 2024-12-15 21:06:19,045 - INFO - Zakres słów 1 - 3 z 9 - Słowa użytkownika: najprzód, zapalała, lampkę, nocną
 2024-12-15 21:06:19,447 - INFO - Zapisano wynik dla użytkownika 5tes
+2024-12-19 20:25:23,532 - INFO - Watching for file changes with StatReloader
+2024-12-19 20:28:06,794 - WARNING - Not Found: /mainAPP/hello
+2024-12-19 20:29:15,684 - INFO - D:\github\UwuBisSTARY\uwubisAPP\urls.py changed, reloading.
+2024-12-22 17:05:30,301 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\github\UwuBisSTARY\mainAPP\views.py", line 43, in index
+    return render(request, 'audioapp/index.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: audioapp/index.html
+2024-12-22 17:05:30,793 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\github\UwuBisSTARY\mainAPP\views.py", line 43, in index
+    return render(request, 'audioapp/index.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: audioapp/index.html
+2024-12-22 17:05:31,350 - WARNING - Not Found: /favicon.ico
+2024-12-22 17:07:22,097 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\github\UwuBisSTARY\mainAPP\views.py", line 43, in index
+    return render(request, 'audioapp/index.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: audioapp/index.html
+2024-12-22 17:07:22,989 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\github\UwuBisSTARY\mainAPP\views.py", line 43, in index
+    return render(request, 'audioapp/index.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\conda-envs\pyaudio_env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: audioapp/index.html
+2024-12-22 22:27:55,492 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:28:17,908 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:28:59,832 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:29:22,216 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:31:40,234 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:36:00,935 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:36:15,350 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 22:36:15,414 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 22:36:36,308 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 22:36:46,531 - INFO - Zakończono nagrywanie.
+2024-12-22 22:36:47,607 - INFO - Rozpoznany tekst użytkownika:  Piękny przykładem zastosowania zasady zachowania pędu.
+2024-12-22 22:36:47,737 - INFO - Zakres słów 1 - 5 z 58 - Słowa referencyjne:  Piękne,  przykładem,  zastosowania,  zasady,  zachowania
+2024-12-22 22:36:47,738 - INFO - Zakres słów 1 - 5 z 58 - Słowa użytkownika: Piękny, przykładem, zastosowania, zasady, zachowania, pędu.
+2024-12-22 22:36:50,887 - INFO - Zapisano wynik dla użytkownika test
+2024-12-22 22:43:13,954 - INFO - Inicjalizacja okna głównego
+2024-12-22 22:43:24,106 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 22:43:24,108 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:00:58,129 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:01:08,219 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:01:08,221 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:03:01,507 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:03:34,133 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:03:45,989 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:03:45,991 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:05:16,052 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:05:45,103 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:05:45,105 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:06:36,196 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:06:46,889 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:06:46,890 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:07:48,856 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:08:02,174 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:08:02,176 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:08:24,624 - INFO - Odsłuchane fragmenty (ms): [(6005, 8501)]
+2024-12-22 23:12:36,655 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:12:49,588 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:12:49,589 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:13:12,244 - INFO - Odsłuchane fragmenty (ms): [(0, 4928), (15143, 17831)]
+2024-12-22 23:13:29,010 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 23:13:39,216 - INFO - Zakończono nagrywanie.
+2024-12-22 23:13:40,682 - INFO - Rozpoznany tekst użytkownika:  Pięknym przykładem zastosowania zasady zachowania będą jest na pędraki towy. Lub, który mógł bycia opokrwać.
+2024-12-22 23:13:42,186 - INFO - Zapisano wynik dla użytkownika test
+2024-12-22 23:13:42,187 - INFO - Tryb YouTube Slider (odsłuchane fragmenty scalone)
+Łącznie słów referencyjnych: 38 - Zapisano wynik do xlsx
+2024-12-22 23:14:07,172 - INFO - Odsłuchane fragmenty (ms): [(0, 4928), (15143, 17831)]
+2024-12-22 23:14:16,746 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 23:14:26,920 - INFO - Zakończono nagrywanie.
+2024-12-22 23:14:31,437 - INFO - Rozpoznany tekst użytkownika:  blinknym sukładem
+2024-12-22 23:14:31,537 - INFO - Zapisano wynik dla użytkownika test
+2024-12-22 23:14:31,537 - INFO - Tryb YouTube Slider (odsłuchane fragmenty scalone)
+Łącznie słów referencyjnych: 38 - Zapisano wynik do xlsx
+2024-12-22 23:18:13,284 - INFO - Odsłuchane fragmenty (ms): [(0, 3008)]
+2024-12-22 23:18:20,709 - INFO - Odsłuchane fragmenty (ms): [(0, 3008)]
+2024-12-22 23:18:30,497 - INFO - Odsłuchane fragmenty (ms): [(6005, 8437)]
+2024-12-22 23:18:34,038 - INFO - Rozpoczynam nagrywanie...
+2024-12-22 23:18:44,246 - INFO - Zakończono nagrywanie.
+2024-12-22 23:18:45,716 - INFO - Rozpoznany tekst użytkownika:  Jest rozwiązaniem podstawowego problemu.
+2024-12-22 23:18:45,812 - INFO - Zapisano wynik dla użytkownika test
+2024-12-22 23:18:45,812 - INFO - Tryb YouTube Slider (odsłuchane fragmenty scalone)
+Łącznie słów referencyjnych: 2 - Zapisano wynik do xlsx
+2024-12-22 23:25:38,864 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:25:48,727 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:25:48,729 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:35:16,783 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:35:26,450 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:35:26,452 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:35:40,440 - INFO - Ostatni segment (ms): 10705 - 13009
+2024-12-22 23:38:41,463 - INFO - Inicjalizacja okna głównego
+2024-12-22 23:38:50,948 - INFO - Rozpoczęcie przetwarzania pliku audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav
+2024-12-22 23:38:50,950 - INFO - Załadowano plik audio: D:/github/UwuBisSTARY/audio/krzys_audio\TAYLOR__Mechanika16k.wav, samplerate: 16000
+2024-12-22 23:39:08,569 - INFO - Ostatni segment (ms): 9138 - 12402
