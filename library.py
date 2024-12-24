@@ -40,7 +40,7 @@ class AUDIOLIB:
         # Załadowanie modelu Whisper
         # Dostępne modele to m.in. "tiny", "base", "small", "medium", "large".
         # Upewnij się, że masz pobrane odpowiednie pliki modelu.
-        self.whisper_model = whisper.load_model("base", device=device)
+        self.whisper_model = whisper.load_model("small", device=device)
 
     def load_audio_file(self, file_path):
         """

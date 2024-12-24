@@ -9,4 +9,4 @@ audio/
 __zig/
 __zig-cache/
 __pycache/
-
+whisper-small/
